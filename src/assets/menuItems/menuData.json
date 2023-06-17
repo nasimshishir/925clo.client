@@ -1,0 +1,107 @@
+{
+    "season": {
+        "id": 1,
+        "seasons": [
+            {
+                "id": "s1",
+                "title": "summer",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/summer.png"
+            },
+            {
+                "id": "s2",
+                "title": "winter",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/winter.png"
+            },
+            {
+                "id": "s3",
+                "title": "spring",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/spring.png"
+            },
+            {
+                "id": "s4",
+                "title": "autumn",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/autumn.png"
+            }
+        ]
+    },
+    "product_type": {
+        "id": 2,
+        "product_types": [
+            {
+                "id": "p1",
+                "title": "tops",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/tops.png"
+            },
+            {
+                "id": "p2",
+                "title": "outwear",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/outwear.png"
+            },
+            {
+                "id": "p3",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            },
+            {
+                "id": "p4",
+                "title": "accessories",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/accessories.png"
+            },
+            {
+                "id": "p5",
+                "title": "footwear",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/footwear.png"
+            }
+        ]
+    },
+    "occasion": {
+        "id": 3,
+        "occasions": [
+            {
+                "id": "o1",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            },
+            {
+                "id": "o2",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            },
+            {
+                "id": "o3",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            },
+            {
+                "id": "o4",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            },
+            {
+                "id": "o5",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            },
+            {
+                "id": "o6",
+                "title": "bottoms",
+                "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
+                "img": "/img/bottoms.png"
+            }
+        ]
+    }
+}
