@@ -7,19 +7,16 @@ import { BsHeart } from "react-icons/bs"
 import Submenu from '@components/Submenu';
 import Link from 'next/link';
 import menus from '../assets/menuItems/menuData.json'
+import { menuList } from '@lib/types/types';
+import { useDropdownMenuContext } from '@lib/contexts/dropdownMenuContext';
 
-type menuList = {
-    id: string,
-    title: string,
-    desc: string,
-    img: string
-}
+
 
 const Header: React.FC = () => {
 
+    const { menuData, setMenuData, itemId, setItemId } = useDropdownMenuContext()
 
-    const [itemId, setItemId] = useState<number | null>(null);
-    const [menuData, setMenuData] = useState<menuList[]>([])
+
     const handleToggle = (id: number | null, data: menuList[]) => {
         if (itemId === id) {
             setItemId(null)

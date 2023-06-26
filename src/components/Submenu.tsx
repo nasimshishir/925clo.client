@@ -3,27 +3,20 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 import Link from 'next/link';
+import { menuItem, menuList } from '@lib/types/types';
+import { useDropdownMenuContext } from '@lib/contexts/dropdownMenuContext';
 
 
 type SubMenuProps = {
-    menuData: {
-        id: string,
-        title: string,
-        desc: string,
-        img: string
-    }[]
+    menuData: menuList[]
 }
 
-type menuItem = {
-    title: string,
-    desc: string
-}
+
 
 
 const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
 
-    const [isHovering, setIsHovering] = useState<boolean>(false);
-    const [menuItemData, setMenuItemData] = useState<menuItem>()
+    const { isHovering, setIsHovering, menuItemData, setMenuItemData } = useDropdownMenuContext();
 
     const handleHover = (menuItem: menuItem) => {
         setIsHovering(true)

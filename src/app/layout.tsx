@@ -1,6 +1,7 @@
 import Header from '@components/Header.v1';
 import Footer from '@components/Footer';
 import '@styles/globals.css';
+import { DropdownMenuContextProvider } from '@lib/contexts/dropdownMenuContext';
 
 
 export const metadata = {
@@ -14,14 +15,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="">
-        <main className="min-h-screen">
-          <Header />
-          {children}
-          <Footer />
-        </main>
-      </body>
-    </html>
+    <DropdownMenuContextProvider>
+      <html lang="en">
+        <body className="">
+          <main className="min-h-screen">
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </body>
+      </html>
+    </DropdownMenuContextProvider>
   )
 }
