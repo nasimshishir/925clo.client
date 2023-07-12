@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import Link from 'next/link';
 import { menuItem, menuList } from '@lib/types/types';
-import { useDropdownMenuContext } from '@lib/contexts/dropdownMenuContext';
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 
 
 type SubMenuProps = {
@@ -28,7 +28,7 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
     }
 
     return (
-        <div className='flex min-h-60 h-auto mt-10'>
+        <div className='flex min-h-60 h-auto mt-10 text-white'>
 
             {/* Sub-Menu Items */}
 

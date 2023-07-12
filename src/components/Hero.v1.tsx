@@ -1,8 +1,8 @@
 'use client'
-import { useDropdownMenuContext } from '@lib/contexts/dropdownMenuContext';
-import React, { useContext } from 'react'
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import React from 'react'
 
-const Hero: React.FC = () => {
+const Herov1: React.FC = () => {
 
     const { isHovering, menuItemData } = useDropdownMenuContext();
 
@@ -21,4 +21,4 @@ const Hero: React.FC = () => {
     )
 }
 
-export default Hero
+export default Herov1;

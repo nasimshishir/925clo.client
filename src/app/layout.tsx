@@ -1,7 +1,7 @@
-import Header from '@components/Header.v1';
-import Footer from '@components/Footer';
 import '@styles/globals.css';
-import { DropdownMenuContextProvider } from '@lib/contexts/dropdownMenuContext';
+import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
+import Footerv1 from '@components/Footer.v1';
+import { Headerv1 } from '@components';
 
 
 export const metadata = {
@@ -19,9 +19,9 @@ export default function RootLayout({
       <html lang="en">
         <body className="">
           <main className="min-h-screen">
-            <Header />
+            <Headerv1 />
             {children}
-            <Footer />
+            <Footerv1 />
           </main>
         </body>
       </html>

@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import heroBg from '@assets/winter_full.png'
-import Hero from '@components/Hero'
+import { Herov1 } from '@components'
 
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <Herov1 />
     </div>
   )
 }
