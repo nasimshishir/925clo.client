@@ -11,9 +11,6 @@ type SubMenuProps = {
     menuData: menuList[]
 }
 
-
-
-
 const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
 
     const { isHovering, setIsHovering, menuItemData, setMenuItemData } = useDropdownMenuContext();
@@ -28,7 +25,7 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
     }
 
     return (
-        <div className='flex min-h-60 h-auto mt-10 text-white'>
+        <div className='flex min-h-60 h-auto text-white mt-10'>
 
             {/* Sub-Menu Items */}
 

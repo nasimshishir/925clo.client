@@ -6,3 +6,31 @@
   margin: 0;
   padding: 0;
 }
+
+.sec_title {
+  @apply text-[24px] font-[700] font-helvetica uppercase
+}
+
+.sec_desc {
+  @apply text-[0.75rem] font-inter font-thin tracking-wide
+}
+
+@screen md {
+  .sec_title {
+    @apply text-[32px] font-[700] font-helvetica uppercase
+  }
+
+  .sec_desc {
+    @apply text-[0.75rem] font-inter font-thin tracking-wide
+  }
+}
+
+@screen lg {
+  .sec_title {
+    @apply text-[32px] font-[700] font-helvetica uppercase
+  }
+
+  .sec_desc {
+    @apply text-[0.75rem] font-inter font-thin tracking-wide
+  }
+}

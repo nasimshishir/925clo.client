@@ -27,7 +27,7 @@
       "@*": [
         "./src/*"
       ],
-      "assets*": [
+      "@assets": [
         "./src/assets/*"
       ],
       "@components": [

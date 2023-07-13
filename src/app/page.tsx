@@ -4,8 +4,8 @@ import { Herov1 } from '@components'
 
 export default function Home() {
   return (
-    <div>
+    <section>
       <Herov1 />
-    </div>
+    </section>
   )
 }

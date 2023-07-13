@@ -26,10 +26,10 @@ const Headerv2: React.FC = () => {
     }
 
     return (
-        <header className='w-full absolute text-black'>
+        <header className='w-full absolute text-black z-50'>
             <nav className='grid grid-cols-5 items-center p-2 mt-1 bg-[#F6F6F6]'>
                 <div className='col-span-1'>
-                    <Link href='/'><Image src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
+                    <Link href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
                 </div>
 
                 {/* Main Menu */}
