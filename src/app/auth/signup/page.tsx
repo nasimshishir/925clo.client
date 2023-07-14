@@ -3,6 +3,7 @@ import React from 'react'
 import signupImg from '@assets/signup_img.jpg'
 import SignUpForm from '@components/SignUpForm';
 import { TfiAngleLeft } from 'react-icons/tfi'
+import Link from 'next/link';
 
 
 const SignUp: React.FC = () => {
@@ -14,11 +15,11 @@ const SignUp: React.FC = () => {
                         <div className='my-auto'>
                             <div className='flex items-center mb-8 lg:hidden'>
                                 <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
-                                <p className='uppercase text-xs font-thin grow text-center'>Step 0/2 Completed</p>
+                                <p className='hidden lg:block uppercase text-xs font-thin grow text-center'>Step 0/2 Completed</p>
                             </div>
                             <div className='flex justify-between items-baseline'>
                                 <h2 className='text-white sec_title'>Sign Up</h2>
-                                <span className='text-xs uppercase font-thin'>Already have an account? <span className='font-medium underline'>Log In</span></span>
+                                <p className='hidden lg:block text-xs uppercase font-thin'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>
                             </div>
                             <div className='mt-3'>
                                 <p className='sec_desc'>Join our exclusive community and unlock the world of luxury fashion.</p>
@@ -29,6 +30,7 @@ const SignUp: React.FC = () => {
                             <div className='mt-10'>
                                 <SignUpForm />
                             </div>
+                            <p className='mt-8 lg:hidden text-xs uppercase font-thin text-center'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>
                             <div className='hidden lg:flex items-center mt-8'>
                                 <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
                                 <p className='uppercase text-xs font-thin grow text-center'>Step 0/2 Completed</p>
