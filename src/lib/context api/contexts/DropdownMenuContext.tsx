@@ -11,6 +11,7 @@ interface DropdownMenuContextProps {
     setMenuItemData: Dispatch<SetStateAction<menuItem | undefined>>;
     isHovering: boolean;
     setIsHovering: Dispatch<SetStateAction<boolean>>;
+    user: null;
 }
 
 
@@ -22,5 +23,6 @@ export const DropdownMenuContext = createContext<DropdownMenuContextProps>({
     menuItemData: undefined,
     setMenuItemData: (): menuItem | undefined => (undefined),
     isHovering: false,
-    setIsHovering: (): boolean => (false)
+    setIsHovering: (): boolean => (false),
+    user: null,
 });

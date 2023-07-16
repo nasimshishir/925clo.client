@@ -16,15 +16,11 @@ export default function RootLayout({
 }) {
     return (
         <DropdownMenuContextProvider>
-            <html lang="en">
-                <body className="">
-                    <main className="min-h-screen">
-                        <Headerv2 />
-                        {children}
-                        <Footerv2 />
-                    </main>
-                </body>
-            </html>
+            <section className="min-h-screen">
+                <Headerv2 />
+                {children}
+                <Footerv2 />
+            </section>
         </DropdownMenuContextProvider>
     )
 }

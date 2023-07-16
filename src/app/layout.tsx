@@ -14,15 +14,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <DropdownMenuContextProvider>
       <html lang="en">
         <body className="">
+          <Headerv1 />
           <main className="min-h-screen">
-            <Headerv1 />
             {children}
-            <Footerv1 />
           </main>
+          <Footerv1 />
         </body>
       </html>
     </DropdownMenuContextProvider>

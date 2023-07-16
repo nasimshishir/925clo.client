@@ -1,12 +1,18 @@
 import Image from 'next/image';
 import React from 'react'
 import signupImg from '@assets/signup_img.jpg'
-import SignUpForm from '@components/SignUpForm';
 import { TfiAngleLeft } from 'react-icons/tfi'
 import Link from 'next/link';
+import SignUpForm from '@components/SignUpForm';
 
 
-const SignUp: React.FC = () => {
+
+
+
+const SignUpPage: React.FC = () => {
+
+
+
     return (
         <section className='min-h-screen overflow-hidden'>
             <div className='max-h-screen h-screen grid grid-cols-2'>
@@ -32,20 +38,18 @@ const SignUp: React.FC = () => {
                             </div>
                             <p className='mt-8 lg:hidden text-xs uppercase font-thin text-center'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>
                             <div className='hidden lg:flex items-center mt-8'>
-                                <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
+                                <><TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span></>
                                 <p className='uppercase text-xs font-thin grow text-center'>Step 0/2 Completed</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='lg:col-span-1 bg-[url("/img/signup_img.jpg")] bg-bottom bg-cover'>
-                    <div className=''>
-
-                    </div>
+                <div className='lg:col-span-1 relative'>
+                    <Image src={signupImg} alt='signup Image' fill className='object-cover object-bottom' />
                 </div>
             </div>
         </section>
     )
 }
 
-export default SignUp;
+export default SignUpPage;

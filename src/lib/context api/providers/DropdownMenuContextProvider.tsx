@@ -13,11 +13,11 @@ export const DropdownMenuContextProvider = ({ children }: DropdownMenuContextPro
     const [menuData, setMenuData] = useState<menuList[]>([]);
     const [menuItemData, setMenuItemData] = useState<menuItem>();
     const [isHovering, setIsHovering] = useState<boolean>(false);
+    const user = null;
 
 
-    const value = {}
     return (
-        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, isHovering, setIsHovering }} >
+        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, isHovering, setIsHovering, user }} >
             {children}
         </DropdownMenuContext.Provider >
     )

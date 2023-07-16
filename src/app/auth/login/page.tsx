@@ -1,7 +1,9 @@
 import LoginForm from '@components/LoginForm';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { TfiAngleLeft } from 'react-icons/tfi';
+import loginImg from '@assets/login_img.jpg'
 
 const LoginPage: React.FC = () => {
     return (
@@ -27,17 +29,15 @@ const LoginPage: React.FC = () => {
                             <div className='mt-10'>
                                 <LoginForm />
                             </div>
-                            <p className='mt-8 lg:hidden text-xs uppercase font-thin text-center'>Already have an account? <span className='font-medium underline'>Log In</span></p>
+                            <p className='mt-8 lg:hidden text-xs uppercase font-thin text-center'>Don't have an account? <Link href='/auth/signup' className='font-medium underline'>Sign Up</Link></p>
                             <div className='hidden lg:flex items-center mt-8'>
                                 <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='lg:col-span-1 bg-[url("/img/login_img.jpg")] bg-top bg-cover'>
-                    <div className=''>
-
-                    </div>
+                <div className='lg:col-span-1 relative'>
+                    <Image src={loginImg} alt='rggerg' fill className='object-cover object-top' />
                 </div>
             </div>
         </section>
