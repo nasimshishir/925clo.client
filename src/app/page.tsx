@@ -7,9 +7,9 @@ export default function Home() {
   // const { user } = useDropdownMenuContext();
   const user = null;
 
-  // if (!user) {
-  //   redirect('/auth')
-  // }
+  if (!user) {
+    redirect('/auth')
+  }
 
   return (
     <section>

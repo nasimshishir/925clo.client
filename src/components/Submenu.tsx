@@ -25,14 +25,14 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
     }
 
     return (
-        <div className='flex min-h-60 h-auto text-white mt-10'>
+        <div className='flex min-h-screen h-auto text-white mt-10'>
 
             {/* Sub-Menu Items */}
 
             <div className='flex flex-wrap max-w-4xl w-3/4 p-4'>
                 {menuData.map(menu =>
                     <>
-                        <div onMouseEnter={() => { handleHover(menu) }} onMouseLeave={off} className='grid px-2'>
+                        <div onMouseEnter={() => { handleHover(menu) }} onMouseLeave={off} className=' px-2'>
                             <Image className='rounded-md' src={menu.img} alt='menu-item' width={160} height={70} />
                             <div className='text-xs uppercase mx-auto hover:bg-white/10 px-4 py-1 mt-3 hover:rounded-[13px]'>{menu.title}</div>
                         </div>

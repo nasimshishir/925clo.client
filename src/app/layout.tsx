@@ -5,7 +5,7 @@ import { Headerv1 } from '@components';
 
 
 export const metadata = {
-  title: '925clo',
+  title: '925',
   description: 'Your daily style manager',
 }
 
@@ -23,7 +23,6 @@ export default function RootLayout({
           <main className="min-h-screen">
             {children}
           </main>
-          <Footerv1 />
         </body>
       </html>
     </DropdownMenuContextProvider>

@@ -1,11 +1,10 @@
-import { Headerv2 } from '@components';
-import Footerv2 from '@components/Footer.v2';
+import { Headerv1 } from '@components';
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
 
 
 export const metadata = {
-    title: 'Virtual Styling',
+    title: '925',
     description: 'Your daily style manager',
 }
 
@@ -17,9 +16,7 @@ export default function RootLayout({
     return (
         <DropdownMenuContextProvider>
             <section className="min-h-screen">
-                <Headerv2 />
                 {children}
-                <Footerv2 />
             </section>
         </DropdownMenuContextProvider>
     )
