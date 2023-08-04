@@ -1,6 +1,6 @@
 'use client'
 import { DropdownMenuContext } from '@lib/context api/contexts/DropdownMenuContext';
-import { menuItem, menuList } from '@lib/types/types';
+import { menuItem } from '@lib/types/types';
 import { ReactNode, useState, useContext } from 'react'
 
 interface DropdownMenuContextProviderProps {
@@ -10,7 +10,7 @@ interface DropdownMenuContextProviderProps {
 export const DropdownMenuContextProvider = ({ children }: DropdownMenuContextProviderProps) => {
 
     const [itemId, setItemId] = useState<number | null>(null);
-    const [menuData, setMenuData] = useState<menuList[]>([]);
+    const [menuData, setMenuData] = useState<menuItem[]>([]);
     const [menuItemData, setMenuItemData] = useState<menuItem>();
     const [isHovering, setIsHovering] = useState<boolean>(false);
     const user = null;

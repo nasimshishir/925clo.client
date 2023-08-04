@@ -6,29 +6,29 @@
                 "id": "s1",
                 "title": "summer",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/summer.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/summer_menu.webp",
+                "fullImg": "/img/summer_bg.webp"
             },
             {
                 "id": "s2",
                 "title": "winter",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/winter.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/winter_menu.webp",
+                "fullImg": "/img/winter_bg.webp"
             },
             {
                 "id": "s3",
                 "title": "spring",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/spring.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/spring_menu.webp",
+                "fullImg": "/img/spring_bg.webp"
             },
             {
                 "id": "s4",
                 "title": "autumn",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/autumn.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/autumn_menu.webp",
+                "fullImg": "/img/autumn_bg.webp"
             }
         ]
     },
@@ -44,24 +44,24 @@
             },
             {
                 "id": "p2",
-                "title": "outwear",
+                "title": "outerwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/outwear.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/outerwear_menu.webp",
+                "fullImg": "/img/outerwear_bg.png"
             },
             {
                 "id": "p3",
                 "title": "bottoms",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/bottoms.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/bottom_menu.webp",
+                "fullImg": "/img/bottom_bg.png"
             },
             {
                 "id": "p4",
                 "title": "accessories",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/accessories.png",
-                "fullImg": "/img/winter_full.png"
+                "img": "/img/accessories_menu.webp",
+                "fullImg": "/img/accessories_bg.webp"
             },
             {
                 "id": "p5",

@@ -7,35 +7,35 @@ import { BsHeart } from "react-icons/bs"
 import Submenu from '@components/Submenu';
 import Link from 'next/link';
 import menus from '../assets/menuItems/menuData.json'
-import { menuList } from '@lib/types/types';
+import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 
 
 
 const Headerv1: React.FC = () => {
 
-    const { menuData, setMenuData, itemId, setItemId, isHovering, menuItemData } = useDropdownMenuContext()
+    const { menuData, setMenuData, itemId, setItemId, isHovering, menuItemData, setIsHovering, setMenuItemData } = useDropdownMenuContext()
     const user = true;
 
 
-    const handleToggle = (id: number | null, data: menuList[]) => {
+    const handleToggle = (id: number | null, data: menuItem[]) => {
         if (itemId === id) {
-            setItemId(null)
+            setItemId(null);
+            return;
         } else {
             setItemId(id)
         }
         setMenuData(data)
-
     }
 
     return (
-        <header className='bg-transparent w-full absolute text-white z-50' style={{
+        <header className={`pt-1 max-h-screen bg-transparent w-full text-white z-50 ${isHovering ? 'h-screen fixed top-0 left-0 bg-cover bg-center transition-all duration-300' : 'absolute'}`} style={{
             backgroundImage: `${isHovering ? `url(${menuItemData?.fullImg})` : ''}`
         }}>
 
 
             {/* Desktop Device */}
-            <nav className='grid grid-cols-5 items-center p-2 mt-1'>
+            <nav className='grid grid-cols-5 items-center p-2'>
                 <div className='col-span-1'>
                     <Link href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
                 </div>

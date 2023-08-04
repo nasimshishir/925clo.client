@@ -12,8 +12,8 @@ export default function Home() {
   }
 
   return (
-    <section>
+    <main>
       <Herov1 />
-    </section>
+    </main>
   )
 }
