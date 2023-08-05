@@ -25,7 +25,7 @@ export default function Home() {
             </p>
           </div>
           <div className='relative'>
-            <Image className='' src={mobile} alt='testing' fill />
+            <Image className='' src={mobile} alt='testing' width={0} height={300} />
           </div>
         </div>
       </section>
