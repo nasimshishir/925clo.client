@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <main className='absolute top-0 left-0 h-screen w-full'>
+    <main className='min-h-screen w-full'>
 
       {/* Hero section Start */}
       <section>
