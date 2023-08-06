@@ -14,8 +14,8 @@ module.exports = {
         helvetica: ['helvetica', 'sans-serif']
       },
       colors: {
-        'primary_orange': '#FF5722',
-        'secondary_orange': '#F25200',
+        'primary_orange': '#F25200',
+        'secondary_orange': '#FF5722',
       },
       fontSize: {
         'xs': '0.72rem',

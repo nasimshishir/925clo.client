@@ -17,7 +17,7 @@
 
 @screen md {
   .sec_title {
-    @apply text-[32px] font-[700] font-helvetica uppercase
+    @apply text-[24px] font-[700] font-helvetica uppercase
   }
 
   .sec_desc {
@@ -27,7 +27,7 @@
 
 @screen lg {
   .sec_title {
-    @apply text-[32px] font-[700] font-helvetica uppercase
+    @apply text-[24px] font-[700] font-helvetica uppercase
   }
 
   .sec_desc {
