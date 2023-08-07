@@ -12,7 +12,7 @@
 }
 
 .sec_desc {
-  @apply text-[0.75rem] font-inter font-thin tracking-wide
+  @apply text-[0.75rem] font-inter font-extralight tracking-wide
 }
 
 @screen md {

@@ -20,8 +20,8 @@ const Herov1: React.FC = () => {
                 <p className='text-white sec_desc text-center mb-5'>In this style profile we ask for your preferences on brands, item types and colours <br /> to help us learn more about you and your individual style.
                 </p>
                 <div className='block lg:flex gap-4 mt-10'>
-                    <Buttonv1 type='submit' css='mb-3' to='/auth/login'>Log in</Buttonv1>
-                    <Buttonv2 type='submit' to='/auth/signup'>Sign Up</Buttonv2>
+                    <Buttonv1 type='submit' css='mb-3 w-60' to='/auth/login'>Generate Outfit</Buttonv1>
+                    <Buttonv2 type='submit' css='w-60' to='/auth/signup'>Your Style Profile</Buttonv2>
                 </div>
             </div>
         </div>

@@ -42,7 +42,7 @@ export default function Home() {
       {/* What we do section End */}
 
       {/* How it Works Section Start */}
-      <section className='bg-black px-10 lg:px-28 py-20'>
+      <section className='bg-black px-10 lg:px-28 py-24'>
         <div>
           <h2 className='text-white sec_title mb-12'>How It Works</h2>
           <div className='grid grid-cols-1 lg:grid-cols-3 text-white gap-20 lg:gap-10'>
