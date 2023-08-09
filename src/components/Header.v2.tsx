@@ -30,14 +30,14 @@ const Headerv2: React.FC = () => {
             backgroundImage: `${isHovering ? `url(${menuItemData?.fullImg})` : ''}`
         }}>
             <nav className={`grid grid-cols-5 items-center p-2`}>
-                <div className='col-span-1'>
-                    <Link href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
+                <div className='col-span-1 flex justify-start'>
+                    <Link className='' href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
                 </div>
 
                 {/* Main Menu */}
                 <div className="md:block hidden col-span-3">
                     <ul className='flex justify-center items-center'>
-                        <Link href="/styling"><li className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-[#F25200] hover:text-white`}>Style Profile</li></Link>
+                        <Link href="/style_profile"><li className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-[#F25200] hover:text-white`}>Style Profile</li></Link>
                         <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-[#F25200] hover:text-white cursor-pointer'>Shop Seasons</li>
                         <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-[#F25200] hover:text-white cursor-pointer'>Shop Product</li>
                         <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-[#F25200] hover:text-white cursor-pointer'>Shop by Occasion</li>

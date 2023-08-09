@@ -1,6 +1,5 @@
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
-import { Headerv1, Footerv1 } from '@components';
 
 
 export const metadata = {
@@ -18,9 +17,7 @@ export default function RootLayout({
     <DropdownMenuContextProvider>
       <html lang="en">
         <body className="">
-          <Headerv1 />
           {children}
-          <Footerv1 />
         </body>
       </html>
     </DropdownMenuContextProvider>

@@ -4,7 +4,7 @@ import { DropdownMenuContextProvider } from '@lib/context api/providers/Dropdown
 
 
 export const metadata = {
-    title: '925',
+    title: '925-Build Style Profile',
     description: 'Your daily style manager',
 }
 
@@ -15,9 +15,14 @@ export default function RootLayout({
 }) {
     return (
         <DropdownMenuContextProvider>
-            <section className="min-h-screen">
-                {children}
-            </section>
+            <html lang="en">
+                <body className="">
+                    <Headerv1 />
+                    <section className="min-h-screen">
+                        {children}
+                    </section>
+                </body>
+            </html>
         </DropdownMenuContextProvider>
     )
 }
