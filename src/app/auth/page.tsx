@@ -1,6 +1,4 @@
 import React from 'react'
-import bg from '@assets/login_landing.png'
-import Image from 'next/image';
 import Buttonv1 from '@components/Button.v1';
 import Buttonv2 from '@components/Button.v2';
 
