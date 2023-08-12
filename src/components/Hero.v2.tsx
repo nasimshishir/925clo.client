@@ -2,6 +2,7 @@
 import React from 'react';
 import { UserLocationInputs } from '@components';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import ClothingTypeInput from './ClothingTypeInput';
 
 
 
@@ -14,7 +15,8 @@ const Herov2: React.FC = () => {
 
     return (
         <div className=''>
-            <UserLocationInputs />
+            {(styleProfileformStep === 0) && <UserLocationInputs />}
+            {(styleProfileformStep === 1) && <ClothingTypeInput />}
         </div>
     )
 }

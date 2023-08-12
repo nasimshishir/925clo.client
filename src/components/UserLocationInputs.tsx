@@ -67,7 +67,6 @@ const UserLocationInputs: React.FC = () => {
         }
 
         console.log(error);
-
     }
 
     return (
