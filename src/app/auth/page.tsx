@@ -1,6 +1,6 @@
 import React from 'react'
-import Buttonv1 from '@components/Button.v1';
-import Buttonv2 from '@components/Button.v2';
+import Buttonv1 from '@components/Buttons/Button.v1';
+import Buttonv2 from '@components/Buttons/Button.v2';
 
 const Auth: React.FC = () => {
 

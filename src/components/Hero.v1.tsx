@@ -2,8 +2,8 @@
 import React from 'react'
 import logo from '@assets/logo_email.svg'
 import Image from 'next/image';
-import Buttonv1 from '@components/Button.v1';
-import Buttonv2 from '@components/Button.v2';
+import Buttonv1 from '@components/Buttons/Button.v1';
+import Buttonv2 from '@components/Buttons/Button.v2';
 
 const Herov1: React.FC = () => {
 

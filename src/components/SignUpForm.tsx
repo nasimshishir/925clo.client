@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Buttonv3 from './Button.v3';
+import Buttonv3 from './Buttons/Button.v3';
 import axios from 'axios';
 
 interface SignUpFormData {

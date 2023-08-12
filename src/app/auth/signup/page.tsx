@@ -20,7 +20,7 @@ const SignUpPage: React.FC = () => {
                     <div className='grid h-screen ps-10 lg:ps-20 pe-10 lg:pe-32'>
                         <div className='my-auto'>
                             <div className='flex items-center mb-8 lg:hidden'>
-                                <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
+                                <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
                                 <p className='hidden lg:block uppercase text-xs font-thin grow text-center'>Step 0/2 Completed</p>
                             </div>
                             <div className='flex justify-between items-baseline'>
@@ -38,7 +38,7 @@ const SignUpPage: React.FC = () => {
                             </div>
                             <p className='mt-8 lg:hidden text-xs uppercase font-thin text-center'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>
                             <div className='hidden lg:flex items-center mt-8'>
-                                <><TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span></>
+                                <><TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span></>
                                 <p className='uppercase text-xs font-thin grow text-center'>Step 0/2 Completed</p>
                             </div>
                         </div>

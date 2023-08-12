@@ -7,9 +7,10 @@ import Herov2 from "./Hero.v2";
 import Submenu from "./Submenu";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
-import Buttonv1 from "./Button.v1";
-import Buttonv2 from "./Button.v2";
-import Buttonv3 from "./Button.v3";
+import Buttonv1 from "./Buttons/Button.v1";
+import Buttonv2 from "./Buttons/Button.v2";
+import Buttonv3 from "./Buttons/Button.v3";
+import UserLocationInputs from "./UserLocationInputs";
 export {
     Headerv1,
     Headerv2,
@@ -22,5 +23,6 @@ export {
     SignUpForm,
     Buttonv1,
     Buttonv2,
-    Buttonv3
+    Buttonv3,
+    UserLocationInputs
 }

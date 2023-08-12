@@ -14,10 +14,12 @@ export const DropdownMenuContextProvider = ({ children }: DropdownMenuContextPro
     const [menuItemData, setMenuItemData] = useState<menuItem>();
     const [isHovering, setIsHovering] = useState<boolean>(false);
     const user = null;
+    const [styleProfileformStep, setStyleProfileformStep] = useState<number>(0)
+
 
 
     return (
-        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, isHovering, setIsHovering, user }} >
+        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, isHovering, setIsHovering, user, styleProfileformStep, setStyleProfileformStep }} >
             {children}
         </DropdownMenuContext.Provider >
     )
