@@ -1,8 +1,7 @@
 'use client'
 import React from 'react';
-import { UserLocationInputs } from '@components';
+import { ClothingTypeInput, UserLocationInput, SizeInput, BrandInput } from '@components';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
-import ClothingTypeInput from './ClothingTypeInput';
 
 
 
@@ -15,8 +14,10 @@ const Herov2: React.FC = () => {
 
     return (
         <div className=''>
-            {(styleProfileformStep === 0) && <UserLocationInputs />}
+            {(styleProfileformStep === 0) && <UserLocationInput />}
             {(styleProfileformStep === 1) && <ClothingTypeInput />}
+            {(styleProfileformStep === 2) && <SizeInput />}
+            {(styleProfileformStep === 3) && <BrandInput />}
         </div>
     )
 }

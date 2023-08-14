@@ -19,7 +19,7 @@ const people = [
 ]
 
 const countries = [
-    { name: 'search the country' },
+    { name: 'search the country', code: null },
     { name: 'Afghanistan', code: 'AF' },
     { name: 'Åland Islands', code: 'AX' },
     { name: 'Albania', code: 'AL' },
@@ -55,23 +55,23 @@ const UserLocationInputs: React.FC = () => {
     const [selected, setSelected] = useState(people[0])
 
     const handleClick = () => {
-        console.log(country.name);
-        console.log(selected.name);
 
         if ((country.name !== 'search the country') && (selected.name !== 'search the city')) {
             setStyleProfileformStep(styleProfileformStep + 1)
         } else if (country.name === 'search the country') {
             setError('Please Select Your Country')
         } else if (selected.name === 'search the city') {
-            setError('Please Select your City')
+            setError('Please Select your city')
         }
 
         console.log(error);
     }
 
+
+
     return (
-        <div className='h-screen grid grid-cols-1 lg:grid-cols-2'>
-            <div className='bg-white pt-28 items-center mx-auto w-3/4'>
+        <div className='max-h-screen h-screen grid grid-cols-1 lg:grid-cols-2'>
+            <div className='bg-white pt-28 items-center mx-auto w-3/5 pb-10'>
                 <div className='flex items-center mb-8 lg:hidden'>
                     <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
                     <p className='hidden lg:block uppercase text-xs font-thin grow text-center'>Style Profile 0/7 Completed</p>
@@ -81,10 +81,12 @@ const UserLocationInputs: React.FC = () => {
                 </p>
                 <div>
                     {error && <p className='flex items-center p-3 bg-red-300 text-white rounded-lg uppercase'><span><IoIosAlert className='me-5' size={13} /></span>{error}</p>}
+
+                    {/* Country ListBox */}
                     <div className="cursor-pointer">
                         <Listbox value={country} onChange={setCountry} >
                             <div className="relative mt-1">
-                                <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-xs">
                                     <span className="block truncate uppercase">{country.name}</span>
                                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                         <BiSearch /></span>
@@ -95,7 +97,7 @@ const UserLocationInputs: React.FC = () => {
                                     leaveFrom="opacity-100"
                                     leaveTo="opacity-0"
                                 >
-                                    <Listbox.Options className="relative mt-2 max-h-60 w-full overflow-auto rounded-md bg-[#F6F6F6] py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                    <Listbox.Options className="relative mt-1 max-h-48 w-full overflow-auto rounded-md bg-[#F6F6F6] py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-xs">
                                         {countries.map((contrye, personIdx) => (
                                             <Listbox.Option
                                                 key={personIdx}
@@ -108,12 +110,12 @@ const UserLocationInputs: React.FC = () => {
                                                 {({ selected }) => (
                                                     <>
                                                         <span
-                                                            className={`block truncate ${country ? 'font-medium uppercase' : 'font-normal'
+                                                            className={`block truncate ${selected ? 'font-normal uppercase' : 'font-light'
                                                                 }`}
                                                         >
                                                             {contrye.name}
                                                         </span>
-                                                        {country ? (
+                                                        {selected ? (
                                                             <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600 uppercase">
                                                             </span>
                                                         ) : null}
@@ -126,10 +128,12 @@ const UserLocationInputs: React.FC = () => {
                             </div>
                         </Listbox>
                     </div>
+
+                    {/* City ListBox */}
                     <div className=''>
-                        <Listbox value={selected} onChange={setSelected} >
+                        <Listbox value={selected} onChange={setSelected}>
                             <div className="relative mt-1">
-                                <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                                <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-xs">
                                     <span className="block truncate uppercase">{selected.name}</span>
                                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                         <BiSearch /></span>
@@ -140,7 +144,7 @@ const UserLocationInputs: React.FC = () => {
                                     leaveFrom="opacity-100"
                                     leaveTo="opacity-0"
                                 >
-                                    <Listbox.Options className="relative mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                    <Listbox.Options className="relative mt-1 max-h-48 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-xs">
                                         {people.map((person, personIdx) => (
                                             <Listbox.Option
                                                 key={personIdx}
@@ -153,7 +157,7 @@ const UserLocationInputs: React.FC = () => {
                                                 {({ selected }) => (
                                                     <>
                                                         <span
-                                                            className={`block truncate ${selected ? 'font-medium uppercase' : 'font-normal'
+                                                            className={`block truncate ${selected ? 'font-normal uppercase' : 'font-light'
                                                                 }`}
                                                         >
                                                             {person.name}

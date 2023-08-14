@@ -17,7 +17,6 @@ export default function RootLayout({
     return (
         <DropdownMenuContextProvider>
             <section className="min-h-screen">
-                <Headerv2 />
                 {children}
             </section>
         </DropdownMenuContextProvider>

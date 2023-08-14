@@ -33,7 +33,7 @@ const SignUpPage: React.FC = () => {
                             </div>
 
                             {/* form container */}
-                            <div className='mt-10'>
+                            <div className='mt-6'>
                                 <SignUpForm />
                             </div>
                             <p className='mt-8 lg:hidden text-xs uppercase font-thin text-center'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>
