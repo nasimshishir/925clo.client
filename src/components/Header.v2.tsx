@@ -32,7 +32,7 @@ const Headerv2: React.FC = () => {
         <header className={`pt-1 max-h-screen w-full absolute z-50 ${menuItemData ? 'h-screen fixed top-0 left-0 text-white bg-transparent bg-cover bg-top transition-all duration-200' : 'text-black bg-[#F6F6F6]'}`} style={{
             backgroundImage: `${menuItemData ? `url(${menuItemData?.fullImg})` : ''}`
         }}>
-            <nav className={`grid grid-cols-5 items-center py-2 px-3`}>
+            <nav className={`grid grid-cols-5 items-center py-2 px-6`}>
                 <div className='col-span-1 flex justify-start'>
                     <Link className='' href='/'><Image className='px-2' src={!itemId ? Logo : Logo2} width={70} height={29} alt='925clo_logo' /></Link>
                 </div>
