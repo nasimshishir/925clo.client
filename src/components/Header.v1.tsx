@@ -14,28 +14,31 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 
 const Headerv1: React.FC = () => {
 
-    const { menuData, setMenuData, itemId, setItemId, isHovering, menuItemData, setIsHovering, setMenuItemData } = useDropdownMenuContext()
+    const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData } = useDropdownMenuContext()
     const user = true;
 
 
     const handleToggle = (id: number | null, data: menuItem[]) => {
         if (itemId === id) {
             setItemId(null);
+            setMenuItemData(null)
+            setMenuData(null)
             return;
         } else {
             setItemId(id)
+            setMenuData(data)
+            setMenuItemData(data[0])
         }
-        setMenuData(data)
     }
 
     return (
-        <header className={`pt-1 max-h-screen bg-transparent w-full text-white z-50 ${isHovering ? 'h-screen fixed top-0 left-0 bg-cover bg-center transition-all duration-300' : 'absolute'}`} style={{
-            backgroundImage: `${isHovering ? `url(${menuItemData?.fullImg})` : ''}`
+        <header className={`max-h-screen bg-transparent w-full text-white z-50 ${menuItemData ? 'h-screen fixed top-0 left-0 bg-cover bg-top transition-all duration-300' : 'absolute'}`} style={{
+            backgroundImage: `${menuItemData ? `url(${menuItemData?.fullImg})` : ''}`
         }}>
 
 
             {/* Desktop Device */}
-            <nav className='grid grid-cols-5 items-center p-2'>
+            <nav className='grid grid-cols-5 items-center py-2 px-6'>
                 <div className='col-span-1 flex justify-start'>
                     <Link className='' href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
                 </div>

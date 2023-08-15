@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React from 'react'
 import Logo from "@assets/logo_2.png";
+import Logo2 from "@assets/logo.png";
 import Avatar from "@assets/profile-avatar.png"
 import { BsHeart } from "react-icons/bs"
 import Submenu from '@components/Submenu';
@@ -12,26 +13,28 @@ import { useDropdownMenuContext, } from '@lib/context api/providers/DropdownMenu
 
 const Headerv2: React.FC = () => {
 
-    const { menuData, setMenuData, itemId, setItemId, isHovering, menuItemData } = useDropdownMenuContext()
+    const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData } = useDropdownMenuContext()
 
 
     const handleToggle = (id: number | null, data: menuItem[]) => {
         if (itemId === id) {
-            setItemId(null)
+            setItemId(null);
+            setMenuItemData(null)
+            setMenuData(null)
         } else {
             setItemId(id)
+            setMenuData(data)
+            setMenuItemData(data[0])
         }
-        setMenuData(data)
-
     }
 
     return (
-        <header className={`pt-1 max-h-screen w-full absolute z-50 ${isHovering ? 'h-screen fixed top-0 left-0 text-white bg-transparent bg-cover transition-all duration-200' : 'text-black bg-[#F6F6F6]'}`} style={{
-            backgroundImage: `${isHovering ? `url(${menuItemData?.fullImg})` : ''}`
+        <header className={`pt-1 max-h-screen w-full absolute z-50 ${menuItemData ? 'h-screen fixed top-0 left-0 text-white bg-transparent bg-cover bg-top transition-all duration-200' : 'text-black bg-[#F6F6F6]'}`} style={{
+            backgroundImage: `${menuItemData ? `url(${menuItemData?.fullImg})` : ''}`
         }}>
-            <nav className={`grid grid-cols-5 items-center p-2`}>
+            <nav className={`grid grid-cols-5 items-center py-2 px-3`}>
                 <div className='col-span-1 flex justify-start'>
-                    <Link className='' href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
+                    <Link className='' href='/'><Image className='px-2' src={!itemId ? Logo : Logo2} width={70} height={29} alt='925clo_logo' /></Link>
                 </div>
 
                 {/* Main Menu */}

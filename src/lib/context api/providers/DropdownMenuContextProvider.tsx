@@ -10,16 +10,15 @@ interface DropdownMenuContextProviderProps {
 export const DropdownMenuContextProvider = ({ children }: DropdownMenuContextProviderProps) => {
 
     const [itemId, setItemId] = useState<number | null>(null);
-    const [menuData, setMenuData] = useState<menuItem[]>([]);
-    const [menuItemData, setMenuItemData] = useState<menuItem>();
-    const [isHovering, setIsHovering] = useState<boolean>(false);
+    const [menuData, setMenuData] = useState<menuItem[] | null>(null);
+    const [menuItemData, setMenuItemData] = useState<menuItem | null>(null);
     const user = null;
     const [styleProfileformStep, setStyleProfileformStep] = useState<number>(0)
 
 
 
     return (
-        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, isHovering, setIsHovering, user, styleProfileformStep, setStyleProfileformStep }} >
+        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, user, styleProfileformStep, setStyleProfileformStep }} >
             {children}
         </DropdownMenuContext.Provider >
     )

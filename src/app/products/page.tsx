@@ -7,7 +7,9 @@ const styling = () => {
     return (
         <div >
             <Headerv2 />
-            <Herov2 />
+            <section className='h-screen'>
+
+            </section>
             <Footerv1 />
         </div>
 

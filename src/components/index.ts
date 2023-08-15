@@ -10,10 +10,11 @@ import SignUpForm from "./SignUpForm";
 import Buttonv1 from "./Buttons/Button.v1";
 import Buttonv2 from "./Buttons/Button.v2";
 import Buttonv3 from "./Buttons/Button.v3";
-import UserLocationInput from "./UserLocationInputs";
-import ClothingTypeInput from "./ClothingTypeInput";
-import SizeInput from "./SizeInput";
-import BrandInput from "./BrandInput";
+import UserLocationInput from "./StyleProfileFormSteps/UserLocationInputs";
+import ClothingTypeInput from "./StyleProfileFormSteps/ClothingTypeInput";
+import SizeInput from "./StyleProfileFormSteps/SizeInput";
+import BrandInput from "./StyleProfileFormSteps/BrandInput";
+import ProductFilterSidebar from "./ProductFilterSidebar";
 
 
 export {
@@ -32,5 +33,6 @@ export {
     UserLocationInput,
     ClothingTypeInput,
     SizeInput,
-    BrandInput
+    BrandInput,
+    ProductFilterSidebar
 }

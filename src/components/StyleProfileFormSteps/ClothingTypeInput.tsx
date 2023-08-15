@@ -1,6 +1,6 @@
 import React from 'react'
 import { TfiAngleLeft } from 'react-icons/tfi';
-import Buttonv1 from './Buttons/Button.v1';
+import { Buttonv1 } from '@components';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { handleBack, handleNext } from '@lib/common'
 

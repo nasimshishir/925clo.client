@@ -8,31 +8,31 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 
 
 type SubMenuProps = {
-    menuData: menuItem[]
+    menuData: menuItem[] | null
 }
 
 const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
 
-    const { isHovering, setIsHovering, menuItemData, setMenuItemData } = useDropdownMenuContext();
+    const { menuItemData, setMenuItemData } = useDropdownMenuContext();
 
     const handleHover = (menuItem: menuItem) => {
-        setIsHovering(true)
+        // setIsHovering(true)
         setMenuItemData(menuItem)
     }
 
     const off = () => {
-        setIsHovering(false)
+        // setIsHovering(false)
     }
 
     return (
-        <div className={`flex max-h-screen h-auto text-white mt-10`}>
+        <div className={`flex max-h-screen h-auto text-white mt-10 mx-6`}>
 
             {/* Sub-Menu Items */}
 
-            <div className='hidden lg:flex flex-wrap max-w-4xl w-3/4 p-4'>
-                {menuData.map(menu =>
+            <div className='hidden lg:flex flex-wrap'>
+                {menuData && menuData.map(menu =>
                     <>
-                        <div onMouseEnter={() => { handleHover(menu) }} onMouseLeave={off} className='grid px-1 group'>
+                        <div onMouseEnter={() => { handleHover(menu) }} onMouseLeave={off} className='grid px-1 group cursor-pointer'>
                             <Image className='rounded-md' src={menu.img} alt='menu-item' width={160} height={96} />
                             <div className={`text-xs uppercase mx-auto group-hover:bg-white/10 px-4 py-1 mt-3 group-hover:rounded-[13px]`}>{menu.title}</div>
                         </div>
@@ -41,10 +41,11 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
             </div>
 
             {/* Sub-Menu Details */}
-            {isHovering && <div className='w-1/4 mx-6 pt-6'>
-                <h3 className='text-2xl font-bold uppercase mb-2'>{menuItemData?.title}</h3>
-                <p className='text-xs font-extralight'>{menuItemData?.desc}</p>
-            </div>}
+            {menuItemData &&
+                <div className='w-1/4 ms-8'>
+                    <h3 className='text-2xl font-bold uppercase mb-2'>{menuItemData?.title}</h3>
+                    <p className='text-xs font-extralight'>{menuItemData?.desc}</p>
+                </div>}
         </div>
     )
 }

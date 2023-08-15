@@ -4,7 +4,7 @@ import React, { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react'
 import { BiSearch } from 'react-icons/bi';
 import { IoIosAlert } from 'react-icons/io';
-import Buttonv1 from './Buttons/Button.v1';
+import { Buttonv1 } from '@components';
 import { TfiAngleLeft } from 'react-icons/tfi';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 

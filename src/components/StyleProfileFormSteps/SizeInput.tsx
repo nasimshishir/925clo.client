@@ -1,19 +1,28 @@
 'use client'
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
+import { Buttonv1 } from '@components';
+import { TfiAngleDown, TfiAngleLeft } from 'react-icons/tfi';
 import { IoIosAlert } from 'react-icons/io';
-import { TfiAngleLeft } from 'react-icons/tfi';
-import Buttonv1 from './Buttons/Button.v1';
+import { Listbox, Transition } from '@headlessui/react';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 
-const BrandInput: React.FC = () => {
+
+const shoeSizes = [
+    'select shoe size uk', '38', '39', '40', '41', '42', '43', '44', '45', '46'
+]
+
+const SizeInput: React.FC = () => {
 
     const { styleProfileformStep, setStyleProfileformStep } = useDropdownMenuContext()
 
 
+
+    const [footwearSize, setFootwearSize] = useState(shoeSizes[0])
     const [error, setError] = useState<string | null>(null)
 
     const handleClick = () => {
         setStyleProfileformStep(styleProfileformStep + 1)
+
     }
 
     return (
@@ -86,19 +95,67 @@ const BrandInput: React.FC = () => {
                             </li>
                         </ul>
                     </div>
+
+                    {/* Shoe Size */}
+                    <div className='mt-7'>
+                        <div className="cursor-pointer w-full lg:w3/4">
+                            <Listbox value={footwearSize} onChange={setFootwearSize} >
+                                <div className="relative mt-1">
+                                    <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-xs">
+                                        <span className="block truncate uppercase">{footwearSize}</span>
+                                        <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                            <TfiAngleDown /></span>
+                                    </Listbox.Button>
+                                    <Transition
+                                        as={Fragment}
+                                        leave="transition ease-in duration-100"
+                                        leaveFrom="opacity-100"
+                                        leaveTo="opacity-0"
+                                    >
+                                        <Listbox.Options className="relative mt-2 max-h-60 w-full overflow-auto rounded-md bg-[#F6F6F6] py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-xs">
+                                            {shoeSizes.map((shoeSize, shoeSizeIdx) => (
+                                                <Listbox.Option
+                                                    key={shoeSizeIdx}
+                                                    className={({ active }) =>
+                                                        `relative cursor-default select-none py-2 pl-10 pr-4 uppercase ${active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
+                                                        }`
+                                                    }
+                                                    value={shoeSize}
+                                                >
+                                                    {({ selected }) => (
+                                                        <>
+                                                            <span
+                                                                className={`block truncate ${selected ? 'font-normal uppercase' : 'font-light'
+                                                                    }`}
+                                                            >
+                                                                {shoeSize}
+                                                            </span>
+                                                            {selected ? (
+                                                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600 uppercase">
+                                                                </span>
+                                                            ) : null}
+                                                        </>
+                                                    )}
+                                                </Listbox.Option>
+                                            ))}
+                                        </Listbox.Options>
+                                    </Transition>
+                                </div>
+                            </Listbox>
+                        </div>
+                    </div>
+
                 </div>
                 <Buttonv1 css='my-5 w-full' onClick={() => handleClick()}>Next Step</Buttonv1>
                 <div className='hidden lg:flex items-center mt-8'>
                     <><TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span></>
-                    <p className='uppercase text-xs font-thin grow text-center'>
-                        {`Style Profile ${styleProfileformStep}/7 Completed`}
-                    </p>
+                    <p className='uppercase text-xs font-thin grow text-center'>{`Style Profile ${styleProfileformStep}/7 Completed`}</p>
                 </div>
 
             </div>
-            <div className='hidden lg:block bg-top bg-cover' style={{ backgroundImage: 'url(/img/brandInputBg.png)' }} ></div>
+            <div className='hidden lg:block bg-top bg-cover' style={{ backgroundImage: 'url(/img/sizeInputBg.png)' }} ></div>
         </div>
     )
 }
 
-export default BrandInput;
+export default SizeInput;
