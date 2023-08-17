@@ -15,8 +15,8 @@ const Products: React.FC = () => {
     return (
         <div >
             <Headerv2 />
-            <section className='pt-20 px-8'>
-                <div className='flex justify-between items-baseline border-b-2'>
+            <section className='pt-20 px-8 bg-white'>
+                <div className='flex justify-between items-baseline'>
                     <div>
                         <p className='uppercase text-[0.6rem]'>{'Products>Shop Season'}</p>
                     </div>
