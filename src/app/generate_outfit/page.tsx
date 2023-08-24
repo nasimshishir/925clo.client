@@ -7,8 +7,8 @@ const generateOutfit: React.FC = () => {
 
   const images = ['https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg', 'https://images.pexels.com/photos/748870/pexels-photo-748870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/101667/pexels-photo-101667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']
   return (
-    <div className=''>
-      <div className='w-full max-w-[1140px] mx-auto py-20 max-h-screen'>
+    <div className='max-h-screen'>
+      <div className='w-full max-w-[1140px] mx-auto py-20 h-screen'>
         {/* Head */}
         <div className='mb-6 flex justify-between items-center'>
           <div className='flex items-center'>
@@ -35,17 +35,17 @@ const generateOutfit: React.FC = () => {
 
         {/* Outfit body */}
         {/* Desktop */}
-        <div className='hidden lg:grid grid-cols-2 lg:grid-cols-3 gap-x-5'>
-          <div className='grid grid-cols-1'>
-            <div><ImageCarousel images={images} imgCss='h-[515px]' /></div>
+        <div className='hidden lg:grid lg:grid-cols-3 gap-x-3'>
+          <div className='flex flex-col'>
+            <ImageCarousel images={images} height='h-[70vh]' />
           </div>
-          <div className='grid grid-cols-1 gap-y-8'>
-            <div className=''><ImageCarousel images={images} imgCss='h-[220px]' /></div>
-            <div className=''><ImageCarousel images={images} imgCss='h-[220px]' /></div>
+          <div className='flex flex-col justify-between'>
+            <ImageCarousel images={images} height='h-[29vh]' />
+            <ImageCarousel images={images} height='h-[29vh]' />
           </div>
-          <div className='grid grid-cols-1 gap-y-8'>
-            <div className=''><ImageCarousel images={images} imgCss='h-[220px]' /></div>
-            <div className=''><ImageCarousel images={images} imgCss='h-[220px]' /></div>
+          <div className='flex flex-col justify-between'>
+            <ImageCarousel images={images} height='h-[29vh]' />
+            <ImageCarousel images={images} height='h-[29vh]' />
           </div>
         </div>
 
