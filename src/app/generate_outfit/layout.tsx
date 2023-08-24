@@ -1,3 +1,4 @@
+import { Headerv2 } from '@components';
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
 
@@ -12,15 +13,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
-
   return (
-    <DropdownMenuContextProvider>
-      <html lang="en">
-        <body className="overflow-x-hidden">
-          {children}
-        </body>
-      </html>
-    </DropdownMenuContextProvider>
+    <section className="min-h-screen">
+      <Headerv2 />
+      {children}
+    </section>
   )
 }

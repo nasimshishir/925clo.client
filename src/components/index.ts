@@ -15,6 +15,7 @@ import ClothingTypeInput from "./StyleProfileFormSteps/ClothingTypeInput";
 import SizeInput from "./StyleProfileFormSteps/SizeInput";
 import BrandInput from "./StyleProfileFormSteps/BrandInput";
 import ProductFilterSidebar from "./ProductFilterSidebar";
+import ImageCarousel from './ImageCarousal'
 
 
 export {
@@ -34,5 +35,6 @@ export {
     ClothingTypeInput,
     SizeInput,
     BrandInput,
-    ProductFilterSidebar
+    ProductFilterSidebar,
+    ImageCarousel
 }

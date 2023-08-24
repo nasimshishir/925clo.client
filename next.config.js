@@ -8,6 +8,9 @@ const nextConfig = {
                 port: '',
                 pathname: '/data/**',
             },
+            {
+                hostname: 'images.pexels.com',
+            }
         ],
     },
 }
