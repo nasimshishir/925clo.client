@@ -15,3 +15,9 @@ export const handleBack = (setStyleProfileformStep: Function, styleProfileformSt
 export const handleNext = (setStyleProfileformStep: Function, styleProfileformStep: number) => {
     setStyleProfileformStep(styleProfileformStep + 1)
 };
+
+export const wishListToggle = (setWishlistIsOpen: Function, wishlistIsOpen: boolean) => {
+    setWishlistIsOpen(!wishlistIsOpen);
+    console.log(wishlistIsOpen);
+
+}

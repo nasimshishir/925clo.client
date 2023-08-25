@@ -11,7 +11,9 @@ interface DropdownMenuContextProps {
     setMenuItemData: Dispatch<SetStateAction<menuItem | null>>;
     user: null;
     styleProfileformStep: number;
-    setStyleProfileformStep: Dispatch<SetStateAction<number>>
+    setStyleProfileformStep: Dispatch<SetStateAction<number>>;
+    wishlistIsOpen: boolean;
+    setWishlistIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
 
@@ -25,4 +27,6 @@ export const DropdownMenuContext = createContext<DropdownMenuContextProps>({
     user: null,
     styleProfileformStep: 0,
     setStyleProfileformStep: (): number => 0,
+    wishlistIsOpen: false,
+    setWishlistIsOpen: () => (false)
 });

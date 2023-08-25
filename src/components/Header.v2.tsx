@@ -10,10 +10,11 @@ import Link from 'next/link';
 import menus from '../assets/menuItems/menuData.json'
 import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext, } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { wishListToggle } from '@lib/common';
 
 const Headerv2: React.FC = () => {
 
-    const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData } = useDropdownMenuContext()
+    const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, wishlistIsOpen, setWishlistIsOpen } = useDropdownMenuContext()
 
 
     const handleToggle = (id: number | null, data: menuItem[]) => {
@@ -27,6 +28,8 @@ const Headerv2: React.FC = () => {
             setMenuItemData(data[0])
         }
     }
+
+
 
     return (
         <header className={`max-h-screen w-full absolute z-50 ${menuItemData ? 'h-screen fixed top-0 left-0 text-white bg-transparent bg-cover bg-top transition-all duration-200' : 'text-black bg-[#F6F6F6]'}`} style={{
@@ -51,7 +54,7 @@ const Headerv2: React.FC = () => {
                 <div className='md:block hidden col-span-1'>
                     <ul className='flex flex-row justify-end items-center'>
                         <li className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-[#F25200] hover:text-white'>How it Works</li>
-                        <li className='text-xs uppercase px-3'><BsHeart size={'1.7em'} /></li>
+                        <li className='text-xs uppercase px-3 cursor-pointer' onClick={() => { wishListToggle(setWishlistIsOpen, wishlistIsOpen) }}><BsHeart size={'1.7em'} /></li>
                         <li className='text-xs uppercase px-3'><Image className='rounded-full' src={Avatar} width={32} height={32} alt='customer-rofile-pic' /></li>
                     </ul>
                     {/* <ul className='flex flex-row justify-end items-center'>

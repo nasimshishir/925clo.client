@@ -1,10 +1,16 @@
-import { Footerv1, Herov1, Headerv1 } from '@components'
+'use client'
+import { Footerv1, Herov1, Headerv1, WishlistSidebar } from '@components'
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import mobile from '@assets/mobile_section.webp'
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { wishListToggle } from '@lib/common';
 
 
 export default function Home() {
+
+  const { wishlistIsOpen } = useDropdownMenuContext()
+
   const user = true;
 
   if (!user) {
@@ -14,6 +20,7 @@ export default function Home() {
   return (
     <>
       <Headerv1 />
+      {wishlistIsOpen && <WishlistSidebar />}
 
       <main className='min-h-screen w-full'>
 
