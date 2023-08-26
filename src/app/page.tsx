@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import mobile from '@assets/mobile_section.webp'
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
-import { wishListToggle } from '@lib/common';
 
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
   return (
     <>
       <Headerv1 />
-      {wishlistIsOpen && <WishlistSidebar />}
 
       <main className='min-h-screen w-full'>
 

@@ -4,13 +4,18 @@ import Buttonv1 from './Buttons/Button.v1';
 import { TfiAngleLeft } from 'react-icons/tfi';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { wishListToggle } from '@lib/common';
+// import { wishListToggle } from '@lib/common';
 
+// interface wishlistProps {
+//     wishListToggle: () => void,
+// }
 
 const WishlistSidebar: React.FC = () => {
-
     const { wishlistIsOpen, setWishlistIsOpen } = useDropdownMenuContext()
+
+
     return (
-        <div className={`duration-500 ease-out transition-all ${wishlistIsOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-40' : 'invisible'}`}>
+        <div className={`text-black duration-500 ease-out transition-all ${wishlistIsOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-40' : 'invisible'}`}>
             {/* desktop */}
             <div className={`hidden lg:grid absolute right-0 top-0 w-full lg:w-[30vw] py-20 bg-white lg:h-screen duration-500 ease-out transition-all ${wishlistIsOpen ? '' : 'translate-x-full'}`}>
                 <div className='w-4/5 mx-auto'>
@@ -26,6 +31,7 @@ const WishlistSidebar: React.FC = () => {
                     </div>
 
                     {/* Color Filter */}
+
 
                     {/* Brands Filter */}
 
@@ -45,7 +51,7 @@ const WishlistSidebar: React.FC = () => {
                             <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
                         </div>
                         <div>
-                            <h6 className='uppercase text-2xl font-bold'>Wishlist</h6>
+                            <h6 className='uppercase text-2xl font-bold'>Filters</h6>
                         </div>
                     </div>
 

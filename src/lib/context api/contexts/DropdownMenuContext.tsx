@@ -28,5 +28,5 @@ export const DropdownMenuContext = createContext<DropdownMenuContextProps>({
     styleProfileformStep: 0,
     setStyleProfileformStep: (): number => 0,
     wishlistIsOpen: false,
-    setWishlistIsOpen: () => (false)
+    setWishlistIsOpen: (): boolean => (false)
 });

@@ -13,7 +13,7 @@ const Herov1: React.FC = () => {
 
 
     return (
-        <div className='bg-cover bg-center' style={{ backgroundImage: 'url(/img/landing_bg.webp)' }}>
+        <div className='bg-cover bg-[center_left_1rem] lg:bg-center' style={{ backgroundImage: 'url(/img/landing_bg.webp)' }}>
             <div className='flex flex-col justify-center items-center h-screen'>
                 <Image className='object-contain' src={logo} alt='testing' width={350} height={0} />
                 <h2 className='text-white sec_title mb-2'>Hey, Clementine Smith</h2>
