@@ -59,7 +59,9 @@ const Headerv1: React.FC = () => {
                     {/* Profile Menu */}
                     <div className='md:block hidden col-span-1'>
                         <ul className='flex flex-row justify-end items-center'>
-                            <li className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>How it Works</li>
+                            <Link href='/how_it_works'>
+                                <li className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>How it Works</li>
+                            </Link>
                             {user && <><li className='text-xs uppercase px-3 cursor-pointer' onClick={() => { wishListToggle(setWishlistIsOpen, wishlistIsOpen) }}><BsHeart size={'1.7em'} /></li>
                                 <li className='text-xs uppercase px-3'><Image className='rounded-full' src={Avatar} width={32} height={32} alt='customer-rofile-pic' /></li></>}
                         </ul>

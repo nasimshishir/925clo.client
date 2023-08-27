@@ -14,11 +14,11 @@ const generateOutfit: React.FC = () => {
           <div className='flex items-center'>
             <TfiAngleLeft className='cursor-pointer' size={12} />
             <div className='flex gap-1 px-3'>
-              <BsCircleFill color={'#586127'} />
-              <BsCircleFill color='#FF5722' />
-              <BsCircleFill color='#FF5722' />
-              <BsCircleFill color='#FF5722' />
-              <BsCircleFill color='#FF5722' />
+              <BsCircleFill color={'#586127'} size={12} />
+              <BsCircleFill color={'#FF5722'} size={12} />
+              <BsCircleFill color={'#FF5722'} size={12} />
+              <BsCircleFill color={'#FF5722'} size={12} />
+              <BsCircleFill color={'#FF5722'} size={12} />
             </div>
             <span className='cursor-pointer uppercase text-xs font-thin px-3'>Outfit</span>
             <TfiAngleRight className='cursor-pointer' size={12} />

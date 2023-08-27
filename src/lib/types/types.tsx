@@ -13,3 +13,8 @@ export type menuItem = {
     img: string,
     fullImg: string
 }
+
+export type AccordionItem = {
+    question: string;
+    answer: string;
+}
