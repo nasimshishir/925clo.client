@@ -6,6 +6,7 @@
 //     fullImg: string
 // }
 
+
 export type menuItem = {
     id: string,
     title: string,
@@ -17,7 +18,8 @@ export type menuItem = {
 
 export type AccordionItem = {
     question: string;
-    answer: unknown
+    type: 'string' | 'video';
+    answer: string
 }
 
 export type Product = {
