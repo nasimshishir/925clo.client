@@ -1,5 +1,5 @@
 'use client'
-import { Footerv1, Herov1, Headerv1, WishlistSidebar } from '@components'
+import { Footerv1, Herov1, Headerv1, Submenu } from '@components'
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import mobile from '@assets/mobile_section.webp'
@@ -8,7 +8,7 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 
 export default function Home() {
 
-  const { wishlistIsOpen } = useDropdownMenuContext()
+  const { itemId, menuData } = useDropdownMenuContext()
 
   const user = true;
 
@@ -19,6 +19,8 @@ export default function Home() {
   return (
     <>
       <Headerv1 />
+      <Submenu menuData={menuData} />
+
 
       <main className='min-h-screen w-full'>
 

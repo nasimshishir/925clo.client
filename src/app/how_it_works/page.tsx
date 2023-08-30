@@ -23,14 +23,14 @@ const faqItems: AccordionItem[] = [
 ];
 
 
-const styling: NextPage = () => {
+const howItWorks: NextPage = () => {
 
   return (
-    <div className='pt-20 grid'>
-      <div className='w-3/5 max-w-[1200px] mx-auto pt-10'>
+    <div className='pt-20 grid px-3 lg:px-0'>
+      <div className='w-full lg:w-3/5 lg:max-w-[1200px] mx-auto lg:pt-10'>
 
         {/* Head */}
-        <div>
+        <div className=''>
           <h4 className='sec_title text-center'>How it Works</h4>
           <p className='text-center sec_desc mt-3'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -47,4 +47,4 @@ const styling: NextPage = () => {
   )
 }
 
-export default styling;
+export default howItWorks;

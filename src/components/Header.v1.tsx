@@ -10,7 +10,7 @@ import menus from '../assets/menuItems/menuData.json'
 import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { wishListToggle } from '@lib/common';
-import WishlistSidebar from './WishlistSidebar';
+import { WishlistSidebar } from '@components';
 
 
 
@@ -35,10 +35,7 @@ const Headerv1: React.FC = () => {
 
     return (
         <>
-            <header className={`max-h-screen bg-transparent w-full text-white z-50 ${menuItemData ? 'h-screen fixed top-0 left-0 bg-cover bg-top transition-all duration-500 ease-out' : 'absolute'}`} style={{
-                backgroundImage: `${menuItemData ? `url(${menuItemData?.fullImg})` : ''}`
-            }}>
-
+            <header className={`absolute bg-transparent w-full text-white z-40`} >
 
                 {/* Desktop Device */}
                 <nav className='grid grid-cols-5 items-center py-2 px-6'>
@@ -67,7 +64,6 @@ const Headerv1: React.FC = () => {
                         </ul>
                     </div>
                 </nav>
-                {itemId && <Submenu menuData={menuData} />}
             </header>
             <WishlistSidebar />
         </>

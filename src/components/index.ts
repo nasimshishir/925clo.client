@@ -1,5 +1,6 @@
 import Headerv1 from "./Header.v1";
 import Headerv2 from "./Header.v2";
+import Headerv3 from "./Header.v3";
 import Footerv1 from "./Footer.v1";
 import Footerv2 from "./Footer.v2";
 import Herov1 from "./Hero.v1";
@@ -25,6 +26,7 @@ import ProductsPageHead from './Products/ProductsPageHead'
 export {
     Headerv1,
     Headerv2,
+    Headerv3,
     Footerv1,
     Footerv2,
     Herov1,
