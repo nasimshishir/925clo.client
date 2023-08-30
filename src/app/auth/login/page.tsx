@@ -4,8 +4,9 @@ import Link from 'next/link';
 import React from 'react'
 import { TfiAngleLeft } from 'react-icons/tfi';
 import loginImg from '@assets/login_img.jpg'
+import { NextPage } from 'next';
 
-const LoginPage: React.FC = () => {
+const LoginPage: NextPage = () => {
     return (
         <section className='min-h-screen overflow-hidden'>
             <div className='max-h-screen h-screen grid grid-cols-2'>

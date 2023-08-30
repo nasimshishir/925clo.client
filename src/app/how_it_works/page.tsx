@@ -4,6 +4,7 @@ import React from 'react';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import Accordion from '@components/Accordion';
 import { AccordionItem } from '@lib/types/types';
+import { NextPage } from 'next';
 
 const faqItems: AccordionItem[] = [
   {
@@ -18,7 +19,7 @@ const faqItems: AccordionItem[] = [
 ];
 
 
-const styling: React.FC = () => {
+const styling: NextPage = () => {
 
   return (
     <div className='pt-20 grid'>

@@ -14,6 +14,10 @@ interface DropdownMenuContextProps {
     setStyleProfileformStep: Dispatch<SetStateAction<number>>;
     wishlistIsOpen: boolean;
     setWishlistIsOpen: Dispatch<SetStateAction<boolean>>
+    isLoading: boolean;
+    setIsLoading: Dispatch<SetStateAction<boolean>>;
+    isFilterBarOpen: boolean;
+    setIsFilterBarOpen: Dispatch<SetStateAction<boolean>>
 }
 
 
@@ -28,5 +32,9 @@ export const DropdownMenuContext = createContext<DropdownMenuContextProps>({
     styleProfileformStep: 0,
     setStyleProfileformStep: (): number => 0,
     wishlistIsOpen: false,
-    setWishlistIsOpen: (): boolean => (false)
+    setWishlistIsOpen: (): boolean => (false),
+    isLoading: false,
+    setIsLoading: (): boolean => (true),
+    isFilterBarOpen: false,
+    setIsFilterBarOpen: (): boolean => (false)
 });

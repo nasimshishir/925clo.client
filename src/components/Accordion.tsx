@@ -25,11 +25,11 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             <span className='text-md font-normal uppercase'>{item.question}</span>
             {activeIndex === index ? <HiOutlineMinus size={20} /> : <BsPlusLg size={20} />}
           </button>
-          {activeIndex === index && (
-            <div className='p-4 duration-300 ease-out transition-all'>
-              <p className='sec_desc'>{item.answer}</p>
-            </div>
-          )}
+
+          <div className={`${activeIndex === index ? 'p-4 duration-300 ease-out transition-all' : 'invisible duration-100 ease-out transition-all'}`}>
+            <p className='sec_desc'>{item.answer}</p>
+          </div>
+
         </div>
       ))}
     </div>

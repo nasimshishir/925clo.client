@@ -2,8 +2,9 @@ import { Footerv1, ImageCarousel } from '@components';
 import React from 'react'
 import { TfiAngleLeft, TfiAngleRight } from 'react-icons/tfi';
 import { BsCircleFill } from 'react-icons/bs';
+import { NextPage } from 'next';
 
-const generateOutfit: React.FC = () => {
+const generateOutfit: NextPage = () => {
 
   const images = ['https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg', 'https://images.pexels.com/photos/748870/pexels-photo-748870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/101667/pexels-photo-101667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']
   return (

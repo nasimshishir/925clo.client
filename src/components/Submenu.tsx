@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react'
-import Link from 'next/link';
 import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { redirect } from 'next/navigation';
 
 
 type SubMenuProps = {
@@ -13,7 +13,7 @@ type SubMenuProps = {
 
 const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
 
-    const { menuItemData, setMenuItemData } = useDropdownMenuContext();
+    const { menuItemData, setMenuItemData, setItemId, setMenuData } = useDropdownMenuContext();
 
     const handleHover = (menuItem: menuItem) => {
         // setIsHovering(true)
@@ -24,6 +24,13 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
         // setIsHovering(false)
     }
 
+    const handleClick = (url: string) => {
+        setItemId(null);
+        setMenuItemData(null)
+        setMenuData(null)
+        redirect(url)
+    }
+
     return (
         <div className={`flex max-h-screen h-auto text-white mt-10 mx-6`}>
 
@@ -31,12 +38,10 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
 
             <div className='hidden lg:flex flex-wrap'>
                 {menuData && menuData.map(menu =>
-                    <>
-                        <div onMouseEnter={() => { handleHover(menu) }} onMouseLeave={off} className='grid px-1 group cursor-pointer'>
-                            <Image className='rounded-md' src={menu.img} alt='menu-item' width={160} height={96} />
-                            <div className={`text-xs uppercase mx-auto group-hover:bg-white/10 px-4 py-1 mt-3 group-hover:rounded-[13px]`}>{menu.title}</div>
-                        </div>
-                    </>
+                    <div onMouseEnter={() => { handleHover(menu) }} onMouseLeave={off} className='grid px-1 group cursor-pointer' onClick={() => handleClick(menu.url)}>
+                        <Image className='rounded-md' src={menu.img} alt='menu-item' width={160} height={96} />
+                        <div className={`text-xs uppercase mx-auto group-hover:bg-white/10 px-4 py-1 mt-3 group-hover:rounded-[13px]`}>{menu.title}</div>
+                    </div>
                 )}
             </div>
 

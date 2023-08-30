@@ -11,10 +11,24 @@ export type menuItem = {
     title: string,
     desc: string,
     img: string,
-    fullImg: string
+    fullImg: string,
+    url: string
 }
 
 export type AccordionItem = {
     question: string;
-    answer: string;
+    answer: unknown
+}
+
+export type Product = {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+    rating: {
+        rate: number;
+        count: number;
+    }
 }

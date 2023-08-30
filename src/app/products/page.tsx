@@ -1,51 +1,57 @@
-'use client'
-import { Footerv1, Headerv2, ProductFilterSidebar } from '@components';
-import React, { useState } from 'react'
+import { Footerv1, Headerv2, ProductFilterSidebar, ProductsPageHead, Spinner, Products } from '@components';
+import React from 'react';
 import products from '@assets/productsSample/products.json'
-import ProductCard from '@components/ProductCard';
+import ProductCard from '@components/Products/ProductCard';
 import { BsPlus } from 'react-icons/bs';
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { Product } from '@lib/types/types';
+import { NextPage } from 'next';
 
 
+async function getProducts() {
+    const res = await fetch('https://fakestoreapi.com/products')
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
 
-const Products: React.FC = () => {
-
-    const allProducts = products.products;
-
-    const [isOpen, setIsOpen] = useState<boolean>(false);
-
-    const filterToggle = () => {
-        setIsOpen(!isOpen)
+    if (!res.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        throw new Error('Failed to fetch data')
     }
 
+    return res.json()
+}
+
+
+const ProductsPage = async () => {
+
+    const products = await getProducts();
 
     return (
         <div className=''>
             <Headerv2 />
-            <ProductFilterSidebar filterToggle={filterToggle} isOpen={isOpen} />
-            <div className='pt-20 px-2 lg:px-8 bg-white'>
-                <div className='flex justify-between items-baseline'>
-                    <div className='hidden lg:block'>
-                        <p className='uppercase text-[0.6rem]'>{'Products>Shop Season'}</p>
-                    </div>
-                    <div>
-                        <h2 className='uppercase text-2xl font-bold'>{'Summer'}</h2>
-                    </div>
-                    <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer' onClick={filterToggle}>
-                        <p className='uppercase text-xs'>filters </p><BsPlus />
-                    </div>
-                </div>
+            <ProductFilterSidebar />
+            <ProductsPageHead />
 
-                {/* Products Listing */}
-                <div className='my-10'>
-                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-6 lg:gap-y-12'>
-                        {allProducts.map(product => <ProductCard product={product} />)}
+
+            {/* Products Listing */}
+
+
+            <div className='my-10'>
+                {products ?
+                    <Products products={products} />
+                    :
+                    <div className="flex items-center justify-center h-[50vh]">
+                        <Spinner size={32} color="text-primary_orange" />
                     </div>
-                </div>
+                }
             </div>
+
+
             <Footerv1 />
         </div>
 
     )
 }
 
-export default Products;
+
+export default ProductsPage;

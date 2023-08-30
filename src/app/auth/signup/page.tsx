@@ -4,12 +4,13 @@ import signupImg from '@assets/signup_img.jpg'
 import { TfiAngleLeft } from 'react-icons/tfi'
 import Link from 'next/link';
 import SignUpForm from '@components/SignUpForm';
+import { NextPage } from 'next';
 
 
 
 
 
-const SignUpPage: React.FC = () => {
+const SignUpPage: NextPage = () => {
 
 
 

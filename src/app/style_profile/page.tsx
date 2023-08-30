@@ -1,8 +1,9 @@
 import { Footerv1, Headerv2, Herov2, WishlistSidebar } from '@components';
+import { NextPage } from 'next';
 import React from 'react';
 
 
-const styling: React.FC = () => {
+const styling: NextPage = () => {
 
 
     return (

@@ -1,24 +1,26 @@
+'use client'
 import React from 'react';
-import Buttonv1 from './Buttons/Button.v1';
+import { Buttonv1 } from '@components';
 import { TfiAngleLeft } from 'react-icons/tfi';
 import { BsPlus } from 'react-icons/bs';
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 
-interface filterProps {
-    filterToggle: () => void,
-    isOpen: boolean,
 
-}
+const ProductFilterSidebar: React.FC = () => {
 
-const ProductFilterSidebar: React.FC<filterProps> = ({ filterToggle, isOpen }) => {
+
+    const { isFilterBarOpen, setIsFilterBarOpen } = useDropdownMenuContext()
+
+
     return (
-        <div className={`duration-500 ease-out transition-all ${isOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-40' : 'invisible'}`}>
+        <div className={`duration-500 ease-out transition-all ${isFilterBarOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-40' : 'invisible'}`}>
             {/* desktop */}
-            <div className={`hidden lg:grid absolute right-0 top-0 w-full lg:w-[30vw] py-20 bg-white lg:h-screen duration-500 ease-out transition-all ${isOpen ? '' : 'translate-x-full'}`}>
+            <div className={`hidden lg:grid absolute right-0 top-0 w-full lg:w-[30vw] py-20 bg-white lg:h-screen duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-x-full'}`}>
                 <div className='w-4/5 mx-auto'>
 
                     {/* Header */}
                     <div className='flex justify-between items-center'>
-                        <div className='flex items-center ps-2' onClick={filterToggle}>
+                        <div className='flex items-center ps-2' onClick={() => { setIsFilterBarOpen(!isFilterBarOpen) }}>
                             <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
                         </div>
                         <div>
@@ -58,12 +60,12 @@ const ProductFilterSidebar: React.FC<filterProps> = ({ filterToggle, isOpen }) =
             </div>
 
             {/* mobile */}
-            <div className={`lg:hidden grid absolute bottom-0 right-0 w-full py-10 bg-white h-[45vh] duration-500 ease-out transition-all ${isOpen ? '' : 'translate-y-full'}`}>
+            <div className={`lg:hidden grid absolute bottom-0 right-0 w-full py-10 bg-white h-[45vh] duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-y-full'}`}>
                 <div className='w-4/5 mx-auto'>
 
                     {/* Header */}
                     <div className='flex justify-between items-center'>
-                        <div className='flex items-center ps-2' onClick={filterToggle}>
+                        <div className='flex items-center ps-2' onClick={() => { setIsFilterBarOpen(!isFilterBarOpen) }}>
                             <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
                         </div>
                         <div>

@@ -2,10 +2,11 @@ import { Buttonv2, Buttonv3 } from '@components';
 import React from 'react';
 import logo from '@assets/logo_angle.webp';
 import Image from 'next/image';
+import { NextPage } from 'next';
 
 
 
-const BuildStyleProfile = () => {
+const BuildStyleProfile: NextPage = () => {
   return (
     <div className='h-screen w-full bg-primary_orange'>
       <div className='flex flex-col justify-center items-center min-h-screen'>

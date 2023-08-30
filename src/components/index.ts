@@ -14,9 +14,12 @@ import UserLocationInput from "./StyleProfileFormSteps/UserLocationInputs";
 import ClothingTypeInput from "./StyleProfileFormSteps/ClothingTypeInput";
 import SizeInput from "./StyleProfileFormSteps/SizeInput";
 import BrandInput from "./StyleProfileFormSteps/BrandInput";
-import ProductFilterSidebar from "./ProductFilterSidebar";
+import ProductFilterSidebar from "./Products/ProductFilterSidebar";
 import ImageCarousel from './ImageCarousal';
 import WishlistSidebar from './WishlistSidebar';
+import Spinner from './Spinner';
+import Products from './Products/Products';
+import ProductsPageHead from './Products/ProductsPageHead'
 
 
 export {
@@ -38,5 +41,8 @@ export {
     BrandInput,
     ProductFilterSidebar,
     ImageCarousel,
-    WishlistSidebar
+    WishlistSidebar,
+    Spinner,
+    Products,
+    ProductsPageHead
 }
