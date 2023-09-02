@@ -11,8 +11,8 @@ const Footerv1: React.FC = () => {
     const user = true;
 
     return (
-        <footer className='bg-primary_orange uppercase text-white font-inter text-[0.75rem]'>
-            <div className='grid grid-cols-2 items-center'>
+        <footer className='hidden lg:block w-full bg-primary_orange uppercase text-white font-inter text-[0.75rem]'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
                 <div className='flex justify-center'>
                     <Image className='w-1/2' src={logo} alt='testing' width={450} height={295} />
                 </div>
@@ -22,15 +22,15 @@ const Footerv1: React.FC = () => {
                     </div>
                     <div className=''>
                         <h6 className='mb-4'>Shop Seasons</h6>
-                        {menu.season.seasons.map(item => <p className='font-extralight text-footer_text mb-1'>{item.title}</p>)}
+                        {menu.season.seasons.map(item => <p key={item.id} className='font-extralight text-footer_text mb-1'>{item.title}</p>)}
                     </div>
                     <div className=''>
                         <h6 className='mb-4'>Shop Product</h6>
-                        {menu.product_type.product_types.map(item => <p className='font-extralight text-footer_text mb-1'>{item.title}</p>)}
+                        {menu.product_type.product_types.map(item => <p key={item.id} className='font-extralight text-footer_text mb-1'>{item.title}</p>)}
                     </div>
                     <div className=''>
                         <h6 className='mb-4'>Shop by Occation</h6>
-                        {menu.occasion.occasions.map(item => <p className='font-extralight text-footer_text mb-1'>{item.title}</p>)}
+                        {menu.occasion.occasions.map(item => <p key={item.id} className='font-extralight text-footer_text mb-1'>{item.title}</p>)}
                     </div>
                     <div className='mt-5'>
                         <h6>How it Works?</h6>

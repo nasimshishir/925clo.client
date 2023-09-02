@@ -1,18 +1,11 @@
-import { Footerv1, Headerv2, Herov2, WishlistSidebar } from '@components';
-import { NextPage } from 'next';
+import { Herov2 } from '@components';
 import React from 'react';
 
 
-const styling: NextPage = () => {
-
+const styling = () => {
 
     return (
-        <div >
-            <Headerv2 />
-            <Herov2 />
-            <Footerv1 />
-        </div>
-
+        <Herov2 />
     )
 }
 

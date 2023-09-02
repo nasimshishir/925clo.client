@@ -1,4 +1,4 @@
-import { Footerv1, Headerv2, ProductFilterSidebar } from '@components';
+import { Footerv1, Headerv2 } from '@components';
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { Suspense } from 'react';
@@ -6,7 +6,7 @@ import Loading from './loading';
 
 
 export const metadata = {
-  title: 'Products',
+  title: 'Dashboard',
   description: 'Your daily style manager',
 }
 
@@ -18,8 +18,9 @@ export default function RootLayout({
   return (
     <DropdownMenuContextProvider>
       <Headerv2 />
-      <ProductFilterSidebar />
-      {children}
+      <Suspense fallback={<Loading />}>
+        {children}
+      </Suspense>
       <Footerv1 />
     </DropdownMenuContextProvider>
   )

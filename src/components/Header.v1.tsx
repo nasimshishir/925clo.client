@@ -65,6 +65,7 @@ const Headerv1: React.FC = () => {
                     </div>
                 </nav>
             </header>
+            <Submenu menuData={menuData} />
             <WishlistSidebar />
         </>
     )

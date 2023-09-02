@@ -48,9 +48,9 @@ const Headerv3: React.FC = () => {
                         <ul className='flex justify-center items-center'>
                             <Link href="/generate_outfit"><li className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10`}>Generate Outfit</li></Link>
                             <Link href="/style_profile"><li className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10`}>Style Profile</li></Link>
-                            <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer ${(itemId === 1) && 'bg-white/10'}`}>Shop Seasons</li>
-                            <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer ${(itemId === 2) && 'bg-white/10'}`}>Shop Product</li>
-                            <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className={`text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer ${(itemId === 3) && 'bg-white/10'}`}>Shop by Occasion</li>
+                            <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>Shop Seasons</li>
+                            <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>Shop Product</li>
+                            <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>Shop by Occasion</li>
                         </ul>
                     </div>
                     {/* Profile Menu */}

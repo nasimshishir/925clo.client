@@ -1,24 +1,27 @@
-import { Headerv2 } from '@components';
-import Footerv2 from '@components/Footer.v2';
+import { Footerv1, Headerv2 } from '@components';
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 
 export const metadata = {
-    title: 'Virtual Styling',
-    description: 'Your daily style manager',
+  title: 'Style Profile',
+  description: 'Your daily style manager',
 }
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode
 }) {
-    return (
-        <DropdownMenuContextProvider>
-            <section className="min-h-screen">
-                {children}
-            </section>
-        </DropdownMenuContextProvider>
-    )
+  return (
+    <DropdownMenuContextProvider>
+      <Headerv2 />
+      <Suspense fallback={<Loading />}>
+        {children}
+      </Suspense>
+      <Footerv1 />
+    </DropdownMenuContextProvider>
+  )
 }

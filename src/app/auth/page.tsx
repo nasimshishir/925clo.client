@@ -3,7 +3,7 @@ import Buttonv1 from '@components/Buttons/Button.v1';
 import Buttonv2 from '@components/Buttons/Button.v2';
 import { NextPage } from 'next';
 
-const Auth: NextPage = () => {
+const Auth = () => {
 
 
     return (

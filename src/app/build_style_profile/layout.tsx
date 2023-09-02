@@ -15,7 +15,6 @@ export default function RootLayout({
 }) {
   return (
     <section className="min-h-screen">
-      <Headerv1 />
       {children}
     </section>
   )

@@ -39,7 +39,7 @@ const Headerv2: React.FC = () => {
             <header className={`w-full absolute z-40 text-black bg-[#F6F6F6] `}>
                 <nav className={`grid grid-cols-5 items-center py-2 px-6`}>
                     <div className='col-span-1 flex justify-start'>
-                        <Link className='' href='/'><Image className='px-2' src={!itemId ? Logo : Logo2} width={70} height={29} alt='925clo_logo' /></Link>
+                        <Link className='' href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
                     </div>
 
                     {/* Main Menu */}
@@ -66,8 +66,8 @@ const Headerv2: React.FC = () => {
                         </ul> */}
                     </div>
                 </nav>
-                {itemId && <Submenu menuData={menuData} />}
             </header>
+            <Submenu menuData={menuData} />
             <WishlistSidebar />
         </>
 

@@ -1,7 +1,6 @@
 'use cilent'
 import Image from 'next/image';
 import React, { useState } from 'react'
-import { Buttonv1, Buttonv3 } from '@components';
 import { Product } from '@lib/types/types';
 
 type productProps = {
@@ -21,14 +20,14 @@ const ProductCard: React.FC<productProps> = ({ product }) => {
                 <div className='h-3/5 w-3/5 relative m-auto'>
                     <Image className={`object-cover`} src={rest.image} alt={title} fill />
                 </div>
-                {hovering && <div className={`hidden lg:grid grid-cols-2 gap-2 w-3/4 absolute bottom-0 inset-x-[12.5%] transition-all duration-500`}>
+                {hovering && <div className={`hidden lg:grid grid-cols-2 gap-2 w-3/4 absolute bottom-4 inset-x-[12.5%] transition-all duration-500`}>
                     <div>
-                        <button className={`w-full btn text-white bg-primary_orange border border-primary_orange rounded-lg text-[.6rem] uppercase font-inter font-light text-center hover:bg-secondary_orange py-1`}>
+                        <button className={`w-full btn text-white bg-primary_orange border border-primary_orange rounded-lg text-[.6rem] uppercase font-inter font-light text-center hover:bg-secondary_orange py-2`}>
                             Buy Now
                         </button>
                     </div>
                     <div>
-                        <button className={`w-full btn text-black bg-transparent border border-black rounded-lg text-[.6rem] uppercase font-inter font-light text-center hover:bg-white/10 py-1`}>
+                        <button className={`w-full btn text-black bg-transparent border border-black rounded-lg text-[.6rem] uppercase font-inter font-light text-center hover:bg-white/10 py-2`}>
                             Add to wishlist
                         </button>
                     </div>

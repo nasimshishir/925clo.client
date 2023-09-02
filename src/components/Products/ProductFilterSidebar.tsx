@@ -13,7 +13,7 @@ const ProductFilterSidebar: React.FC = () => {
 
 
     return (
-        <div className={`duration-500 ease-out transition-all ${isFilterBarOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-40 duration-500 ease-out transition-all' : 'invisible duration-500 delay-500 ease-out transition-all'}`}>
+        <div className={`duration-500 ease-out transition-all ${isFilterBarOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-30 duration-500 ease-out transition-all' : 'invisible duration-500 delay-500 ease-out transition-all'}`}>
             {/* desktop */}
             <div className={`hidden lg:grid absolute right-0 top-0 w-full lg:w-[30vw] py-20 bg-white lg:h-screen duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-x-full'}`}>
                 <div className='w-4/5 mx-auto'>

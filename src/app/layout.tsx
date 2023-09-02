@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <DropdownMenuContextProvider>
       <html lang="en">
-        <body className="overflow-x-hidden">
+        <body className="w-full overflow-x-hidden">
           {children}
         </body>
       </html>

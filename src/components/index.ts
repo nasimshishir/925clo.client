@@ -20,7 +20,9 @@ import ImageCarousel from './ImageCarousal';
 import WishlistSidebar from './WishlistSidebar';
 import Spinner from './Spinner';
 import Products from './Products/Products';
-import ProductsPageHead from './Products/ProductsPageHead'
+import ProductsPageHead from './Products/ProductsPageHead';
+import Accordion from './Accordion';
+import Back from './Back'
 
 
 export {
@@ -46,5 +48,7 @@ export {
     WishlistSidebar,
     Spinner,
     Products,
-    ProductsPageHead
+    ProductsPageHead,
+    Accordion,
+    Back
 }

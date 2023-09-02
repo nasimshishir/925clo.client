@@ -1,6 +1,8 @@
 import { Footerv1, Headerv2 } from '@components';
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 
 export const metadata = {
@@ -16,10 +18,10 @@ export default function RootLayout({
   return (
     <DropdownMenuContextProvider>
       <Headerv2 />
-      <section className="min-h-screen">
+      <Suspense fallback={<Loading />}>
         {children}
-      </section>
-      {/* <Footerv1 /> */}
+      </Suspense>
+      <Footerv1 />
     </DropdownMenuContextProvider>
   )
 }

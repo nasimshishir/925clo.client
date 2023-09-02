@@ -33,7 +33,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             {activeIndex === index ? <HiOutlineMinus size={16} /> : <BsPlusLg size={16} />}
           </button>
 
-          <div className={`${activeIndex === index ? 'pt-0 pb-4 duration-300 ease-out transition-all h-auto' : 'invisible h-0 duration-100 ease-out transition-all'}`}>
+          <div className={`${activeIndex === index ? 'pt-0 pb-4 duration-500 ease-out transition-all h-auto' : 'invisible h-0 w-0 duration-500 ease-out transition-transform'}`}>
             {item.type === 'string' &&
               <p className='sec_desc'>{item.answer}</p>
             }

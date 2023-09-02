@@ -1,24 +1,24 @@
 'use client'
-import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { Product } from '@lib/types/types';
-import React from 'react'
+import React, { Suspense, use } from 'react'
 import ProductCard from './ProductCard';
+import Loading from '@app/generate_outfit/loading';
 
-interface ProductsPageProps {
-    products: Product[];
-}
+// interface ProductsPageProps {
+//     products: Product[];
+// }
 
-const Products: React.FC<ProductsPageProps> = ({ products }) => {
+
+const Products = ({ getProducts }: { getProducts: Promise<Product[]> }) => {
+
+    const products = use(getProducts)
+
     return (
-
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-6 lg:gap-y-12'>
-            {products.map((product: Product) => <ProductCard product={product} />
+            {products.map((product: Product) => <ProductCard key={product.id} product={product} />
             )}
         </div>
-
     )
 }
-
-Products.propTypes = {}
 
 export default Products;
