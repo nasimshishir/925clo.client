@@ -13,11 +13,11 @@ const Buttonv1: React.FC<ButtonProps> = ({ children, css, to, ...rest }) => {
     return (
         <div>
             {to ? <Link href={`${to}`}>
-                <button className={`btn text-white bg-primary_orange border py-4 border-primary_orange rounded-xl text-[.7rem] uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all ${css}`} {...rest}>
+                <button className={`text-white bg-primary_orange border border-primary_orange rounded-xl text-[.7rem] uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all ${css}`} {...rest}>
                     {children}
                 </button>
             </Link> :
-                <button className={`btn text-white bg-primary_orange border py-4 border-primary_orange rounded-xl text-[.7rem] uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all ${css}`} {...rest}>
+                <button className={`text-white bg-primary_orange border border-primary_orange rounded-xl text-[.7rem] uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all ${css}`} {...rest}>
                     {children}
                 </button>
             }

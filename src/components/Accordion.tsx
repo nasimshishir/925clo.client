@@ -33,15 +33,17 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
             {activeIndex === index ? <HiOutlineMinus size={16} /> : <BsPlusLg size={16} />}
           </button>
 
-          <div className={`${activeIndex === index ? 'pt-0 pb-4 duration-500 ease-out transition-all h-auto' : 'invisible h-0 w-0 duration-500 ease-out transition-transform'}`}>
-            {item.type === 'string' &&
-              <p className='sec_desc'>{item.answer}</p>
-            }
-            {item.type === 'video' &&
-              <div className='grid w-full pt-3'>
-                <YouTube videoId={item.answer} className='mx-auto' />
-              </div>
-            }
+          <div className={`${activeIndex === index ? 'pt-0 pb-4 duration-500 ease-out transition-all' : 'invisible h-0 w-0 duration-500 ease-out transition-transform'}`}>
+            <div className={`${activeIndex === index ? 'delay-500 duration-500 ease-out transition-all' : 'hidden'}`}>
+              {item.type === 'string' &&
+                <p className='sec_desc'>{item.answer}</p>
+              }
+              {item.type === 'video' &&
+                <div className='grid w-full pt-3'>
+                  <YouTube videoId={item.answer} className='mx-auto' />
+                </div>
+              }
+            </div>
           </div>
 
         </div>

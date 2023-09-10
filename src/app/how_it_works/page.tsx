@@ -36,10 +36,10 @@ const faqItems: AccordionItem[] = [
 ];
 
 
-const howItWorks = () => {
+const howItWorksPage = () => {
 
   return (
-    <div className='min-h-screen w-full pt-28 lg:py-20 grid px-10 lg:px-0'>
+    <section className='min-h-screen w-full pt-28 grid px-10 lg:px-0'>
       <div className='w-full lg:w-3/5 lg:max-w-[1200px] mx-auto lg:pt-10'>
         {/* Head */}
         <div className='' >
@@ -55,8 +55,8 @@ const howItWorks = () => {
           <Accordion items={faqItems} />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default howItWorks;
+export default howItWorksPage;

@@ -1,8 +1,4 @@
-import { Footerv1, ImageCarousel } from '@components';
 import React from 'react'
-import { TfiAngleLeft, TfiAngleRight } from 'react-icons/tfi';
-import { BsCircleFill } from 'react-icons/bs';
-import { NextPage } from 'next';
 import GenerateOutfit from '@components/GenerateOutfit';
 
 const generateOutfit = () => {
@@ -11,9 +7,9 @@ const generateOutfit = () => {
 
 
   return (
-    <div className='max-h-screen'>
+    <section className='max-h-screen'>
       <GenerateOutfit getGeneratedOutfits={getGeneratedOutfits} />
-    </div>
+    </section>
   )
 }
 

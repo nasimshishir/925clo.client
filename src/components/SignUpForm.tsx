@@ -27,10 +27,7 @@ const SignUpForm: React.FC = () => {
 
     const handleSignUp = async (SignUpData: SignUpFormData) => {
         // Handle sign up logic, e.g., send form data to the server
-
-        console.log(SignUpData);
         const siteUrl = process.env.SITE_URL;
-        console.log(siteUrl);
 
 
         try {

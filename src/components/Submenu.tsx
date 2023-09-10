@@ -6,7 +6,6 @@ import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { useRouter } from 'next/navigation';
 import { Headerv3 } from '@components';
-import { NextPage } from 'next';
 
 
 type SubMenuProps = {
@@ -29,9 +28,7 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
         setItemId(null);
         setMenuItemData(null);
         setMenuData(null);
-        console.log(path);
         router.push(path)
-        console.log('redirected');
 
 
     }

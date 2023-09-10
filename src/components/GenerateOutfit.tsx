@@ -15,10 +15,9 @@ const GenerateOutfit = ({ getGeneratedOutfits }: { getGeneratedOutfits: Promise<
   const images = ['https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg', 'https://images.pexels.com/photos/748870/pexels-photo-748870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/101667/pexels-photo-101667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']
 
   const products = use(getGeneratedOutfits)
-  console.log(products);
 
   return (
-    <div className='w-3/4 max-w-[1140px] mx-auto py-20 h-screen'>
+    <div className='w-3/4 max-w-[1140px] mx-auto py-20 min-h-screen'>
       {/* Head */}
       <div className='mb-6 flex justify-between items-center'>
         <div className='flex items-center'>
@@ -45,7 +44,7 @@ const GenerateOutfit = ({ getGeneratedOutfits }: { getGeneratedOutfits: Promise<
 
       {/* Outfit body */}
       {/* Desktop */}
-      <div className='hidden lg:grid lg:grid-cols-3 gap-x-2'>
+      <div className='hidden lg:grid lg:grid-cols-3 gap-x-2 pb-3'>
         <div className='flex flex-col'>
           <ImageCarousel images={images} height='h-[70vh]' />
         </div>

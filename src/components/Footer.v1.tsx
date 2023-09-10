@@ -11,8 +11,10 @@ const Footerv1: React.FC = () => {
     const user = true;
 
     return (
-        <footer className='hidden lg:block w-full bg-primary_orange uppercase text-white font-inter text-[0.75rem]'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
+        <footer className='w-full bg-primary_orange uppercase text-white font-inter text-[0.75rem]'>
+
+            {/* Footer Desktop */}
+            <div className='hidden lg:grid grid-cols-1 lg:grid-cols-2 items-center'>
                 <div className='flex justify-center'>
                     <Image className='w-1/2' src={logo} alt='testing' width={450} height={295} />
                 </div>
@@ -49,6 +51,8 @@ const Footerv1: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Footer Mobile */}
         </footer>
     )
 }
