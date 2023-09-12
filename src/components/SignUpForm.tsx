@@ -84,7 +84,7 @@ const SignUpForm: React.FC = () => {
                 {err && <p className='text-white'>Password Don't Match</p>}
             </div>
             <div className='mt-12'>
-                <Buttonv3 type='submit' css='w-full'>Continue</Buttonv3>
+                <Buttonv3 type='submit' css='w-full py-3 lg:py-4'>Continue</Buttonv3>
             </div>
 
         </form>

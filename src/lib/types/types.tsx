@@ -6,6 +6,13 @@
 //     fullImg: string
 // }
 
+export type user = {
+    id: number,
+    name: string,
+    createdAt: Date,
+    asscessToken: string,
+    refreshToken: string
+}
 
 export type menuItem = {
     id: string,
