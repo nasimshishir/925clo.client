@@ -1,11 +1,17 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useUserContext } from '@lib/context api/providers/UserProvider';
 
 const DashboardSidebar = () => {
+  const router = useRouter()
+  const { setUser } = useUserContext()
 
-  const logOut = () => { }
+  const logOut = () => {
+    setUser(null)
+    router.push('/auth/login')
+  }
 
 
   const path = usePathname();

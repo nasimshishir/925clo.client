@@ -4,6 +4,7 @@ import Buttonv3 from './Buttons/Button.v3';
 import axios from 'axios';
 import { useUserContext } from '@lib/context api/providers/UserProvider';
 import { user } from '@lib/types/types';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -13,6 +14,8 @@ interface LoginFormData {
 }
 
 const LoginForm: React.FC = () => {
+
+    const router = useRouter()
 
     const { setUser } = useUserContext()
 
@@ -34,6 +37,7 @@ const LoginForm: React.FC = () => {
             const user: user = response.data;
             if (user) {
                 setUser(user)
+                router.push('/')
             }
 
         } catch (error) {
@@ -70,7 +74,7 @@ const LoginForm: React.FC = () => {
                 <input className='bg-transparent border rounded-xl border-white text-sm font-thin focus:bg-transparent focus:outline-none p-3 text-white focus:border-gray-300 placeholder:text-gray-300' type="password" name='password' placeholder='Type your password here...' title='(Atleast 8 characters, uppercase, lowercase, numbers and special characters)' required onChange={handleChange} value={formData.password} />
             </div>
             <div className='mt-12'>
-                <Buttonv3>Continue</Buttonv3>
+                <Buttonv3 css='w-60 py-3 lg:py-4'>Sign in</Buttonv3>
             </div>
 
         </form>
