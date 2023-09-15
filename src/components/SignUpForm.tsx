@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import Buttonv3 from './Buttons/Button.v3';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
+
 
 interface SignUpFormData {
     name: string;
@@ -16,6 +18,7 @@ interface FormData {
 }
 
 const SignUpForm: React.FC = () => {
+    const router = useRouter()
 
     const [err, setErr] = useState<boolean>(false)
     const [formData, setFormData] = useState<FormData>({
@@ -32,7 +35,10 @@ const SignUpForm: React.FC = () => {
 
         try {
             const response = await axios.post(`http://localhost:8000/auth/register`, SignUpData)
-            console.log(response);
+            if (response.data.id) {
+                console.log('user registered');
+                router.push('/auth/login')
+            }
 
         } catch (error) {
             console.error(error);

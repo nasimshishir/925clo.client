@@ -3,8 +3,12 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 import React from 'react'
 import { BsPlus } from 'react-icons/bs';
 import ProductFilterSidebar from './ProductFilterSidebar';
+import { PageProps } from '../../../.next/types/app/products/page';
 
 const ProductsPageHead = () => {
+
+
+
 
     const { isFilterBarOpen, setIsFilterBarOpen } = useDropdownMenuContext()
 

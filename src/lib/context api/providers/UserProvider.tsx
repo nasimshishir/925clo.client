@@ -3,11 +3,11 @@ import { UserContext } from '@lib/context api/contexts/UserContext';
 import { menuItem, user } from '@lib/types/types';
 import { ReactNode, useState, useContext } from 'react'
 
-interface DropdownMenuContextProviderProps {
+interface UserProviderProps {
     children: ReactNode
 }
 
-export const UserContextProvider = ({ children }: DropdownMenuContextProviderProps) => {
+export const UserContextProvider = ({ children }: UserProviderProps) => {
 
     const [user, setUser] = useState<user | null>(null)
 

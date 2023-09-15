@@ -1,15 +1,19 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import { Buttonv1 } from '@components';
 import { TfiAngleLeft } from 'react-icons/tfi';
-import { BsPlus } from 'react-icons/bs';
+import { BsCircleFill, BsPlus } from 'react-icons/bs';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { useProductFilterContext } from '@lib/context api/providers/ProductFilterProvider';
+import AutocompleteSeachBox from '@components/AutocompleteSearchBox';
 
 
 const ProductFilterSidebar: React.FC = () => {
 
-
+    const { queryPramas, setQueryPramas } = useProductFilterContext()
     const { isFilterBarOpen, setIsFilterBarOpen } = useDropdownMenuContext()
+
+
 
 
     return (
@@ -32,29 +36,30 @@ const ProductFilterSidebar: React.FC = () => {
                     <div className='mt-10'>
                         <p className='uppercase text-xs ps-2'>Colors</p>
                         <div className='flex gap-2 items-center mt-2'>
-                            <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-lg'>
-                                colors
+                            <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-xl'>
+                                {queryPramas?.colors?.map(color => <BsCircleFill key={color} color={color} size={12} />)}
                             </div>
-                            <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer'>
+                            <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer' >
                                 <p className='uppercase text-xs'>Add </p><BsPlus />
                             </div>
                         </div>
+                        {/* <AutocompleteSeachBox /> */}
                     </div>
 
                     {/* Brands Filter */}
                     <div className='mt-2'>
                         <p className='uppercase text-xs ps-2'>Brands</p>
                         <div className='flex gap-2 items-center mt-2'>
-                            <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-lg'>
-                                colors
+                            <div className='flex flex-wrap px-3 py-2 bg-[#f6f6f6] flex-1 rounded-xl'>
+                                {<p className='uppercase border border-black rounded px-2 py-1 text-xs font-thin me-1 mb-1'>Brand</p>}
                             </div>
                             <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer'>
                                 <p className='uppercase text-xs'>Add </p><BsPlus />
                             </div>
                         </div>
                     </div>
-                    <div className='mt-5'>
-                        <Buttonv1 css='w-36'>Apply Filters</Buttonv1>
+                    <div className='mt-7'>
+                        <Buttonv1 css='w-36 py-3'>Apply Filters</Buttonv1>
                     </div>
                 </div>
             </div>

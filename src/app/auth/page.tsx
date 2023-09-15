@@ -3,12 +3,16 @@ import { Buttonv1, Buttonv2 } from '@components';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from "@assets/logo.png";
+import { PageProps } from '../../../.next/types/app/auth/page';
 
 
 
-const Auth = () => {
+
+const Auth = (pageProps: PageProps) => {
+
+
     return (
-        <div className='w-full' style={{ backgroundImage: 'url(/img/login_landing.png)' }}>
+        <div className='w-full min-h-screen' style={{ backgroundImage: 'url(/img/login_landing.png)' }}>
             <div className='absolute text-white w-full'>
                 <nav className='flex justify-between items-center py-2 px-6'>
                     <div className=''>

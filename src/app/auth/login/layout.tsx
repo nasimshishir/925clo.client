@@ -4,7 +4,7 @@ import { DropdownMenuContextProvider } from '@lib/context api/providers/Dropdown
 
 
 export const metadata = {
-    title: '925-Authentication',
+    title: '925-Login',
     description: 'Your daily style manager',
 }
 

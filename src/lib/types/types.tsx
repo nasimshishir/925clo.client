@@ -41,3 +41,8 @@ export type Product = {
         count: number;
     }
 }
+
+export type FilterParams = {
+    colors?: string[];
+    brands?: string[];
+}
