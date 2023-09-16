@@ -43,6 +43,6 @@ export type Product = {
 }
 
 export type FilterParams = {
-    colors?: string[];
-    brands?: string[];
+    colors?: { color: string }[];
+    brands?: { brand: string }[];
 }

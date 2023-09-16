@@ -5,13 +5,15 @@ import { TfiAngleLeft } from 'react-icons/tfi';
 import { BsCircleFill, BsPlus } from 'react-icons/bs';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { useProductFilterContext } from '@lib/context api/providers/ProductFilterProvider';
-import AutocompleteSeachBox from '@components/AutocompleteSearchBox';
+import AutocompleteSearchBox from '@components/AutocompleteSearchBox';
 
 
 const ProductFilterSidebar: React.FC = () => {
 
     const { queryPramas, setQueryPramas } = useProductFilterContext()
     const { isFilterBarOpen, setIsFilterBarOpen } = useDropdownMenuContext()
+    const [colors, setColors] = useState({});
+    const [brands, setBrands] = useState({});
 
 
 
@@ -19,7 +21,7 @@ const ProductFilterSidebar: React.FC = () => {
     return (
         <div className={`duration-500 ease-out transition-all ${isFilterBarOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-30 duration-500 ease-out transition-all' : 'invisible duration-500 delay-500 ease-out transition-all'}`}>
             {/* desktop */}
-            <div className={`hidden lg:grid absolute right-0 top-0 w-full lg:w-[30vw] py-20 bg-white lg:h-screen duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-x-full'}`}>
+            <div className={`hidden md:grid absolute right-0 top-0 w-full md:w-[30vw] py-20 bg-white md:h-screen duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-x-full'}`}>
                 <div className='w-4/5 mx-auto'>
 
                     {/* Header */}
@@ -37,13 +39,13 @@ const ProductFilterSidebar: React.FC = () => {
                         <p className='uppercase text-xs ps-2'>Colors</p>
                         <div className='flex gap-2 items-center mt-2'>
                             <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-xl'>
-                                {queryPramas?.colors?.map(color => <BsCircleFill key={color} color={color} size={12} />)}
+                                {queryPramas?.colors?.map(color => <BsCircleFill key={color.color} color={color.color} size={12} />)}
                             </div>
                             <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer' >
                                 <p className='uppercase text-xs'>Add </p><BsPlus />
                             </div>
                         </div>
-                        {/* <AutocompleteSeachBox /> */}
+                        <AutocompleteSearchBox />
                     </div>
 
                     {/* Brands Filter */}
@@ -65,7 +67,7 @@ const ProductFilterSidebar: React.FC = () => {
             </div>
 
             {/* mobile */}
-            <div className={`lg:hidden grid absolute bottom-0 right-0 w-full py-10 bg-white h-[45vh] duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-y-full'}`}>
+            <div className={`md:hidden grid absolute bottom-0 right-0 w-full py-10 bg-white h-[45vh] duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-y-full'}`}>
                 <div className='w-4/5 mx-auto'>
 
                     {/* Header */}
@@ -74,7 +76,7 @@ const ProductFilterSidebar: React.FC = () => {
                             <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
                         </div>
                         <div>
-                            <h6 className='uppercase text-2xl font-bold'>Filters</h6>
+                            <h6 className='uppercase text-2xl font-bold'>Filters mobile</h6>
                         </div>
                     </div>
 

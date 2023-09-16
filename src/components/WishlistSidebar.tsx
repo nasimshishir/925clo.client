@@ -29,15 +29,6 @@ const WishlistSidebar: React.FC = () => {
                             <h6 className='uppercase text-2xl font-bold'>Wishlist</h6>
                         </div>
                     </div>
-
-                    {/* Color Filter */}
-
-
-                    {/* Brands Filter */}
-
-                    <div className='mt-5'>
-                        <Buttonv1 css='w-36'>Apply Filters</Buttonv1>
-                    </div>
                 </div>
             </div>
 
@@ -53,15 +44,6 @@ const WishlistSidebar: React.FC = () => {
                         <div>
                             <h6 className='uppercase text-2xl font-bold'>Filters</h6>
                         </div>
-                    </div>
-
-                    {/* Color Filter */}
-
-
-                    {/* Brands Filter */}
-
-                    <div className='mt-5'>
-                        <Buttonv1 css='w-36'>Apply Filters</Buttonv1>
                     </div>
                 </div>
             </div>
