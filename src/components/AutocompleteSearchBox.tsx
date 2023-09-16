@@ -16,7 +16,7 @@ const people = [
     { id: 6, name: 'Hellen Schmidt' },
 ]
 
-export default function Example() {
+export default function AutocompleteSearchBox() {
     const [selected, setSelected] = useState([])
     const [query, setQuery] = useState('')
 

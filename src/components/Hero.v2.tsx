@@ -5,12 +5,8 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 
 
 
-const Herov2: React.FC = () => {
+const Herov2 = () => {
     const { styleProfileformStep } = useDropdownMenuContext()
-
-    console.log(styleProfileformStep);
-
-
 
     return (
         <div className=''>

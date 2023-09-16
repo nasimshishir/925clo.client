@@ -8,7 +8,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/summer_menu.webp",
                 "fullImg": "/img/summer_bg.webp",
-                "url": "products/season/summer"
+                "url": "/products/season/summer"
             },
             {
                 "id": "s2",
@@ -16,7 +16,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/winter_menu.webp",
                 "fullImg": "/img/winter_bg.webp",
-                "url": "products/season/winter"
+                "url": "/products/season/winter"
             },
             {
                 "id": "s3",
@@ -24,7 +24,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/spring_menu.webp",
                 "fullImg": "/img/spring_bg.webp",
-                "url": "products/season/spring"
+                "url": "/products/season/spring"
             },
             {
                 "id": "s4",
@@ -32,7 +32,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/autumn_menu.webp",
                 "fullImg": "/img/autumn_bg.webp",
-                "url": "products/season/autumn"
+                "url": "/products/season/autumn"
             }
         ]
     },
@@ -45,7 +45,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/top_menu.webp",
                 "fullImg": "/img/top_bg.webp",
-                "url": "products/type/top"
+                "url": "/products/type/top"
             },
             {
                 "id": "p2",
@@ -53,7 +53,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/outerwear_menu.webp",
                 "fullImg": "/img/outerwear_bg.png",
-                "url": "products/type/outwear"
+                "url": "/products/type/outwear"
             },
             {
                 "id": "p3",
@@ -61,7 +61,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottom_menu.webp",
                 "fullImg": "/img/bottom_bg.png",
-                "url": "products/type/bottom"
+                "url": "/products/type/bottom"
             },
             {
                 "id": "p4",
@@ -69,7 +69,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/accessories_menu.webp",
                 "fullImg": "/img/accessories_bg.webp",
-                "url": "products/type/accessories"
+                "url": "/products/type/accessories"
             },
             {
                 "id": "p5",
@@ -77,7 +77,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/footwear_menu.webp",
                 "fullImg": "/img/footwear_bg.webp",
-                "url": "products/type/footwear"
+                "url": "/products/type/footwear"
             }
         ]
     },
@@ -90,7 +90,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottoms.png",
                 "fullImg": "/img/winter_full.png",
-                "url": "products/occassion/everyday_wear"
+                "url": "/products/occassion/everyday_wear"
             },
             {
                 "id": "o2",
@@ -98,7 +98,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottoms.png",
                 "fullImg": "/img/winter_full.png",
-                "url": "products/occassion/date_night"
+                "url": "/products/occassion/date_night"
             },
             {
                 "id": "o3",
@@ -106,7 +106,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottoms.png",
                 "fullImg": "/img/winter_full.png",
-                "url": "products/occassion/cozy_fits"
+                "url": "/products/occassion/cozy_fits"
             },
             {
                 "id": "o4",
@@ -114,7 +114,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottoms.png",
                 "fullImg": "/img/winter_full.png",
-                "url": "products/occassion/occassionwear"
+                "url": "/products/occassion/occassionwear"
             },
             {
                 "id": "o5",
@@ -122,7 +122,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottoms.png",
                 "fullImg": "/img/winter_full.png",
-                "url": "products/occassion/workwear"
+                "url": "/products/occassion/workwear"
             }
         ]
     }

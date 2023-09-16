@@ -3,7 +3,6 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 import React from 'react'
 import { BsPlus } from 'react-icons/bs';
 import ProductFilterSidebar from './ProductFilterSidebar';
-import { PageProps } from '../../../.next/types/app/products/page';
 
 interface BreadCrumb {
     category: string;
@@ -29,7 +28,7 @@ const ProductsPageHead = ({ category, value }: BreadCrumb) => {
             <div className='pt-20 px-2 lg:px-8 bg-white'>
                 <div className='flex justify-between items-baseline'>
                     <div className='hidden lg:block'>
-                        <p className='uppercase text-[0.6rem]'>{'Products>' + category}</p>
+                        <p className='uppercase text-[0.7rem]'>{'Products > ' + category}</p>
                     </div>
                     <div>
                         <h2 className='uppercase text-2xl font-bold'>{value}</h2>

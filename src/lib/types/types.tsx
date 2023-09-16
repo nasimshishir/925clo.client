@@ -6,6 +6,8 @@
 //     fullImg: string
 // }
 
+import { UrlObject } from "url"
+
 export type user = {
     id: number,
     name: string,
@@ -20,7 +22,7 @@ export type menuItem = {
     desc: string,
     img: string,
     fullImg: string,
-    url: string
+    url: string,
 }
 
 export type AccordionItem = {
