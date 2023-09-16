@@ -10,9 +10,9 @@ export default function Home() {
 
   const { user } = useUserContext()
 
-  if (!user) {
-    redirect('/auth')
-  }
+  // if (!user) {
+  //   redirect('/auth')
+  // }
 
   return (
     <>

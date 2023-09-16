@@ -10,7 +10,7 @@ const DashboardSidebar = () => {
 
   const logOut = () => {
     setUser(null)
-    router.push('/auth/login')
+    router.push('/auth')
   }
 
 
