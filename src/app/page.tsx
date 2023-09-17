@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <Headerv1 />
+      <Headerv1 bgColor='bg-transparent' textColor='white' hoverColor='bg-white/10' />
       <main className='min-h-screen w-full'>
 
         {/* Hero section Start */}

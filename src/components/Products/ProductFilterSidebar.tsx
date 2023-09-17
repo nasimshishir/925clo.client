@@ -1,19 +1,18 @@
 'use client'
 import React, { useState } from 'react';
-import { Buttonv1 } from '@components';
+import { Buttonv1, InputField } from '@components';
 import { TfiAngleLeft } from 'react-icons/tfi';
 import { BsCircleFill, BsPlus } from 'react-icons/bs';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { useProductFilterContext } from '@lib/context api/providers/ProductFilterProvider';
-import AutocompleteSearchBox from '@components/AutocompleteSearchBox';
 
 
 const ProductFilterSidebar: React.FC = () => {
 
     const { queryPramas, setQueryPramas } = useProductFilterContext()
     const { isFilterBarOpen, setIsFilterBarOpen } = useDropdownMenuContext()
-    const [colors, setColors] = useState({});
-    const [brands, setBrands] = useState({});
+    const [colors, setColors] = useState([]);
+    const [brands, setBrands] = useState([]);
 
 
 
@@ -35,7 +34,7 @@ const ProductFilterSidebar: React.FC = () => {
                     </div>
 
                     {/* Color Filter */}
-                    <div className='mt-10'>
+                    <div className='mt-10 relative'>
                         <p className='uppercase text-xs ps-2'>Colors</p>
                         <div className='flex gap-2 items-center mt-2'>
                             <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-xl'>
@@ -45,7 +44,7 @@ const ProductFilterSidebar: React.FC = () => {
                                 <p className='uppercase text-xs'>Add </p><BsPlus />
                             </div>
                         </div>
-                        <AutocompleteSearchBox />
+
                     </div>
 
                     {/* Brands Filter */}

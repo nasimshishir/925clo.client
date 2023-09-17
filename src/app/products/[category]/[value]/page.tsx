@@ -22,7 +22,6 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     return (
         <section className='min-h-screen'>
             <ProductsPageHead category={params.category} value={params.value} />
-
             {/* Products Listing */}
             <Suspense fallback={<Loading />}>
                 <div className='my-10 px-2 lg:px-0'>
