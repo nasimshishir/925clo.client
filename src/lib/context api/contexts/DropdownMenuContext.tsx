@@ -27,7 +27,7 @@ export const DropdownMenuContext = createContext<DropdownMenuContextProps>({
     itemId: null,
     setItemId: (): number | null => null,
     menuItemData: null,
-    setMenuItemData: (): menuItem | undefined => (undefined),
+    setMenuItemData: (): menuItem | null => (null),
     user: null,
     styleProfileformStep: 0,
     setStyleProfileformStep: (): number => 0,

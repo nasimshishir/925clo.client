@@ -5,7 +5,7 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 
 
 
-const Herov2 = () => {
+const Herov2: React.FC = () => {
     const { styleProfileformStep } = useDropdownMenuContext()
 
     return (

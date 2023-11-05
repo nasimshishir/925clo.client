@@ -1,9 +1,9 @@
 'use client'
 import { Footerv1, Herov1, Headerv1, Submenu } from '@components'
 import Image from 'next/image';
-import { redirect } from 'next/navigation';
 import mobile from '@assets/mobile_section.webp'
 import { useUserContext } from '@lib/context api/providers/UserProvider';
+import Logo from '@assets/logo.png'
 
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <Headerv1 bgColor='bg-transparent' textColor='white' hoverColor='bg-white/10' />
+      <Headerv1 />
       <main className='min-h-screen w-full'>
 
         {/* Hero section Start */}

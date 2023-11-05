@@ -11,19 +11,13 @@ import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { wishListToggle } from '@lib/common';
 import { WishlistSidebar } from '@components';
-
-interface headerProps {
-    bgColor?: string,
-    textColor?: string,
-    hoverColor?: string,
-    hoverTextColor?: string
-}
+import { useUserContext } from '@lib/context api/providers/UserProvider';
 
 
-const Headerv1: React.FC<headerProps> = ({ bgColor, textColor, hoverColor, hoverTextColor }) => {
+const Headerv1: React.FC = () => {
 
     const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, wishlistIsOpen, setWishlistIsOpen } = useDropdownMenuContext()
-    const user = true;
+    const { user } = useUserContext()
 
 
     const handleToggle = (id: number | null, data: menuItem[]) => {
@@ -41,7 +35,7 @@ const Headerv1: React.FC<headerProps> = ({ bgColor, textColor, hoverColor, hover
 
     return (
         <>
-            <header className={`absolute w-full ${textColor} ${bgColor} z-40`} >
+            <header className={`absolute w-full text-white bg-transparent z-40`} >
 
                 {/* Desktop Device */}
                 <nav className='grid grid-cols-5 items-center py-2 px-6'>
@@ -52,18 +46,18 @@ const Headerv1: React.FC<headerProps> = ({ bgColor, textColor, hoverColor, hover
                     {/* Main Menu */}
                     <div className="md:block hidden col-span-3">
                         <ul className='flex justify-center items-center'>
-                            <Link href="/generate_outfit"><li className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:${hoverColor}`}>Generate Outfit</li></Link>
-                            <Link href="/style_profile"><li className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:${hoverColor}`}>Style Profile</li></Link>
-                            <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:${hoverColor} cursor-pointer`}>Shop Seasons</li>
-                            <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:${hoverColor} cursor-pointer`}>Shop Product</li>
-                            <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:${hoverColor} cursor-pointer`}>Shop by Occasion</li>
+                            <Link href="/generate_outfit"><li className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10`}>Generate Outfit</li></Link>
+                            <Link href="/style_profile"><li className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10`}>Style Profile</li></Link>
+                            <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>Shop Seasons</li>
+                            <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>Shop Product</li>
+                            <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>Shop by Occasion</li>
                         </ul>
                     </div>
                     {/* Profile Menu */}
                     <div className='md:block hidden col-span-1'>
                         <ul className='flex flex-row justify-end items-center'>
                             <Link href='/how_it_works'>
-                                <li className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:${hoverColor} cursor-pointer`}>How it Works</li>
+                                <li className={`text-[0.7rem] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>How it Works</li>
                             </Link>
                             {user &&
                                 <>
