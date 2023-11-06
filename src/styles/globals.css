@@ -8,7 +8,7 @@
 }
 
 .sec_title {
-  @apply text-[24px] font-[700] font-helvetica uppercase
+  @apply text-[1.5rem] font-[700] font-helvetica uppercase
 }
 
 .sec_desc {
@@ -17,21 +17,21 @@
 
 @screen md {
   .sec_title {
-    @apply text-[24px] font-[700] font-helvetica uppercase
+    @apply text-[2rem] font-[700] font-helvetica uppercase
   }
 
   .sec_desc {
-    @apply text-[0.75rem] font-inter font-extralight tracking-wide
+    @apply text-[0.875rem] font-inter font-extralight tracking-wide
   }
 }
 
 @screen lg {
   .sec_title {
-    @apply text-[24px] font-[700] font-helvetica uppercase
+    @apply text-[2rem] font-[700] font-helvetica uppercase
   }
 
   .sec_desc {
-    @apply text-[0.75rem] font-inter font-extralight tracking-wide
+    @apply text-[0.875rem] font-inter font-extralight tracking-wide
   }
 }
 

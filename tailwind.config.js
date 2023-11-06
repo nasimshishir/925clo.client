@@ -17,10 +17,6 @@ module.exports = {
         'primary_orange': '#F25200',
         'secondary_orange': '#FF5722',
       },
-      fontSize: {
-        'xs': '0.72rem',
-      },
-
     },
   },
   plugins: [],

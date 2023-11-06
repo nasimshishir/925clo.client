@@ -13,10 +13,11 @@ const Auth = (pageProps: PageProps) => {
 
     return (
         <div className='w-full min-h-screen' style={{ backgroundImage: 'url(/img/login_landing.png)' }}>
+            {/* Header ====================================== */}
             <div className='absolute text-white w-full'>
                 <nav className='flex justify-between items-center py-2 px-6'>
                     <div className=''>
-                        <Link className='' href='/'><Image className='px-2' src={Logo} width={70} height={29} alt='925clo_logo' /></Link>
+                        <Link className='' href='/'><Image className='px-2' src={Logo} width={100} height={42} alt='925clo_logo' /></Link>
                     </div>
 
                     <div className=''>
@@ -26,13 +27,14 @@ const Auth = (pageProps: PageProps) => {
                     </div>
                 </nav>
             </div>
+            {/* Auth Body ================================================ */}
             <div className='flex flex-col justify-center items-center h-screen' >
                 <h2 className='text-white sec_title mb-2'>Welcome to 925</h2>
                 <p className='text-white sec_desc text-center mb-5'>As a member of the 925 community you’ll enjoy a personalized <br />stylist at your fingertips, ready to curate a 5-piece outfit just for you.
                 </p>
                 <div className='mt-10'>
-                    <Buttonv1 type='submit' css='mb-3 w-72 py-3 lg:py-3' to='/auth/login'>Log in</Buttonv1>
-                    <Buttonv2 type='submit' css='w-72 py-3 lg:py-3' to='/auth/signup'>Sign Up</Buttonv2>
+                    <Buttonv1 type='submit' css='mb-4 lg:mb-5 w-[20rem] lg:w-[25.6rem] h-[3.375rem] lg: h-[4.3125rem]' to='/auth/login'>Log in</Buttonv1>
+                    <Buttonv2 type='submit' css='w-[20rem] lg:w-[25.6rem] h-[3.375rem] lg: h-[4.3125rem]' to='/auth/signup'>Sign Up</Buttonv2>
                 </div>
             </div>
         </div>
