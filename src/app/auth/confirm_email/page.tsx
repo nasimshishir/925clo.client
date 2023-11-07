@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react'
-import signupImg from '@assets/signup_img.jpg'
 import { TfiAngleLeft } from 'react-icons/tfi'
 import Link from 'next/link';
 import Logo from "@assets/logo.png";
@@ -48,33 +47,34 @@ const ConfirmEmailPage = () => {
                 </nav>
             </div>
             {/* Body ============================================ */}
-            <div className='h-screen flex md:flex-col-reverse lg:flex-row'>
+            <div className='h-screen flex flex-col-reverse lg:flex-row'>
                 <div className='flex-1 bg-primary_orange h-full text-white'>
                     <div className='grid h-full lg:h-screen ps-10 lg:ps-[8rem] pe-10 lg:pe-[13rem]'>
-                        <div className='py-5 lg:pt-0'>
-                            <div className='flex justify-between items-baseline'>
+                        <div className='lg:my-auto flex flex-col justify-between mt-[3rem] mb-[4rem]'>
+                            <div>
                                 <h2 className='text-white sec_title'>Confirm your e-mail</h2>
-                            </div>
-                            <div className='mt-3'>
-                                <p className='sec_desc'>Join our exclusive community and unlock the world of luxury fashion.</p>
-                                <p className='sec_desc'>Simply provide us with a few details to get started.</p>
+                                <div className='mt-3'>
+                                    <p className='sec_desc'>Join our exclusive community and unlock the world of luxury fashion.</p>
+                                    <p className='sec_desc'>Simply provide us with a few details to get started.</p>
+                                </div>
                             </div>
 
                             {/* ======================================================== */}
-                            <div className='mt-20'>
-                                <div className='mt-12'>
-                                    <Buttonv3 type='submit' css='w-full h-[3rem] md:h-[4.3125rem]'>Confirm e-mail</Buttonv3>
+                            <div>
+                                <div className='mt-20'>
+                                    <div className='mt-12'>
+                                        <Buttonv3 type='submit' css='w-full h-[3rem] md:h-[4.3125rem]'>Confirm e-mail</Buttonv3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='flex items-center mt-8'>
-                                <><TfiAngleLeft className='cursor-pointer hidden lg:block' size={14} /><span className='cursor-pointer uppercase text-sm font-thin  hidden lg:block'>Back</span></>
-                                <p className='uppercase text-sm font-thin grow lg:text-end'>Step 0/2 Completed</p>
+                                <div className='flex items-center mt-8'>
+                                    <><TfiAngleLeft className='cursor-pointer hidden lg:block' size={14} /><span className='cursor-pointer uppercase text-sm font-thin  hidden lg:block'>Back</span></>
+                                    <p className='uppercase text-sm font-thin grow lg:text-end'>Step 0/2 Completed</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='flex-1 relative'>
-                    <Image src={signupImg} alt='signup Image' fill className='object-cover object-bottom' />
+                <div className='flex-1 relative bg-confirm_email_bg_m lg:bg-confirm_email_bg bg-cover bg-no-repeat'>
                 </div>
             </div>
         </section>

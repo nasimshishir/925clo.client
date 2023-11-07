@@ -20,7 +20,12 @@ module.exports = {
       backgroundImage: {
         'auth_bg': "url('/img/auth_landing.webp')",
         'auth_bg_m': "url('/img/auth_landing_mobile.webp')",
-        'signup_bg': "url(/img/)"
+        'signup_bg': "url(/img/signup_bg.webp)",
+        'login_bg': "url(/img/login_bg.webp)",
+        'confirm_email_bg': "url(/img/confirm_email_bg.webp)",
+        'confirm_email_bg_m': "url(/img/confirm_email_bg_m.webp)",
+        'enter_code': "url(/img/enter_code.webp)",
+        'enter_code_m': "url(/img/enter_code_m.webp)"
       }
     },
   },

@@ -1,14 +1,9 @@
 import Image from 'next/image';
 import React from 'react'
-import signupImg from '@assets/signup_img.jpg'
 import { TfiAngleLeft } from 'react-icons/tfi'
 import Link from 'next/link';
 import SignUpForm from '@components/SignUpForm';
 import Logo from "@assets/logo.png";
-
-
-
-
 
 
 const SignUpPage = () => {
@@ -72,8 +67,8 @@ const SignUpPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className='hidden md:block flex-1 relative'>
-                    <Image src={signupImg} alt='signup Image' fill className='object-cover object-bottom' />
+                <div className='hidden md:block flex-1 relative bg-signup_bg bg-cover bg-bottom bg-no-repeat'>
+
                 </div>
             </div>
         </section>
