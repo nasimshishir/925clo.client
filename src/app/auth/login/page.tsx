@@ -12,8 +12,8 @@ const LoginPage = ({ params, searchParams }: PageProps) => {
     console.log(searchParams);
 
     return (
-        <section className='min-h-screen overflow-hidden'>
-            <div className='max-h-screen h-screen grid grid-cols-2'>
+        <section className='max-h-screen overflow-hidden'>
+            <div className='min-h-screen h-screen grid grid-cols-2'>
                 <div className='col-span-2 lg:col-span-1 bg-secondary_orange h-full text-white'>
                     <div className='grid h-screen ps-10 lg:ps-20 pe-10 lg:pe-32'>
                         <div className='my-auto'>

@@ -12,7 +12,7 @@ const Auth = (pageProps: PageProps) => {
 
 
     return (
-        <div className='w-full min-h-screen max-h-screen bg-cover' style={{ backgroundImage: 'url(/img/login_landing.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'left' }}>
+        <div className='w-full min-h-screen max-h-screen bg-cover bg-auth_bg_m md:bg-auth_bg bg-no-repeat'>
             {/* Header ====================================== */}
             <div className='absolute text-white w-full'>
                 <nav className='flex justify-center lg:justify-between items-center py-4 px-6'>
@@ -28,13 +28,13 @@ const Auth = (pageProps: PageProps) => {
                 </nav>
             </div>
             {/* Auth Body ================================================ */}
-            <div className='flex flex-col justify-end lg:justify-center items-center h-screen' >
+            <div className='flex flex-col justify-end md:justify-center items-center h-screen' >
                 <h2 className='text-white sec_title mb-2'>Welcome to 925</h2>
                 <p className='text-white sec_desc text-center mb-5 w-3/4 lg:w-full'>As a member of the 925 community you’ll enjoy a personalized <br className='hidden lg:block' />stylist at your fingertips, ready to curate a 5-piece outfit just for you.
                 </p>
-                <div className='mt-[3.125rem] mb-20 md:mb-0'>
-                    <Buttonv1 type='submit' css='mb-4 lg:mb-5 w-[20rem] lg:w-[25.6rem] h-[3rem] lg:h-[4.3125rem]' to='/auth/login'>Log in</Buttonv1>
-                    <Buttonv2 type='submit' css='w-[20rem] lg:w-[25.6rem] h-[3rem] lg:h-[4.3125rem]' to='/auth/signup'>Sign Up</Buttonv2>
+                <div className='mt-[3.125rem] mb-28 md:mb-0'>
+                    <Buttonv1 type='submit' css='mb-4 lg:mb-5 w-[20rem] md:w-[25.6rem] h-[3rem] md:h-[4.3125rem]' to='/auth/login'>Log in</Buttonv1>
+                    <Buttonv2 type='submit' css='w-[20rem] md:w-[25.6rem] h-[3rem] md:h-[4.3125rem]' to='/auth/signup'>Sign Up</Buttonv2>
                 </div>
             </div>
         </div>

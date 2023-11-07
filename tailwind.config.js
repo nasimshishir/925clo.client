@@ -17,6 +17,11 @@ module.exports = {
         'primary_orange': '#F25200',
         'secondary_orange': '#FF5722',
       },
+      backgroundImage: {
+        'auth_bg': "url('/img/auth_landing.webp')",
+        'auth_bg_m': "url('/img/auth_landing_mobile.webp')",
+        'signup_bg': "url(/img/)"
+      }
     },
   },
   plugins: [],
