@@ -30,7 +30,9 @@ import ProfileInfo from "./Dashboard/ProfileInfo";
 import StyleProfile from "./Dashboard/StyleProfile";
 import Wishlist from "./Dashboard/Wishlist";
 import InputField from "./InputField";
-import AutocompleteSearchBox from "./AutocompleteSearchBox"
+import AutocompleteSearchBox from "./AutocompleteSearchBox";
+import EmailVerificationForm from "./EmailVerificationForm";
+
 
 
 export {
@@ -66,5 +68,6 @@ export {
     StyleProfile,
     Wishlist,
     InputField,
-    AutocompleteSearchBox
+    AutocompleteSearchBox,
+    EmailVerificationForm
 }

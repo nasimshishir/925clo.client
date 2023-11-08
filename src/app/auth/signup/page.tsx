@@ -57,7 +57,7 @@ const SignUpPage = () => {
                             </div>
 
                             {/* form container */}
-                            <div className='mt-6'>
+                            <div className='mt-12'>
                                 <SignUpForm />
                             </div>
                             <div className='flex items-center mt-8'>
@@ -68,7 +68,6 @@ const SignUpPage = () => {
                     </div>
                 </div>
                 <div className='hidden md:block flex-1 relative bg-signup_bg bg-cover bg-bottom bg-no-repeat'>
-
                 </div>
             </div>
         </section>

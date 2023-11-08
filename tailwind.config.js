@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         'primary_orange': '#F25200',
         'secondary_orange': '#FF5722',
+        'off_white': '#FFC7A8'
       },
       backgroundImage: {
         'auth_bg': "url('/img/auth_landing.webp')",

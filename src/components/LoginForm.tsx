@@ -65,16 +65,16 @@ const LoginForm: React.FC = () => {
     return (
         <form className='w-full' onSubmit={handleSubmit}>
 
-            <div className='grid gap-2 mt-3'>
+            <div className='grid gap-2 mt-4'>
                 <label className='uppercase text-xs font-thin tracking-wide ms-5' htmlFor="">E-mail</label>
-                <input className='bg-transparent border rounded-xl border-white text-sm font-thin focus:bg-transparent focus:outline-none p-3 text-white focus:border-gray-300 placeholder:text-gray-300' type="email" name='username' required onChange={handleChange} value={formData.username} />
+                <input className='block h-[4rem] px-5 bg-transparent border rounded-xl border-white text-sm font-thin focus:bg-transparent focus:outline-none text-white focus:border-gray-300 placeholder:text-gray-300' type="email" name='username' required onChange={handleChange} value={formData.username} />
             </div>
-            <div className='grid gap-2 mt-3'>
+            <div className='grid gap-2 mt-4'>
                 <label className='uppercase text-xs font-thin tracking-wide ms-5' htmlFor="">Password</label>
-                <input className='bg-transparent border rounded-xl border-white text-sm font-thin focus:bg-transparent focus:outline-none p-3 text-white focus:border-gray-300 placeholder:text-gray-300' type="password" name='password' placeholder='Type your password here...' title='(Atleast 8 characters, uppercase, lowercase, numbers and special characters)' required onChange={handleChange} value={formData.password} />
+                <input className='block h-[4rem] px-5 bg-transparent border rounded-xl border-white text-sm font-thin focus:bg-transparent focus:outline-none text-white focus:border-gray-300 placeholder:text-gray-300' type="password" name='password' placeholder='Type your password here...' title='(Atleast 8 characters, uppercase, lowercase, numbers and special characters)' required onChange={handleChange} value={formData.password} />
             </div>
             <div className='mt-12'>
-                <Buttonv3 css='w-60 py-3 lg:py-4'>Sign in</Buttonv3>
+                <Buttonv3 css='w-full h-[3rem] md:h-[4.3125rem]'>Sign in</Buttonv3>
             </div>
 
         </form>
