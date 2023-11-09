@@ -11,7 +11,7 @@ const Auth = () => {
 
 
     return (
-        <div className='w-full min-h-screen max-h-screen bg-cover bg-auth_bg_m md:bg-auth_bg bg-no-repeat'>
+        <div className='w-full min-h-screen bg-cover bg-auth_bg_m md:bg-auth_bg bg-no-repeat'>
             {/* Header ====================================== */}
             <div className='absolute text-white w-full'>
                 <nav className='flex justify-center lg:justify-between items-center py-4 px-6'>
@@ -27,7 +27,7 @@ const Auth = () => {
                 </nav>
             </div>
             {/* Auth Body ================================================ */}
-            <div className='flex flex-col justify-end md:justify-center items-center h-screen' >
+            <div className='flex flex-col justify-end md:justify-center items-center min-h-screen' >
                 <h2 className='text-white sec_title mb-2'>Welcome to 925</h2>
                 <p className='text-white sec_desc text-center mb-5 w-3/4 lg:w-full'>As a member of the 925 community you’ll enjoy a personalized <br className='hidden md:block' />stylist at your fingertips, ready to curate a 5-piece outfit just for you.
                 </p>
