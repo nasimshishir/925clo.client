@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import React, { ButtonHTMLAttributes } from 'react';
-import { Url } from 'url';
+import { Url, UrlObject } from 'url';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     // Additional props if needed
     css?: string;
-    to?: string;
+    to?: Rstring;
 }
 
 const Buttonv1: React.FC<ButtonProps> = ({ children, css, to, ...rest }) => {
