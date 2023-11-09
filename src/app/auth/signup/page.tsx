@@ -8,10 +8,8 @@ import Logo from "@assets/logo.png";
 
 const SignUpPage = () => {
 
-
-
     return (
-        <section className='min-h-screen overflow-hidden'>
+        <section className='min-h-screen sm:max-h-screen overflow-hidden'>
             {/* Header ========================================== */}
 
             <div className='hidden lg:block absolute text-white w-1/2'>
@@ -29,8 +27,8 @@ const SignUpPage = () => {
             </div>
 
             {/* Mobile Header ==================================== */}
-            <div className='absolute lg:hidden text-white w-full'>
-                <nav className='flex justify-center lg:justify-between items-center py-4 px-6'>
+            <div className='lg:hidden text-white w-full bg-primary_orange'>
+                <nav className='flex justify-center lg:justify-between items-center py-3 px-6'>
                     <div className=''>
                         <Link className='' href='/'><Image className='px-2' src={Logo} width={100} height={42} alt='925clo_logo' /></Link>
                     </div>
@@ -42,10 +40,12 @@ const SignUpPage = () => {
                     </div>
                 </nav>
             </div>
+
+
             {/* Body ============================================ */}
             <div className='min-h-screen flex md:flex-col-reverse lg:flex-row'>
                 <div className='flex-1 bg-primary_orange h-full text-white'>
-                    <div className='grid min-h-screen ps-6 sm:ps-10 lg:ps-[8rem] pe-6 sm:pe-10 lg:pe-[13rem] mt-16 mb-5 lg:my-0'>
+                    <div className='grid min-h-screen ps-6 sm:ps-10 lg:ps-[8rem] pe-6 sm:pe-10 lg:pe-[13rem] pb-5 sm:pb-0'>
                         <div className='my-auto'>
                             <div className='flex justify-between items-baseline'>
                                 <h2 className='text-white sec_title'>Sign Up</h2>
