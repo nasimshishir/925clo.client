@@ -3,12 +3,11 @@ import { Buttonv1, Buttonv2 } from '@components';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from "@assets/logo.png";
-import { PageProps } from '../../../.next/types/app/auth/page';
 
 
 
 
-const Auth = (pageProps: PageProps) => {
+const Auth = () => {
 
 
     return (
@@ -30,7 +29,7 @@ const Auth = (pageProps: PageProps) => {
             {/* Auth Body ================================================ */}
             <div className='flex flex-col justify-end md:justify-center items-center h-screen' >
                 <h2 className='text-white sec_title mb-2'>Welcome to 925</h2>
-                <p className='text-white sec_desc text-center mb-5 w-3/4 lg:w-full'>As a member of the 925 community you’ll enjoy a personalized <br className='hidden lg:block' />stylist at your fingertips, ready to curate a 5-piece outfit just for you.
+                <p className='text-white sec_desc text-center mb-5 w-3/4 lg:w-full'>As a member of the 925 community you’ll enjoy a personalized <br className='hidden md:block' />stylist at your fingertips, ready to curate a 5-piece outfit just for you.
                 </p>
                 <div className='mt-[3.125rem] mb-28 md:mb-0'>
                     <Buttonv1 type='submit' css='mb-4 lg:mb-5 w-[20rem] md:w-[25.6rem] h-[3rem] md:h-[4.3125rem]' to='/auth/login'>Log in</Buttonv1>

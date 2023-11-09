@@ -11,7 +11,7 @@ const SignUpPage = () => {
 
 
     return (
-        <section className='max-h-screen overflow-hidden'>
+        <section className='min-h-screen overflow-hidden'>
             {/* Header ========================================== */}
 
             <div className='hidden lg:block absolute text-white w-1/2'>
@@ -43,21 +43,20 @@ const SignUpPage = () => {
                 </nav>
             </div>
             {/* Body ============================================ */}
-            <div className='h-screen flex md:flex-col-reverse lg:flex-row'>
+            <div className='min-h-screen flex md:flex-col-reverse lg:flex-row'>
                 <div className='flex-1 bg-primary_orange h-full text-white'>
-                    <div className='grid h-screen ps-10 lg:ps-[8rem] pe-10 lg:pe-[13rem]'>
-                        <div className='my-auto pt-5 lg:pt-0'>
+                    <div className='grid min-h-screen ps-6 sm:ps-10 lg:ps-[8rem] pe-6 sm:pe-10 lg:pe-[13rem] mt-16 mb-5 lg:my-0'>
+                        <div className='my-auto'>
                             <div className='flex justify-between items-baseline'>
                                 <h2 className='text-white sec_title'>Sign Up</h2>
                                 <p className='hidden lg:block text-xs uppercase font-thin'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>
                             </div>
                             <div className='mt-3'>
-                                <p className='sec_desc'>Join our exclusive community and unlock the world of luxury fashion.</p>
-                                <p className='sec_desc'>Simply provide us with a few details to get started.</p>
+                                <p className='sec_desc'>Join our exclusive community and unlock the world of luxury fashion. <br className='hidden md:block' /> Simply provide us with a few details to get started.</p>
                             </div>
 
                             {/* form container */}
-                            <div className='mt-12'>
+                            <div className='mt-[3rem]'>
                                 <SignUpForm />
                             </div>
                             <div className='flex items-center mt-8'>
