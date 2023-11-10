@@ -10,43 +10,34 @@ const SignUpPage = () => {
 
     return (
         <section className='min-h-screen sm:max-h-screen overflow-hidden'>
-            {/* Header ========================================== */}
 
-            <div className='hidden lg:block absolute text-white w-1/2'>
-                <nav className='flex justify-center lg:justify-between items-center py-4 px-6'>
-                    <div className=''>
-                        <Link className='' href='/'><Image className='px-2' src={Logo} width={100} height={42} alt='925clo_logo' /></Link>
+            {/* Header ==================================== */}
+            <div className='absolute text-white w-full lg:w-1/2 bg-primary_orange'>
+                <nav className='relative h-auto'>
+                    <div className='absolute flex justify-center md:justify-between items-center py-3 px-6 w-full'>
+                        <div className=''>
+                            <Link className='' href='/'><Image className='px-2' src={Logo} width={100} height={42} alt='925clo_logo' /></Link>
+                        </div>
+
+                        <div className='hidden md:block'>
+                            <Link href='/how_it_works'>
+                                <span className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>How it Works</span>
+                            </Link>
+                        </div>
                     </div>
-
-                    <div className='hidden lg:block'>
-                        <Link href='/how_it_works'>
-                            <span className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>How it Works</span>
-                        </Link>
-                    </div>
-                </nav>
-            </div>
-
-            {/* Mobile Header ==================================== */}
-            <div className='lg:hidden text-white w-full bg-primary_orange'>
-                <nav className='flex justify-center lg:justify-between items-center py-3 px-6'>
-                    <div className=''>
-                        <Link className='' href='/'><Image className='px-2' src={Logo} width={100} height={42} alt='925clo_logo' /></Link>
-                    </div>
-
-                    <div className='hidden lg:block'>
-                        <Link href='/how_it_works'>
-                            <span className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>How it Works</span>
-                        </Link>
+                    <div className='absolute py-5 px-6 ps-6 sm:ps-10 md:hidden'>
+                        <div className='flex items-center'>
+                            <><TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span></>
+                        </div>
                     </div>
                 </nav>
             </div>
-
 
             {/* Body ============================================ */}
             <div className='min-h-screen flex md:flex-col-reverse lg:flex-row'>
                 <div className='flex-1 bg-primary_orange h-full text-white'>
                     <div className='grid min-h-screen ps-6 sm:ps-10 lg:ps-[8rem] pe-6 sm:pe-10 lg:pe-[13rem] pb-5 sm:pb-0'>
-                        <div className='my-auto'>
+                        <div className='my-auto pt-16 md:pt-0'>
                             <div className='flex justify-between items-baseline'>
                                 <h2 className='text-white sec_title'>Sign Up</h2>
                                 <p className='hidden lg:block text-xs uppercase font-thin'>Already have an account? <Link href='/auth/login' className='font-medium underline'>Log In</Link></p>

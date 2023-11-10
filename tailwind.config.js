@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '360px',
+        'xs': '376px',
         'sm': '481px',
         'md': '769px',
         'lg': '1025px',
@@ -27,6 +27,7 @@ module.exports = {
         'off_white': '#FFC7A8'
       },
       backgroundImage: {
+        'logo_white': "url/('/img/')",
         'auth_bg': "url('/img/auth_landing.webp')",
         'auth_bg_m': "url('/img/auth_landing_mobile.webp')",
         'signup_bg': "url(/img/signup_bg.webp)",
