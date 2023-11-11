@@ -4,6 +4,7 @@ import { TfiAngleLeft } from 'react-icons/tfi'
 import Link from 'next/link';
 import SignUpForm from '@components/SignUpForm';
 import Logo from "@assets/logo.png";
+import { AuthHeader } from '@components';
 
 
 const SignUpPage = () => {
@@ -12,26 +13,7 @@ const SignUpPage = () => {
         <section className='min-h-screen sm:max-h-screen overflow-hidden'>
 
             {/* Header ==================================== */}
-            <div className='absolute text-white w-full lg:w-1/2 bg-primary_orange'>
-                <nav className='relative h-auto'>
-                    <div className='absolute flex justify-center md:justify-between items-center py-3 px-6 w-full'>
-                        <div className=''>
-                            <Link className='' href='/'><Image className='px-2' src={Logo} width={100} height={42} alt='925clo_logo' /></Link>
-                        </div>
-
-                        <div className='hidden md:block'>
-                            <Link href='/how_it_works'>
-                                <span className='text-xs tracking-[0.6px] px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer'>How it Works</span>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className='absolute py-5 px-6 ps-6 sm:ps-10 md:hidden'>
-                        <div className='flex items-center'>
-                            <><TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span></>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+            <AuthHeader />
 
             {/* Body ============================================ */}
             <div className='min-h-screen flex md:flex-col-reverse lg:flex-row'>
@@ -50,7 +32,7 @@ const SignUpPage = () => {
                             <div className='mt-[3rem]'>
                                 <SignUpForm />
                             </div>
-                            <div className='flex items-center mt-8'>
+                            <div className='flex items-center mt-2'>
                                 <><TfiAngleLeft className='cursor-pointer hidden lg:block' size={12} /><span className='cursor-pointer uppercase text-xs font-thin  hidden lg:block'>Back</span></>
                                 <p className='uppercase text-xs font-thin grow lg:text-center'>Step 0/2 Completed</p>
                             </div>

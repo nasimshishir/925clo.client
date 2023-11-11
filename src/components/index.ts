@@ -32,6 +32,7 @@ import Wishlist from "./Dashboard/Wishlist";
 import InputField from "./InputField";
 import AutocompleteSearchBox from "./AutocompleteSearchBox";
 import EmailVerificationForm from "./EmailVerificationForm";
+import AuthHeader from "./AuthHeader";
 
 
 
@@ -69,5 +70,6 @@ export {
     Wishlist,
     InputField,
     AutocompleteSearchBox,
-    EmailVerificationForm
+    EmailVerificationForm,
+    AuthHeader
 }
