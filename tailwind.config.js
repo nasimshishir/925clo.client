@@ -35,7 +35,8 @@ module.exports = {
         'confirm_email_bg': "url(/img/confirm_email_bg.webp)",
         'confirm_email_bg_m': "url(/img/confirm_email_bg_m.webp)",
         'enter_code': "url(/img/enter_code.webp)",
-        'enter_code_m': "url(/img/enter_code_m.webp)"
+        'enter_code_m': "url(/img/enter_code_m.webp)",
+        'landing_bg': "url(/img/landing_bg.webp)"
       }
     },
   },
