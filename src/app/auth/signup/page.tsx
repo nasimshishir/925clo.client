@@ -32,10 +32,6 @@ const SignUpPage = () => {
                             <div className='mt-[3rem]'>
                                 <SignUpForm />
                             </div>
-                            <div className='flex items-center mt-2'>
-                                <><TfiAngleLeft className='cursor-pointer hidden lg:block' size={12} /><span className='cursor-pointer uppercase text-xs font-thin  hidden lg:block'>Back</span></>
-                                <p className='uppercase text-xs font-thin grow lg:text-center'>Step 0/2 Completed</p>
-                            </div>
                         </div>
                     </div>
                 </div>
