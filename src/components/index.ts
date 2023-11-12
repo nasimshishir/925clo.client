@@ -33,6 +33,7 @@ import InputField from "./InputField";
 import AutocompleteSearchBox from "./AutocompleteSearchBox";
 import EmailVerificationForm from "./EmailVerificationForm";
 import AuthHeader from "./AuthHeader";
+import AccountCreated from "./AccountCreated";
 
 
 
@@ -71,5 +72,6 @@ export {
     InputField,
     AutocompleteSearchBox,
     EmailVerificationForm,
-    AuthHeader
+    AuthHeader,
+    AccountCreated
 }

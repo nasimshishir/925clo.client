@@ -24,7 +24,7 @@ function AuthHeader() {
                     </div>
                 </div>
                 <div className='absolute py-5 px-6 ps-6 sm:ps-10 md:hidden'>
-                    <div className='flex items-center'>
+                    <div className='flex items-center h-full'>
                         <><TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span></>
                     </div>
                 </div>
