@@ -12,7 +12,7 @@
 }
 
 .sec_desc {
-  @apply text-[0.75rem] font-inter font-extralight tracking-wide
+  @apply text-xs font-inter font-extralight
 }
 
 @screen xs {
@@ -21,7 +21,7 @@
   }
 
   .sec_desc {
-    @apply text-[0.75rem] font-inter font-extralight tracking-wide
+    @apply text-xs font-inter font-extralight
   }
 }
 
@@ -31,7 +31,7 @@
   }
 
   .sec_desc {
-    @apply text-[0.875rem] font-inter font-extralight tracking-wide
+    @apply text-sm font-inter font-extralight
   }
 }
 
@@ -41,7 +41,7 @@
   }
 
   .sec_desc {
-    @apply text-[0.875rem] font-inter font-extralight tracking-wide
+    @apply text-sm font-inter font-extralight
   }
 }
 
