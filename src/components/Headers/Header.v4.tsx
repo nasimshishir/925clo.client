@@ -6,13 +6,14 @@ import Avatar from "@assets/profile-avatar.png"
 import { BsHeart } from "react-icons/bs"
 import Submenu from '@components/Submenu';
 import Link from 'next/link';
-import menus from '../assets/menuItems/menuData.json'
+import menus from '@assets/menuItems/menuData.json'
 import { menuItem } from '@lib/types/types';
-import { useDropdownMenuContext, } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { wishListToggle } from '@lib/common';
-import WishlistSidebar from './WishlistSidebar';
-import { usePathname } from 'next/navigation'
+import { WishlistSidebar } from '@components';
 import { useUserContext } from '@lib/context api/providers/UserProvider';
+import { usePathname } from 'next/navigation';
+
 
 const Headerv4: React.FC = () => {
 
