@@ -52,7 +52,7 @@
                 "title": "outerwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/outerwear_menu.webp",
-                "fullImg": "/img/outerwear_bg.png",
+                "fullImg": "/img/outerwear_bg.webp",
                 "url": "/products/type/outwear"
             },
             {
@@ -60,7 +60,7 @@
                 "title": "bottoms",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottom_menu.webp",
-                "fullImg": "/img/bottom_bg.png",
+                "fullImg": "/img/bottom_bg.webp",
                 "url": "/products/type/bottom"
             },
             {
@@ -88,40 +88,40 @@
                 "id": "o1",
                 "title": "everyday wear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/bottoms.png",
-                "fullImg": "/img/winter_full.png",
+                "img": "/img/everydaywear_menu.webp",
+                "fullImg": "/img/everydaywear_bg.webp",
                 "url": "/products/occassion/everyday_wear"
             },
             {
                 "id": "o2",
                 "title": "date night",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/bottoms.png",
-                "fullImg": "/img/winter_full.png",
+                "img": "/img/datenight_menu.webp",
+                "fullImg": "/img/datenight_bg.webp",
                 "url": "/products/occassion/date_night"
             },
             {
                 "id": "o3",
                 "title": "cozy fits",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/bottoms.png",
-                "fullImg": "/img/winter_full.png",
+                "img": "/img/cozyfits_menu.webp",
+                "fullImg": "/img/cozyfits_bg.webp",
                 "url": "/products/occassion/cozy_fits"
             },
             {
                 "id": "o4",
                 "title": "occassionwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/bottoms.png",
-                "fullImg": "/img/winter_full.png",
+                "img": "/img/occassionwear_menu.webp",
+                "fullImg": "/img/occassionwear_bg.webp",
                 "url": "/products/occassion/occassionwear"
             },
             {
                 "id": "o5",
                 "title": "workwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
-                "img": "/img/bottoms.png",
-                "fullImg": "/img/winter_full.png",
+                "img": "/img/workwear_menu.webp",
+                "fullImg": "/img/workwear_bg.webp",
                 "url": "/products/occassion/workwear"
             }
         ]

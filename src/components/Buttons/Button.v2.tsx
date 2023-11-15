@@ -5,6 +5,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     // Additional props if needed
     css?: string;
     to?: string;
+    onClick?: () => void;
 }
 
 const Buttonv2: React.FC<ButtonProps> = ({ children, css, to, ...rest }) => {

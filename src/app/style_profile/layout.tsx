@@ -18,11 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <DropdownMenuContextProvider>
-      <Headerv2 />
-      <Suspense fallback={<Loading />}>
-        {children}
-      </Suspense>
-      <Footerv1 />
+      <div className='bg-header_black'>
+        <Headerv2 />
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
+        <Footerv1 />
+      </div>
     </DropdownMenuContextProvider>
   )
 }

@@ -1,14 +1,13 @@
 'use client'
 import React from 'react'
-import logo from '@assets/logo_email.svg'
-import Image from 'next/image';
 import Buttonv1 from '@components/Buttons/Button.v1';
 import Buttonv2 from '@components/Buttons/Button.v2';
 import WhiteLogo from './Lotties/WhiteLogo';
+import { useUserContext } from '@lib/context api/providers/UserProvider';
 
 const Herov1 = () => {
 
-
+    const { user } = useUserContext()
 
 
 
@@ -26,12 +25,12 @@ const Herov1 = () => {
                         </p>
                     </div>
                     <div className='hidden sm:flex justify-center gap-4 mt-10'>
-                        <Buttonv1 type='submit' css='mx-auto mb-3 w-72 lg:w-60 py-3 lg:py-4' to='/auth/login'>{'Generate Outfit'}</Buttonv1>
-                        <Buttonv2 type='submit' css='mx-auto w-72 lg:w-60 py-3 lg:py-4' to='/auth/signup'>{'Your Style Profile'}</Buttonv2>
+                        <Buttonv1 type='submit' css='mx-auto mb-3 w-72 md:w-80 h-[3rem] sm:h-[4.3125rem]' to='/auth/login'>{'Generate Outfit'}</Buttonv1>
+                        <Buttonv2 type='submit' css='mx-auto w-72 md:w-80 h-[3rem] sm:h-[4.3125rem]' to='/auth/signup'>{'Your Style Profile'}</Buttonv2>
                     </div>
                 </div>
                 {/* Mobile============================================= */}
-                <div className='absolute bottom-10 w-full px-5 xs:px-10 xs-10 sm:hidden'>
+                <div className='absolute bottom-12 w-full px-5 xs:px-10 xs-10 sm:hidden'>
                     <Buttonv1 type='submit' css='mb-3 w-full h-[3rem] sm:h-[4.3125rem]' to='/auth/login'>{'Generate Outfit'}</Buttonv1>
                     <Buttonv2 type='submit' css='w-full h-[3rem] sm:h-[4.3125rem]' to='/auth/signup'>{'Your Style Profile'}</Buttonv2>
                 </div>

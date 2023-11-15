@@ -2,11 +2,13 @@ import { Herov2 } from '@components';
 import React from 'react';
 
 
-const styling = () => {
+const stylingPage = () => {
 
     return (
-        <Herov2 />
+        <div className='bg-white pt-[4.375rem] rounded-t-3xl'>
+            <Herov2 />
+        </div>
     )
 }
 
-export default styling;
+export default stylingPage;

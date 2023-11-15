@@ -24,7 +24,8 @@ module.exports = {
       colors: {
         'primary_orange': '#F25200',
         'secondary_orange': '#FF5722',
-        'off_white': '#FFC7A8'
+        'off_white': '#FFC7A8',
+        'header_black': '#0F0E0D'
       },
       backgroundImage: {
         'logo_white': "url/('/img/')",
