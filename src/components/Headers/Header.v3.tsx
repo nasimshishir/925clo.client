@@ -41,7 +41,7 @@ const Headerv3: React.FC = () => {
 
     return (
         <>
-            <div className={`bg-blue-500 w-full text-white`} >
+            <div className={`bg-transparent w-full text-white`} >
 
                 {/* Desktop Device */}
                 {/* Desktop Device */}

@@ -41,7 +41,7 @@ const Headerv1 = () => {
 
     return (
         <>
-            <header className={`absolute w-full text-white bg-transparent z-40 h-[4.375rem] grid`}>
+            <header className={`absolute w-full text-white bg-transparent z-40 h-[4.375rem] grid`} id='header1'>
 
                 {/* Desktop Device */}
                 <nav className='hidden lg:grid grid-cols-5 mx-8'>

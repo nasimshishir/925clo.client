@@ -7,7 +7,7 @@ const generateOutfit = () => {
 
 
   return (
-    <section className='max-h-screen'>
+    <section className='max-h-screen bg-white rounded-t-3xl'>
       <GenerateOutfit getGeneratedOutfits={getGeneratedOutfits} />
     </section>
   )

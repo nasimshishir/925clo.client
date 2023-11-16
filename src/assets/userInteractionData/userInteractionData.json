@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "user": {
+            "id": 1,
+            "name": "clementine smith",
+            "email": "clem321@email.com"
+        },
+        "styleProfile": {
+            "id": 1,
+            "location": "london,United Kingdom",
+            "gender": "male",
+            "brands": [
+                "Ralph Lauren",
+                "Prada",
+                "Dior",
+                "Louis Viutton",
+                "Valentino"
+            ],
+            "colors": [
+                "red",
+                "orange",
+                "violate",
+                "yellow",
+                "blue"
+            ],
+            "sizeTop": "lg",
+            "sizeBottom": "lg",
+            "sizeFootwear": "UK 38",
+            "occassion": "date night"
+        },
+        "product": {
+            "id": 25,
+            "product_title": "Montblanc - 1858 Limited Edition Automatic 42mm Bronze and Woven Watch",
+            "description": "Inspiration for Montblanc's '1858' line comes from classic Minerva watches from the 1920s and '30s that were used for mountain exploration, notice how the back of this limited edition reference is engraved with a signature mountain, compass and crossed ice pick-axes. Engineered in Switzerland with a calibre MB 24.15 automatic movement, it has a polished and satin-finished bronze case with slim bevelled horns and an army-green dial to match the durable woven NATO strap. The hands and numerals are coated with Super-LumiNova® for visibility. We offer a two-year warranty for all working parts and manufacturing faults for luxury watches",
+            "image": "https://www.mrporter.com/variants/images/343549805741945/pr/w1000.jpg",
+            "price": 2645,
+            "currency": "GBP",
+            "product_category": "Luxury Watches > Exclusives And Limited Editions",
+            "type": "accessories",
+            "material": "70% Other Fibres 30% Stainless Steel",
+            "primaryColor": "green",
+            "secondaryColor": "golden",
+            "brand": "Montblanc",
+            "season": [
+                "summer",
+                "autumn",
+                "winter",
+                "spring"
+            ],
+            "product_id": "MPUK0400577143429",
+            "product_url": "https://MrPorter.prf.hn/click/camref:1011lzrF7/creativeref:1101l32564/destination:https%3A%2F%2Fwww.mrporter.com%2Fen-gb%2Fmens%2Fproduct%2Fmontblanc%2Fluxury-watches%2Fdress-watches%2F1858-limited-edition-automatic-42mm-bronze-and-woven-watch-ref-no-118222%2F343549805741945"
+        },
+        "interactionType": "wishlist"
+    },
+    {
+        "id": 2,
+        "user": {
+            "id": 1,
+            "name": "clementine smith",
+            "email": "clem321@email.com"
+        },
+        "styleProfile": {
+            "id": 2,
+            "location": "london,United Kingdom",
+            "gender": "male",
+            "brands": [
+                "Ralph Lauren",
+                "Prada",
+                "Dior",
+                "Louis Viutton",
+                "Gucci"
+            ],
+            "colors": [
+                "red",
+                "orange",
+                "brown",
+                "yellow",
+                "blue"
+            ],
+            "sizeTop": "lg",
+            "sizeBottom": "lg",
+            "sizeFootwear": "UK 38",
+            "occassion": "occassion wear"
+        },
+        "product": {
+            "id": 25,
+            "product_title": "Montblanc - 1858 Limited Edition Automatic 42mm Bronze and Woven Watch",
+            "description": "Inspiration for Montblanc's '1858' line comes from classic Minerva watches from the 1920s and '30s that were used for mountain exploration, notice how the back of this limited edition reference is engraved with a signature mountain, compass and crossed ice pick-axes. Engineered in Switzerland with a calibre MB 24.15 automatic movement, it has a polished and satin-finished bronze case with slim bevelled horns and an army-green dial to match the durable woven NATO strap. The hands and numerals are coated with Super-LumiNova® for visibility. We offer a two-year warranty for all working parts and manufacturing faults for luxury watches",
+            "image": "https://www.mrporter.com/variants/images/343549805741945/pr/w1000.jpg",
+            "price": 2645,
+            "currency": "GBP",
+            "product_category": "Luxury Watches > Exclusives And Limited Editions",
+            "type": "accessories",
+            "material": "70% Other Fibres 30% Stainless Steel",
+            "primaryColor": "green",
+            "secondaryColor": "golden",
+            "brand": "Montblanc",
+            "season": [
+                "summer",
+                "autumn",
+                "winter",
+                "spring"
+            ],
+            "product_id": "MPUK0400577143429",
+            "product_url": "https://MrPorter.prf.hn/click/camref:1011lzrF7/creativeref:1101l32564/destination:https%3A%2F%2Fwww.mrporter.com%2Fen-gb%2Fmens%2Fproduct%2Fmontblanc%2Fluxury-watches%2Fdress-watches%2F1858-limited-edition-automatic-42mm-bronze-and-woven-watch-ref-no-118222%2F343549805741945"
+        },
+        "interactionType": "wishlist"
+    }
+]
