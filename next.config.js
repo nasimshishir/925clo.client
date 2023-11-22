@@ -13,6 +13,9 @@ const nextConfig = {
             },
             {
                 hostname: 'fakestoreapi.com'
+            },
+            {
+                hostname: 'flagcdn.com'
             }
         ],
     },

@@ -12,13 +12,12 @@ import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuC
 import { wishListToggle } from '@lib/common';
 import { Buttonv2, WishlistSidebar } from '@components';
 import { useUserContext } from '@lib/context api/providers/UserProvider';
+import ProfileDropdownMenu from '@components/ProfileDropdownMenu';
 
 
 const Headerv2 = () => {
 
-    const [dropdownIsActive, setDropdownIsActive] = useState<boolean>(false)
-
-    const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, wishlistIsOpen, setWishlistIsOpen } = useDropdownMenuContext()
+    const { menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, wishlistIsOpen, setWishlistIsOpen, profileDropdownIsActive, setProfileDropdownIsActive } = useDropdownMenuContext()
     const { user } = useUserContext()
 
 
@@ -35,9 +34,6 @@ const Headerv2 = () => {
         }
     }
 
-    const handleProfileDropdownClose = () => {
-        setTimeout(() => setDropdownIsActive(false), 500)
-    }
 
     return (
         <>
@@ -67,7 +63,7 @@ const Headerv2 = () => {
                             </Link>
                             <>
                                 <li className='text-xs uppercase cursor-pointer' onClick={() => { wishListToggle(setWishlistIsOpen, wishlistIsOpen) }}><BsHeart size={'1.2rem'} /></li>
-                                <Link href='/dashboard' className='grid h-[4.375rem]' onMouseEnter={() => setDropdownIsActive(true)}><li className='cursor-pointer my-auto'><Image className='rounded-full' src={Avatar} width={30} height={30} alt='customer-rofile-pic' /></li></Link>
+                                <Link href='/dashboard' className='grid h-[4.375rem]' onMouseEnter={() => setProfileDropdownIsActive(true)}><li className='cursor-pointer my-auto'><Image className='rounded-full' src={Avatar} width={30} height={30} alt='customer-rofile-pic' /></li></Link>
                             </>
                             {/* {user &&
                                 <>
@@ -80,20 +76,8 @@ const Headerv2 = () => {
             </header>
             <Submenu menuData={menuData} />
             <WishlistSidebar />
-            {dropdownIsActive &&
-                <div className='h-[26.5rem] w-[23.125rem] fixed top-[4.5rem] right-12 rounded-2xl bg-gray-500/5 backdrop-blur-md p-9 text-white hidden lg:flex flex-col justify-between' onMouseEnter={() => setDropdownIsActive(true)} onMouseLeave={() => setDropdownIsActive(false)}>
-                    <div>
-                        <p className='font-helvetica font-normal uppercase text-2xl mb-8 px-3'>Clementine Smith</p>
-                        <div>
-                            <p className='font-inter text-sm font-normal uppercase py-2 hover:bg-white/10 rounded-lg px-3'>Profile Info</p>
-                            <p className='font-inter text-sm font-normal uppercase py-2 hover:bg-white/10 rounded-lg px-3'>Style Profile</p>
-                            <p className='font-inter text-sm font-normal uppercase py-2 hover:bg-white/10 rounded-lg px-3'>Wishlist</p>
-                        </div>
-                    </div>
-                    <div className='px-3'>
-                        <Buttonv2 css='w-full h-[3rem]'>Log Out</Buttonv2>
-                    </div>
-                </div>}
+            {profileDropdownIsActive &&
+                <ProfileDropdownMenu />}
         </>
     )
 }

@@ -12,7 +12,7 @@
 }
 
 .sec_desc {
-  @apply text-xs font-inter font-extralight
+  @apply text-xs font-inter font-normal
 }
 
 @screen xs {
@@ -21,7 +21,7 @@
   }
 
   .sec_desc {
-    @apply text-xs font-inter font-extralight
+    @apply text-xs font-inter font-normal
   }
 }
 
@@ -31,7 +31,7 @@
   }
 
   .sec_desc {
-    @apply text-sm font-inter font-extralight
+    @apply text-sm font-inter font-normal
   }
 }
 
@@ -41,7 +41,7 @@
   }
 
   .sec_desc {
-    @apply text-sm font-inter font-extralight
+    @apply text-sm font-inter font-normal
   }
 }
 

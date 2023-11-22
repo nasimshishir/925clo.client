@@ -1,12 +1,12 @@
 'use client'
-
 import React, { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react'
 import { BiSearch } from 'react-icons/bi';
 import { IoIosAlert } from 'react-icons/io';
-import { Buttonv1 } from '@components';
+import { AutocompleteSearchBox, Buttonv1 } from '@components';
 import { TfiAngleLeft } from 'react-icons/tfi';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import Image from 'next/image';
 
 const people = [
     { name: 'search the city' },
@@ -19,7 +19,6 @@ const people = [
 ]
 
 const countries = [
-    { name: 'search the country', code: null },
     { name: 'Afghanistan', code: 'AF' },
     { name: 'Åland Islands', code: 'AX' },
     { name: 'Albania', code: 'AL' },
@@ -46,7 +45,7 @@ const countries = [
 ]
 
 
-const UserLocationInputs: React.FC = () => {
+const UserLocationInputs = () => {
 
     const { styleProfileformStep, setStyleProfileformStep } = useDropdownMenuContext()
 
@@ -70,110 +69,26 @@ const UserLocationInputs: React.FC = () => {
 
 
     return (
-        <div className='max-h-screen h-screen grid grid-cols-1 lg:grid-cols-2'>
-            <div className='bg-white pt-28 items-center mx-auto w-3/5 pb-10'>
+        <div className='h-full grid grid-cols-1 lg:grid-cols-2'>
+            <div className='pt-28 items-center mx-auto w-2/3 pb-10'>
                 <div className='flex items-center mb-8 lg:hidden'>
                     <TfiAngleLeft size={12} /><span className='uppercase text-xs font-thin'>Back</span>
                     <p className='hidden lg:block uppercase text-xs font-thin grow text-center'>Style Profile 0/7 Completed</p>
                 </div>
-                <h2 className='text-black sec_title mb-2'>Where in the World are you?</h2>
-                <p className='text-black sec_desc mb-5'>In this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.
+                <h2 className='text-black sec_title mb-5'>Where in the World are you?</h2>
+                <p className='text-black sec_desc'>In this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.
                 </p>
-                <div>
+                <div className='mt-20'>
                     {error && <p className='flex items-center p-3 bg-red-300 text-white rounded-lg uppercase'><span><IoIosAlert className='me-5' size={13} /></span>{error}</p>}
 
                     {/* Country ListBox */}
-                    <div className="cursor-pointer">
-                        <Listbox value={country} onChange={setCountry} >
-                            <div className="relative mt-1">
-                                <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-xs">
-                                    <span className="block truncate uppercase">{country.name}</span>
-                                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                                        <BiSearch /></span>
-                                </Listbox.Button>
-                                <Transition
-                                    as={Fragment}
-                                    leave="transition ease-in duration-100"
-                                    leaveFrom="opacity-100"
-                                    leaveTo="opacity-0"
-                                >
-                                    <Listbox.Options className="relative mt-1 max-h-48 w-full overflow-auto rounded-md bg-[#F6F6F6] py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-xs">
-                                        {countries.map((contrye, personIdx) => (
-                                            <Listbox.Option
-                                                key={personIdx}
-                                                className={({ active }) =>
-                                                    `relative cursor-default select-none py-2 pl-10 pr-4 uppercase ${active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
-                                                    }`
-                                                }
-                                                value={contrye}
-                                            >
-                                                {({ selected }) => (
-                                                    <>
-                                                        <span
-                                                            className={`block truncate ${selected ? 'font-normal uppercase' : 'font-light'
-                                                                }`}
-                                                        >
-                                                            {contrye.name}
-                                                        </span>
-                                                        {selected ? (
-                                                            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600 uppercase">
-                                                            </span>
-                                                        ) : null}
-                                                    </>
-                                                )}
-                                            </Listbox.Option>
-                                        ))}
-                                    </Listbox.Options>
-                                </Transition>
-                            </div>
-                        </Listbox>
+                    <div className=''>
+                        <AutocompleteSearchBox placeholder='Search The Country' />
                     </div>
 
                     {/* City ListBox */}
                     <div className=''>
-                        <Listbox value={selected} onChange={setSelected}>
-                            <div className="relative mt-1">
-                                <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-[#F6F6F6] py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-xs">
-                                    <span className="block truncate uppercase">{selected.name}</span>
-                                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                                        <BiSearch /></span>
-                                </Listbox.Button>
-                                <Transition
-                                    as={Fragment}
-                                    leave="transition ease-in duration-100"
-                                    leaveFrom="opacity-100"
-                                    leaveTo="opacity-0"
-                                >
-                                    <Listbox.Options className="relative mt-1 max-h-48 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-xs">
-                                        {people.map((person, personIdx) => (
-                                            <Listbox.Option
-                                                key={personIdx}
-                                                className={({ active }) =>
-                                                    `relative cursor-default select-none py-2 pl-10 pr-4 uppercase ${active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
-                                                    }`
-                                                }
-                                                value={person}
-                                            >
-                                                {({ selected }) => (
-                                                    <>
-                                                        <span
-                                                            className={`block truncate ${selected ? 'font-normal uppercase' : 'font-light'
-                                                                }`}
-                                                        >
-                                                            {person.name}
-                                                        </span>
-                                                        {selected ? (
-                                                            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600 uppercase">
-                                                            </span>
-                                                        ) : null}
-                                                    </>
-                                                )}
-                                            </Listbox.Option>
-                                        ))}
-                                    </Listbox.Options>
-                                </Transition>
-                            </div>
-                        </Listbox>
+
                     </div>
                 </div>
                 <Buttonv1 css='my-5 w-full' onClick={() => handleClick()}>Next Step</Buttonv1>
@@ -183,7 +98,7 @@ const UserLocationInputs: React.FC = () => {
                 </div>
 
             </div>
-            <div className='hidden lg:block bg-cover' style={{ backgroundImage: 'url(/img/earth.png)' }} ></div>
+            <div className='hidden lg:block bg-location_bg bg-cover bg-center'></div>
         </div>
     )
 }

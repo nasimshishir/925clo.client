@@ -24,6 +24,7 @@ module.exports = {
       colors: {
         'primary_orange': '#F25200',
         'secondary_orange': '#FF5722',
+        'gray_bg': '#F6F6F6',
         'off_white': '#FFC7A8',
         'header_black': '#0F0E0D'
       },
@@ -37,7 +38,8 @@ module.exports = {
         'confirm_email_bg_m': "url(/img/confirm_email_bg_m.webp)",
         'enter_code': "url(/img/enter_code.webp)",
         'enter_code_m': "url(/img/enter_code_m.webp)",
-        'landing_bg': "url(/img/landing_bg.webp)"
+        'landing_bg': "url(/img/landing_bg.webp)",
+        'location_bg': "url(/img/location_bg.webp)"
       }
     },
   },

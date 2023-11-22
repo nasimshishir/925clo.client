@@ -11,7 +11,7 @@ const Footerv1: React.FC = () => {
     const user = true;
 
     return (
-        <footer className='w-full bg-primary_orange uppercase text-white font-inter text-[0.75rem]'>
+        <footer className='w-full bg-primary_orange uppercase text-white font-inter text-[0.75rem] z-50'>
 
             {/* Footer Desktop */}
             <div className='hidden lg:grid grid-cols-1 lg:grid-cols-2 items-center'>

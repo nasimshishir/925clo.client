@@ -16,12 +16,14 @@ export const DropdownMenuContextProvider = ({ children }: DropdownMenuContextPro
     const [styleProfileformStep, setStyleProfileformStep] = useState<number>(0);
     const [wishlistIsOpen, setWishlistIsOpen] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [isFilterBarOpen, setIsFilterBarOpen] = useState<boolean>(false)
+    const [isFilterBarOpen, setIsFilterBarOpen] = useState<boolean>(false);
+    const [profileDropdownIsActive, setProfileDropdownIsActive] = useState<boolean>(false)
+
 
 
 
     return (
-        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, user, styleProfileformStep, setStyleProfileformStep, wishlistIsOpen, setWishlistIsOpen, isLoading, setIsLoading, isFilterBarOpen, setIsFilterBarOpen }} >
+        < DropdownMenuContext.Provider value={{ menuData, setMenuData, itemId, setItemId, menuItemData, setMenuItemData, user, styleProfileformStep, setStyleProfileformStep, wishlistIsOpen, setWishlistIsOpen, isLoading, setIsLoading, isFilterBarOpen, setIsFilterBarOpen, profileDropdownIsActive, setProfileDropdownIsActive }} >
             {children}
         </DropdownMenuContext.Provider >
     )

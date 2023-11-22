@@ -2,9 +2,10 @@
 import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { BsFillArrowDownSquareFill } from 'react-icons/bs';
+import { BiSearch } from 'react-icons/bi';
 
 interface options {
-    id?: number;
+    code?: number;
     name: string;
 }
 const people = [
@@ -14,9 +15,20 @@ const people = [
     { id: 4, name: 'Tom Cook' },
     { id: 5, name: 'Tanya Fox' },
     { id: 6, name: 'Hellen Schmidt' },
+    { id: 7, name: 'Wade Cooper' },
+    { id: 8, name: 'Arlene Mccoy' },
+    { id: 9, name: 'Devon Webb' },
+    { id: 10, name: 'Tom Cook' },
+    { id: 11, name: 'Tanya Fox' },
+    { id: 12, name: 'Hellen Schmidt' },
 ]
 
-export default function AutocompleteSearchBox() {
+interface AutocompleteProps {
+    placeholder?: string
+    options?: options[]
+}
+
+export default function AutocompleteSearchBox({ placeholder }: AutocompleteProps) {
     const [selected, setSelected] = useState([])
     const [query, setQuery] = useState('')
 
@@ -31,17 +43,18 @@ export default function AutocompleteSearchBox() {
             )
 
     return (
-        <div className="absolute top-16 w-72">
+        <div className="w-full bg-gray_bg rounded-[1rem]">
             <Combobox value={selected} onChange={setSelected}>
                 <div className="relative mt-1">
-                    <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+                    <div className="relative w-full px-5 cursor-default overflow-hidden text-sm h-[4.375rem]">
                         <Combobox.Input
-                            className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
+                            className="w-full h-full py-2 text-sm leading-5 text-black bg-transparent placeholder:text-black/30 uppercase focus:outline-0"
                             displayValue={(person: options) => person.name}
                             onChange={(event) => setQuery(event.target.value)}
+                            placeholder={placeholder}
                         />
-                        <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
-                            <BsFillArrowDownSquareFill
+                        <Combobox.Button className="absolute inset-y-0 right-2 flex items-center pr-2">
+                            <BiSearch
                                 className="h-5 w-5 text-gray-400"
                                 aria-hidden="true"
                             />
@@ -54,9 +67,9 @@ export default function AutocompleteSearchBox() {
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
-                        <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        <Combobox.Options className="absolute z-50 max-h-60 w-full overflow-auto py-1 bg-gray_bg rounded-[1rem]">
                             {filtered.length === 0 && query !== '' ? (
-                                <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
+                                <div className="relative cursor-default select-none py-2 px-4 text-black">
                                     Nothing found.
                                 </div>
                             ) : (

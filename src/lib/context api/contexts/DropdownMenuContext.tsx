@@ -18,6 +18,8 @@ interface DropdownMenuContextProps {
     setIsLoading: Dispatch<SetStateAction<boolean>>;
     isFilterBarOpen: boolean;
     setIsFilterBarOpen: Dispatch<SetStateAction<boolean>>
+    profileDropdownIsActive: boolean,
+    setProfileDropdownIsActive: Dispatch<SetStateAction<boolean>>
 }
 
 
@@ -36,5 +38,7 @@ export const DropdownMenuContext = createContext<DropdownMenuContextProps>({
     isLoading: false,
     setIsLoading: (): boolean => (true),
     isFilterBarOpen: false,
-    setIsFilterBarOpen: (): boolean => (false)
+    setIsFilterBarOpen: (): boolean => (false),
+    profileDropdownIsActive: false,
+    setProfileDropdownIsActive: (): boolean => (false)
 });

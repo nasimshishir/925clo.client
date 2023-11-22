@@ -9,7 +9,7 @@ const Herov2: React.FC = () => {
     const { styleProfileformStep } = useDropdownMenuContext()
 
     return (
-        <div className=''>
+        <div className='h-full'>
             {(styleProfileformStep === 0) && <UserLocationInput />}
             {(styleProfileformStep === 1) && <ClothingTypeInput />}
             {(styleProfileformStep === 2) && <SizeInput />}

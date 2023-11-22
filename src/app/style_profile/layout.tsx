@@ -3,7 +3,6 @@ import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { Suspense } from 'react';
 import Loading from './loading';
-import Logo from '@assets/logo_2.png'
 
 
 export const metadata = {
@@ -18,13 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <DropdownMenuContextProvider>
-      <div className='bg-header_black'>
+      <div className='realtive bg-header_black max-h-screen min-h-screen flex flex-col h-screen'>
         <Headerv2 />
         <Suspense fallback={<Loading />}>
           {children}
         </Suspense>
-        <Footerv1 />
       </div>
+      {/* <Footerv1 /> */}
     </DropdownMenuContextProvider>
   )
 }
