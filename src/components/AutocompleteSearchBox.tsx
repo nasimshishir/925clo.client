@@ -3,25 +3,28 @@ import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { BsFillArrowDownSquareFill } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
+import Image from 'next/image';
+import people from '@assets/countries.json'
+import { FaCircle, FaRegCircle } from 'react-icons/fa';
 
 interface options {
-    code?: number;
+    code: string;
     name: string;
 }
-const people = [
-    { id: 1, name: 'Wade Cooper' },
-    { id: 2, name: 'Arlene Mccoy' },
-    { id: 3, name: 'Devon Webb' },
-    { id: 4, name: 'Tom Cook' },
-    { id: 5, name: 'Tanya Fox' },
-    { id: 6, name: 'Hellen Schmidt' },
-    { id: 7, name: 'Wade Cooper' },
-    { id: 8, name: 'Arlene Mccoy' },
-    { id: 9, name: 'Devon Webb' },
-    { id: 10, name: 'Tom Cook' },
-    { id: 11, name: 'Tanya Fox' },
-    { id: 12, name: 'Hellen Schmidt' },
-]
+// const people = [
+//     { code: 1, name: 'Wade Cooper' },
+//     { code: 2, name: 'Arlene Mccoy' },
+//     { code: 3, name: 'Devon Webb' },
+//     { code: 4, name: 'Tom Cook' },
+//     { code: 5, name: 'Tanya Fox' },
+//     { code: 6, name: 'Hellen Schmcodet' },
+//     { code: 7, name: 'Wade Cooper' },
+//     { code: 8, name: 'Arlene Mccoy' },
+//     { code: 9, name: 'Devon Webb' },
+//     { code: 10, name: 'Tom Cook' },
+//     { code: 11, name: 'Tanya Fox' },
+//     { code: 12, name: 'Hellen Schmidt' },
+// ]
 
 interface AutocompleteProps {
     placeholder?: string
@@ -35,8 +38,8 @@ export default function AutocompleteSearchBox({ placeholder }: AutocompleteProps
     const filtered =
         query === ''
             ? people
-            : people.filter((person) =>
-                person.name
+            : people.filter((country) =>
+                country.name
                     .toLowerCase()
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
@@ -49,7 +52,7 @@ export default function AutocompleteSearchBox({ placeholder }: AutocompleteProps
                     <div className="relative w-full px-5 cursor-default overflow-hidden text-sm h-[4.375rem]">
                         <Combobox.Input
                             className="w-full h-full py-2 text-sm leading-5 text-black bg-transparent placeholder:text-black/30 uppercase focus:outline-0"
-                            displayValue={(person: options) => person.name}
+                            displayValue={(country: options) => country.name}
                             onChange={(event) => setQuery(event.target.value)}
                             placeholder={placeholder}
                         />
@@ -73,31 +76,39 @@ export default function AutocompleteSearchBox({ placeholder }: AutocompleteProps
                                     Nothing found.
                                 </div>
                             ) : (
-                                filtered.map((person) => (
+                                filtered.map((country) => (
                                     <Combobox.Option
-                                        key={person.id}
+                                        key={country.code}
                                         className={({ active }) =>
-                                            `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-teal-600 text-white' : 'text-gray-900'
+                                            `relative cursor-pointer select-none py-2 pl-10 pr-4 ${active ? 'text-black' : 'text-gray-900'
                                             }`
                                         }
-                                        value={person}
+                                        value={country}
                                     >
                                         {({ selected, active }) => (
                                             <>
-                                                <span
-                                                    className={`block truncate ${selected ? 'font-medium' : 'font-normal'
+                                                <div
+                                                    className={`truncate ${selected ? 'font-medium' : 'font-normal'
                                                         }`}
                                                 >
-                                                    {person.name}
-                                                </span>
-                                                {selected ? (
+                                                    {<div className='flex justify-between'>
+                                                        <div className='flex gap-3'>
+                                                            <Image src={`https://flagcdn.com/w40/${country.code.toLowerCase()}.webp`} alt={`flag-${country.code}`} width={30} height={0} />
+                                                            <span className='uppercase text-sm'>{country.name}</span>
+                                                        </div>
+                                                        <div>
+                                                            {selected ? <FaCircle color='#F25200' /> : <FaRegCircle color='#c2c2c2' />}
+                                                        </div>
+                                                    </div>}
+                                                </div>
+                                                {/* {selected ? (
                                                     <span
                                                         className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-teal-600'
                                                             }`}
                                                     >
                                                         <BsFillArrowDownSquareFill className="h-5 w-5" aria-hidden="true" />
                                                     </span>
-                                                ) : null}
+                                                ) : null} */}
                                             </>
                                         )}
                                     </Combobox.Option>
