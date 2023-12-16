@@ -29,7 +29,6 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
         setMenuData(null);
         router.push(path)
 
-
     }
 
     return (

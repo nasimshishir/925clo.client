@@ -18,7 +18,7 @@ const ProductCard: React.FC<productProps> = ({ product }) => {
         <div className={`${hovering && 'transition-all duration-500'}`} onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
             <div className={`grid grid-cols-1 h-52 md:h-96 relative ${hovering ? 'bg-white' : 'bg-[#F6F6F6]'}`}>
                 <div className='h-3/5 w-3/5 relative m-auto'>
-                    <Image className={`object-cover`} src={rest.image} alt={title} fill />
+                    <Image className={`object-contain`} src={rest.image} alt={title} fill />
                 </div>
                 {hovering && <div className={`hidden md:grid grid-cols-2 gap-2 w-3/4 absolute bottom-4 inset-x-[12.5%] transition-all duration-500`}>
                     <div>

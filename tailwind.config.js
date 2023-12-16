@@ -26,7 +26,8 @@ module.exports = {
         'secondary_orange': '#FF5722',
         'gray_bg': '#F6F6F6',
         'off_white': '#FFC7A8',
-        'header_black': '#0F0E0D'
+        'header_black': '#0F0E0D',
+        'bg_white': '#E7E4E2',
       },
       backgroundImage: {
         'logo_white': "url/('/img/')",
@@ -39,7 +40,19 @@ module.exports = {
         'enter_code': "url(/img/enter_code.webp)",
         'enter_code_m': "url(/img/enter_code_m.webp)",
         'landing_bg': "url(/img/landing_bg.webp)",
-        'location_bg': "url(/img/location_bg.webp)"
+        'location_bg': "url(/img/location_bg.webp)",
+        'male_bg': "url(/img/male.webp)",
+        'female_bg': "url(/img/female.webp)",
+        'unisex_bg': "url(/img/unisex.webp)",
+        'brands_bg': "url(/img/brands.webp)",
+        'sizes_bg': "url(/img/sizes.webp)",
+        'colors_bg': "url(/img/colors.webp)",
+        'occasion_bg': "url(/img/ocassion.webp)",
+        'datenight_bg': "url(/img/datenight.webp)",
+        'cozyfits_bg': "url(/img/cozyfits.webp)",
+        'everyday_bg': "url(/img/everyday.webp)",
+        'workwear_bg': "url(/img/workwear.webp)",
+
       }
     },
   },

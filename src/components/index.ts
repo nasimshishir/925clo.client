@@ -17,6 +17,7 @@ import UserLocationInput from "./StyleProfileFormSteps/UserLocationInputs";
 import ClothingTypeInput from "./StyleProfileFormSteps/ClothingTypeInput";
 import SizeInput from "./StyleProfileFormSteps/SizeInput";
 import BrandInput from "./StyleProfileFormSteps/BrandInput";
+import ColorsInput from "./StyleProfileFormSteps/ColorsInput";
 import ProductFilterSidebar from "./Products/ProductFilterSidebar";
 import ImageCarousel from './ImageCarousal';
 import WishlistSidebar from './WishlistSidebar';
@@ -30,10 +31,12 @@ import ProfileInfo from "./Dashboard/ProfileInfo";
 import StyleProfile from "./Dashboard/StyleProfile";
 import Wishlist from "./Dashboard/Wishlist";
 import InputField from "./InputField";
-import AutocompleteSearchBox from "./AutocompleteSearchBox";
+import AutocompleteSearchBoxCountry from "./AutocompleteSearchBoxCountry";
+import AutocompleteSearchBoxCity from "./AutocompleteSearchBoxCity";
 import EmailVerificationForm from "./EmailVerificationForm";
 import AuthHeader from "./AuthHeader";
 import AccountCreated from "./AccountCreated";
+import DownAngle from "./Svg/DownAngle";
 
 
 
@@ -57,6 +60,7 @@ export {
     ClothingTypeInput,
     SizeInput,
     BrandInput,
+    ColorsInput,
     ProductFilterSidebar,
     ImageCarousel,
     WishlistSidebar,
@@ -70,8 +74,10 @@ export {
     StyleProfile,
     Wishlist,
     InputField,
-    AutocompleteSearchBox,
+    AutocompleteSearchBoxCountry,
+    AutocompleteSearchBoxCity,
     EmailVerificationForm,
     AuthHeader,
-    AccountCreated
+    AccountCreated,
+    DownAngle
 }

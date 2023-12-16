@@ -13,7 +13,7 @@ const Products = ({ products }: ProductsProps) => {
 
 
     return (
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-6 lg:gap-y-12'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-6 lg:gap-y-12 rounded-3xl border-2'>
             {products.map((product: Product) => <ProductCard key={product.id} product={product} />
             )}
         </div>

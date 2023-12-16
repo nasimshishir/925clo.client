@@ -1,58 +1,53 @@
 'use client'
-import { Fragment, useState } from 'react'
+import { Fragment, useState, Dispatch, SetStateAction, useEffect } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { BsFillArrowDownSquareFill } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import Image from 'next/image';
-import people from '@assets/countries.json'
 import { FaCircle, FaRegCircle } from 'react-icons/fa';
 
-interface options {
+interface country {
     code: string;
     name: string;
+    cities: string[]
 }
-// const people = [
-//     { code: 1, name: 'Wade Cooper' },
-//     { code: 2, name: 'Arlene Mccoy' },
-//     { code: 3, name: 'Devon Webb' },
-//     { code: 4, name: 'Tom Cook' },
-//     { code: 5, name: 'Tanya Fox' },
-//     { code: 6, name: 'Hellen Schmcodet' },
-//     { code: 7, name: 'Wade Cooper' },
-//     { code: 8, name: 'Arlene Mccoy' },
-//     { code: 9, name: 'Devon Webb' },
-//     { code: 10, name: 'Tom Cook' },
-//     { code: 11, name: 'Tanya Fox' },
-//     { code: 12, name: 'Hellen Schmidt' },
-// ]
 
 interface AutocompleteProps {
     placeholder?: string
-    options?: options[]
+    options?: country[]
+    setItem: Dispatch<SetStateAction<country | null>>
 }
 
-export default function AutocompleteSearchBox({ placeholder }: AutocompleteProps) {
-    const [selected, setSelected] = useState([])
+export default function AutocompleteSearchBoxCountry({ placeholder, options, setItem, }: AutocompleteProps) {
+    const [selected, setSelected] = useState<country | null>(null)
     const [query, setQuery] = useState('')
 
     const filtered =
         query === ''
-            ? people
-            : people.filter((country) =>
-                country.name
+            ? options
+            : options?.filter((option) => {
+                return option.name
                     .toLowerCase()
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
-            )
+            })
+    useEffect(() => {
+        setItem(selected)
+    }, [selected])
+
 
     return (
         <div className="w-full bg-gray_bg rounded-[1rem]">
             <Combobox value={selected} onChange={setSelected}>
                 <div className="relative mt-1">
-                    <div className="relative w-full px-5 cursor-default overflow-hidden text-sm h-[4.375rem]">
+                    <div className="relative w-full px-5 cursor-default overflow-hidden text-sm h-[3rem] lg:h-[4.375rem]">
+                        {/* {
+                            selected &&
+                            <Image className='"absolute inset-y-0 left-2 flex items-center pl-2"' src={`https://flagcdn.com/w40/${selected.code.toLowerCase()}.webp`} alt={`flag-${selected.code}`} width={30} height={0} />
+                        } */}
                         <Combobox.Input
                             className="w-full h-full py-2 text-sm leading-5 text-black bg-transparent placeholder:text-black/30 uppercase focus:outline-0"
-                            displayValue={(country: options) => country.name}
+                            displayValue={(country: country) => country?.name}
                             onChange={(event) => setQuery(event.target.value)}
                             placeholder={placeholder}
                         />
@@ -70,15 +65,15 @@ export default function AutocompleteSearchBox({ placeholder }: AutocompleteProps
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
-                        <Combobox.Options className="absolute z-50 max-h-60 w-full overflow-auto py-1 bg-gray_bg rounded-[1rem]">
-                            {filtered.length === 0 && query !== '' ? (
+                        <Combobox.Options className="relative z-50 max-h-60 w-full overflow-auto py-1 bg-gray_bg rounded-[1rem]">
+                            {filtered?.length === 0 && query !== '' ? (
                                 <div className="relative cursor-default select-none py-2 px-4 text-black">
                                     Nothing found.
                                 </div>
                             ) : (
-                                filtered.map((country) => (
+                                filtered?.map((country) => (
                                     <Combobox.Option
-                                        key={country.code}
+                                        key={country?.code}
                                         className={({ active }) =>
                                             `relative cursor-pointer select-none py-2 pl-10 pr-4 ${active ? 'text-black' : 'text-gray-900'
                                             }`
