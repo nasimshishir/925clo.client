@@ -39,7 +39,7 @@ const faqItems: AccordionItem[] = [
 const howItWorksPage = () => {
 
   return (
-    <section className='min-h-screen w-full pt-28 grid px-10 lg:px-0'>
+    <div className='bg-bg_white rounded-t-3xl h-full pt-28 grid px-10 lg:px-0'>
       <div className='w-full lg:w-3/5 lg:max-w-[1200px] mx-auto lg:pt-10'>
         {/* Head */}
         <div className='' >
@@ -55,7 +55,7 @@ const howItWorksPage = () => {
           <Accordion items={faqItems} />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

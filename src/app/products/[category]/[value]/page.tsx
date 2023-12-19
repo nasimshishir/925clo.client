@@ -4,15 +4,19 @@ import React, { Suspense } from 'react';
 import Loading from '../../../loading';
 import { useProductFilterContext } from '@lib/context api/providers/ProductFilterProvider';
 import Image from 'next/image';
-
+import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
+import { PageProps } from '../../../../../.next/types/app/products/[category]/[value]/page';
 // app/posts/page.ts
-type PageProps = {
-    params: {},
-    searchParams: { [key: string]: string | string[] | undefined },
-}
+// type PageProps = {
+//     params: {},
+//     searchParams: { [key: string]: string | string[] | undefined },
+//     pathname: string
+// }
 
 
 const ProductsPage = async ({ params, searchParams }: PageProps) => {
+
+    const { menuItemData } = useDropdownMenuContext()
 
     const { queryPramas } = useProductFilterContext()
 
@@ -21,6 +25,8 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     const querystring = require('querystring');
     const queryParameters = querystring.stringify(searchParams)
     const products = await getProducts(queryParameters)
+
+
 
 
     return (
@@ -61,8 +67,11 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
             </div>
             {/* Products Listing */}
             <div className='col-span-4'>
-                <div className='h-80 rounded-3xl flex' style={{ backgroundImage: `url(/img/shop/summer)` }}>
-                    <div></div>
+                {/* Banner */}
+                <div className='h-80 rounded-3xl flex' style={{ backgroundImage: `url(/img/shop/summer.webp)` }}>
+                    <div>
+
+                    </div>
                 </div>
                 <Suspense fallback={<Loading />}>
                     <Products products={products} />

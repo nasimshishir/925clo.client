@@ -33,7 +33,7 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
 
     return (
         <div className={`w-full max-h-screen h-screen bg-cover bg-top ${menuItemData ? 'fixed top-0 left-0 translate-y-0 z-50 duration-500 transition-all ease-out' : 'absolute duration-500 ease-out transition-all -translate-y-full -top-full'}`} style={{
-            backgroundImage: `${menuItemData ? `url(${menuItemData?.fullImg})` : ''}`
+            backgroundImage: `${menuItemData ? `url(/img/${menuItemData?.fullImg})` : ''}`
         }}>
             <Headerv3 />
             <div className={`flex h-auto text-white mt-16 mx-6`}>

@@ -7,7 +7,7 @@
                 "title": "summer",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/summer_menu.webp",
-                "fullImg": "/img/summer_bg.webp",
+                "fullImg": "/summer_bg.webp",
                 "url": "/products/season/summer"
             },
             {
@@ -15,7 +15,7 @@
                 "title": "winter",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/winter_menu.webp",
-                "fullImg": "/img/winter_bg.webp",
+                "fullImg": "/winter_bg.webp",
                 "url": "/products/season/winter"
             },
             {
@@ -23,7 +23,7 @@
                 "title": "spring",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/spring_menu.webp",
-                "fullImg": "/img/spring_bg.webp",
+                "fullImg": "/spring_bg.webp",
                 "url": "/products/season/spring"
             },
             {
@@ -31,7 +31,7 @@
                 "title": "autumn",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/autumn_menu.webp",
-                "fullImg": "/img/autumn_bg.webp",
+                "fullImg": "/autumn_bg.webp",
                 "url": "/products/season/autumn"
             }
         ]
@@ -44,7 +44,7 @@
                 "title": "tops",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/top_menu.webp",
-                "fullImg": "/img/top_bg.webp",
+                "fullImg": "/top_bg.webp",
                 "url": "/products/type/top"
             },
             {
@@ -52,7 +52,7 @@
                 "title": "outerwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/outerwear_menu.webp",
-                "fullImg": "/img/outerwear_bg.webp",
+                "fullImg": "/outerwear_bg.webp",
                 "url": "/products/type/outwear"
             },
             {
@@ -60,7 +60,7 @@
                 "title": "bottoms",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottom_menu.webp",
-                "fullImg": "/img/bottom_bg.webp",
+                "fullImg": "/bottom_bg.webp",
                 "url": "/products/type/bottom"
             },
             {
@@ -68,7 +68,7 @@
                 "title": "accessories",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/accessories_menu.webp",
-                "fullImg": "/img/accessories_bg.webp",
+                "fullImg": "/accessories_bg.webp",
                 "url": "/products/type/accessories"
             },
             {
@@ -76,7 +76,7 @@
                 "title": "footwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/footwear_menu.webp",
-                "fullImg": "/img/footwear_bg.webp",
+                "fullImg": "/footwear_bg.webp",
                 "url": "/products/type/footwear"
             }
         ]
@@ -89,7 +89,7 @@
                 "title": "everyday wear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/everydaywear_menu.webp",
-                "fullImg": "/img/everydaywear_bg.webp",
+                "fullImg": "/everydaywear_bg.webp",
                 "url": "/products/occassion/everyday_wear"
             },
             {
@@ -97,7 +97,7 @@
                 "title": "date night",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/datenight_menu.webp",
-                "fullImg": "/img/datenight_bg.webp",
+                "fullImg": "/datenight_bg.webp",
                 "url": "/products/occassion/date_night"
             },
             {
@@ -105,7 +105,7 @@
                 "title": "cozy fits",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/cozyfits_menu.webp",
-                "fullImg": "/img/cozyfits_bg.webp",
+                "fullImg": "/cozyfits_bg.webp",
                 "url": "/products/occassion/cozy_fits"
             },
             {
@@ -113,7 +113,7 @@
                 "title": "occassionwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/occassionwear_menu.webp",
-                "fullImg": "/img/occassionwear_bg.webp",
+                "fullImg": "/occassionwear_bg.webp",
                 "url": "/products/occassion/occassionwear"
             },
             {
@@ -121,7 +121,7 @@
                 "title": "workwear",
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/workwear_menu.webp",
-                "fullImg": "/img/workwear_bg.webp",
+                "fullImg": "/workwear_bg.webp",
                 "url": "/products/occassion/workwear"
             }
         ]

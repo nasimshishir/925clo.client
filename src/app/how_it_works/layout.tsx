@@ -17,10 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <DropdownMenuContextProvider>
-      <Headerv2 />
-      <Suspense fallback={<Loading />}>
-        {children}
-      </Suspense>
+      <div className='realtive bg-header_black min-h-screen h-screen flex flex-col'>
+        <Headerv2 />
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
+      </div>
       <Footerv1 />
     </DropdownMenuContextProvider>
   )
