@@ -16,7 +16,7 @@ import { PageProps } from '../../../../../.next/types/app/products/[category]/[v
 
 const ProductsPage = async ({ params, searchParams }: PageProps) => {
 
-    const { menuItemData } = useDropdownMenuContext()
+    const { category } = useProductFilterContext()
 
     const { queryPramas } = useProductFilterContext()
 
@@ -26,17 +26,20 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     const queryParameters = querystring.stringify(searchParams)
     const products = await getProducts(queryParameters)
 
+    console.log(category?.title);
+
+
 
 
 
     return (
-        <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-5 w-full p-4'>
+        <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-5 w-full p-2 gap-2'>
             {/* Filter $ Sort Sidebar */}
-            <div className='col-span-1 flex flex-col gap-2 h-[100%]'>
+            <div className='col-span-1 flex flex-col gap-2 h-full rounded-2xl'>
 
                 {/* Sort */}
-                <div className='bg-white rounded-xl'>
-                    <div className='h-[3rem] lg:h-[4.125rem] w-full bg-primary_orange uppercase text-lg '>Sort</div>
+                <div className='bg-white rounded-2xl'>
+                    <div className='h-[3rem] lg:h-[4.125rem] w-full bg-primary_orange uppercase text-lg rounded-2xl'>Sort</div>
                     {/* Color Filter */}
                     <div>
                         <div className='p-5'>
@@ -69,13 +72,15 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
             <div className='col-span-4'>
                 {/* Banner */}
                 <div className='h-80 rounded-3xl flex' style={{ backgroundImage: `url(/img/shop/summer.webp)` }}>
-                    <div>
-
+                    <div className='w-40'>
+                        <p className='text-white font-inter font-bold text-[2rem] uppercase'>Shop by <br /> {category?.title}</p>
                     </div>
                 </div>
-                <Suspense fallback={<Loading />}>
-                    <Products products={products} />
-                </Suspense>
+                <div className='bg-bg_white rounded-3xl mt-2'>
+                    <Suspense fallback={<Loading />}>
+                        <Products products={products} />
+                    </Suspense>
+                </div>
             </div>
         </div>
 

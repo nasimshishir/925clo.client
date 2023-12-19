@@ -6,6 +6,7 @@ import { menuItem } from '@lib/types/types';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
 import { useRouter } from 'next/navigation';
 import { Headerv3 } from '@components';
+import { useProductFilterContext } from '@lib/context api/providers/ProductFilterProvider';
 
 
 type SubMenuProps = {
@@ -16,6 +17,7 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
     const router = useRouter();
 
     const { menuItemData, setMenuItemData, setItemId, setMenuData } = useDropdownMenuContext();
+    const { setCategory } = useProductFilterContext();
 
     const handleHover = (menuItem: menuItem) => {
         // setIsHovering(true)
@@ -27,6 +29,7 @@ const Submenu: React.FC<SubMenuProps> = ({ menuData }) => {
         setItemId(null);
         setMenuItemData(null);
         setMenuData(null);
+        setCategory(menuItemData);
         router.push(path)
 
     }

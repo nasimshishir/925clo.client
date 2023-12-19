@@ -6,6 +6,7 @@
 //     fullImg: string
 // }
 
+import { type } from "os"
 import { UrlObject } from "url"
 
 export type user = {
@@ -47,4 +48,8 @@ export type Product = {
 export type FilterParams = {
     colors?: { color: string }[];
     brands?: { brand: string }[];
+}
+
+export type Category = {
+
 }

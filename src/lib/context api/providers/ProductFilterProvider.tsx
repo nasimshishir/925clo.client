@@ -1,6 +1,6 @@
 'use client'
 import { ProductFilterContext } from '@lib/context api/contexts/ProductFilterContext';
-import { FilterParams } from '@lib/types/types';
+import { FilterParams, menuItem } from '@lib/types/types';
 import { ReactNode, useState, useContext } from 'react'
 
 interface ProdutcFilterProviderProps {
@@ -10,13 +10,14 @@ interface ProdutcFilterProviderProps {
 export const ProductFilterContextProvider = ({ children }: ProdutcFilterProviderProps) => {
 
     const [queryPramas, setQueryPramas] = useState<FilterParams | null>(null)
+    const [category, setCategory] = useState<menuItem | null>(null)
 
 
 
 
 
     return (
-        < ProductFilterContext.Provider value={{ queryPramas, setQueryPramas }} >
+        < ProductFilterContext.Provider value={{ queryPramas, setQueryPramas, category, setCategory }} >
             {children}
         </ProductFilterContext.Provider >
     )
