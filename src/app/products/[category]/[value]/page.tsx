@@ -33,7 +33,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
 
 
     return (
-        <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-5 w-full p-2 gap-2'>
+        <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-6 w-full p-2 gap-2'>
             {/* Filter $ Sort Sidebar */}
             <div className='col-span-1 flex flex-col gap-2 h-full rounded-2xl'>
 
@@ -69,14 +69,14 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
                 </div>
             </div>
             {/* Products Listing */}
-            <div className='col-span-4'>
+            <div className='col-span-5'>
                 {/* Banner */}
                 <div className='h-80 rounded-3xl flex' style={{ backgroundImage: `url(/img/shop/summer.webp)` }}>
                     <div className='w-40'>
                         <p className='text-white font-inter font-bold text-[2rem] uppercase'>Shop by <br /> {category?.title}</p>
                     </div>
                 </div>
-                <div className='bg-bg_white rounded-3xl mt-2'>
+                <div className='bg-bg_white rounded-3xl mt-1'>
                     <Suspense fallback={<Loading />}>
                         <Products products={products} />
                     </Suspense>

@@ -37,6 +37,7 @@ import EmailVerificationForm from "./EmailVerificationForm";
 import AuthHeader from "./AuthHeader";
 import AccountCreated from "./AccountCreated";
 import DownAngle from "./Svg/DownAngle";
+import HeartSvg from "./Svg/HeartSvg";
 
 
 
@@ -79,5 +80,6 @@ export {
     EmailVerificationForm,
     AuthHeader,
     AccountCreated,
-    DownAngle
+    DownAngle,
+    HeartSvg
 }
