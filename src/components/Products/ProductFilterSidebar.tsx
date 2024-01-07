@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Buttonv1, InputField } from '@components';
+import { Buttonv1, ColorSelect, SortSelectField } from '@components';
 import { TfiAngleLeft } from 'react-icons/tfi';
 import { BsCircleFill, BsPlus } from 'react-icons/bs';
 import { useDropdownMenuContext } from '@lib/context api/providers/DropdownMenuContextProvider';
@@ -18,95 +18,24 @@ const ProductFilterSidebar: React.FC = () => {
 
 
     return (
-        <div className={`duration-500 ease-out transition-all ${isFilterBarOpen ? 'fixed w-screen h-full inset-0 bg-gray-900/20 z-30 duration-500 ease-out transition-all' : 'invisible duration-500 delay-500 ease-out transition-all'}`}>
-            {/* desktop */}
-            <div className={`hidden md:grid absolute right-0 top-0 w-full md:w-[30vw] py-20 bg-white md:h-screen duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-x-full'}`}>
-                <div className='w-4/5 mx-auto'>
+        <div className='col-span-1 flex flex-col gap-2 h-full rounded-2xl w-full'>
 
-                    {/* Header */}
-                    <div className='flex justify-between items-center'>
-                        <div className='flex items-center ps-2' onClick={() => { setIsFilterBarOpen(!isFilterBarOpen) }}>
-                            <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
-                        </div>
-                        <div>
-                            <h6 className='uppercase text-2xl font-bold'>Filters</h6>
-                        </div>
-                    </div>
-
-                    {/* Color Filter */}
-                    <div className='mt-10 relative'>
-                        <p className='uppercase text-xs ps-2'>Colors</p>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-xl'>
-                                {queryPramas?.colors?.map(color => <BsCircleFill key={color.color} color={color.color} size={12} />)}
-                            </div>
-                            <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer' >
-                                <p className='uppercase text-xs'>Add </p><BsPlus />
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/* Brands Filter */}
-                    <div className='mt-2'>
-                        <p className='uppercase text-xs ps-2'>Brands</p>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <div className='flex flex-wrap px-3 py-2 bg-[#f6f6f6] flex-1 rounded-xl'>
-                                {<p className='uppercase border border-black rounded px-2 py-1 text-xs font-thin me-1 mb-1'>Brand</p>}
-                            </div>
-                            <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer'>
-                                <p className='uppercase text-xs'>Add </p><BsPlus />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='mt-7'>
-                        <Buttonv1 css='w-36 py-3'>Apply Filters</Buttonv1>
-                    </div>
-                </div>
+            {/* Sort */}
+            <div className='bg-white rounded-2xl'>
+                <SortSelectField />
             </div>
 
-            {/* mobile */}
-            <div className={`md:hidden grid absolute bottom-0 right-0 w-full py-10 bg-white h-[45vh] duration-500 ease-out transition-all ${isFilterBarOpen ? '' : 'translate-y-full'}`}>
-                <div className='w-4/5 mx-auto'>
+            {/* Filters */}
+            <div className='bg-white rounded-xl'>
+                <div className='w-full bg-primary_orange uppercase text-lg rounded-[1rem] py-5 pl-5 pr-6 text-white'>Filter</div>
 
-                    {/* Header */}
-                    <div className='flex justify-between items-center'>
-                        <div className='flex items-center ps-2' onClick={() => { setIsFilterBarOpen(!isFilterBarOpen) }}>
-                            <TfiAngleLeft className='cursor-pointer' size={12} /><span className='cursor-pointer uppercase text-xs font-thin'>Back</span>
-                        </div>
-                        <div>
-                            <h6 className='uppercase text-2xl font-bold'>Filters mobile</h6>
-                        </div>
-                    </div>
-
-                    {/* Color Filter */}
-                    <div className='mt-10'>
-                        <p className='uppercase text-xs ps-2'>Colors</p>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-lg'>
-                                colors
-                            </div>
-                            <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer'>
-                                <p className='uppercase text-xs'>Add </p><BsPlus />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Brands Filter */}
-                    <div className='mt-2'>
-                        <p className='uppercase text-xs ps-2'>Brands</p>
-                        <div className='flex gap-2 items-center mt-2'>
-                            <div className='px-3 py-3 bg-[#f6f6f6] flex-1 rounded-lg'>
-                                colors
-                            </div>
-                            <div className='flex justify-center border border-black rounded-lg px-5 py-2 cursor-pointer'>
-                                <p className='uppercase text-xs'>Add </p><BsPlus />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='mt-5'>
-                        <Buttonv1 css='w-36'>Apply Filters</Buttonv1>
-                    </div>
+                {/* Color Filter */}
+                <div className='grid gap-5'>
+                    <ColorSelect />
+                    <ColorSelect />
+                    <ColorSelect />
+                    <ColorSelect />
+                    <ColorSelect />
                 </div>
             </div>
         </div>

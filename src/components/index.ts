@@ -38,6 +38,9 @@ import AuthHeader from "./AuthHeader";
 import AccountCreated from "./AccountCreated";
 import DownAngle from "./Svg/DownAngle";
 import HeartSvg from "./Svg/HeartSvg";
+import SortSelectField from "./SortSelectField";
+import ColorSelect from "./ColorSelect";
+import LockSvg from "./Svg/LockSvg"
 
 
 
@@ -81,5 +84,8 @@ export {
     AuthHeader,
     AccountCreated,
     DownAngle,
-    HeartSvg
+    HeartSvg,
+    LockSvg,
+    SortSelectField,
+    ColorSelect
 }

@@ -19,7 +19,6 @@ export default function RootLayout({
     <DropdownMenuContextProvider>
       <div className='realtive bg-header_black min-h-screen flex flex-col'>
         <Headerv2 />
-        <ProductFilterSidebar />
         {children}
       </div>
       <Footerv1 />

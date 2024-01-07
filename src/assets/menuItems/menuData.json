@@ -8,7 +8,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/summer_menu.webp",
                 "fullImg": "/summer_bg.webp",
-                "url": "/products/season/summer"
+                "url": "/products/summer"
             },
             {
                 "id": "s2",
@@ -16,7 +16,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/winter_menu.webp",
                 "fullImg": "/winter_bg.webp",
-                "url": "/products/season/winter"
+                "url": "/products/winter"
             },
             {
                 "id": "s3",
@@ -24,7 +24,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/spring_menu.webp",
                 "fullImg": "/spring_bg.webp",
-                "url": "/products/season/spring"
+                "url": "/products/spring"
             },
             {
                 "id": "s4",
@@ -32,7 +32,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/autumn_menu.webp",
                 "fullImg": "/autumn_bg.webp",
-                "url": "/products/season/autumn"
+                "url": "/products/autumn"
             }
         ]
     },
@@ -45,7 +45,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/top_menu.webp",
                 "fullImg": "/top_bg.webp",
-                "url": "/products/type/top"
+                "url": "/products/top"
             },
             {
                 "id": "p2",
@@ -53,7 +53,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/outerwear_menu.webp",
                 "fullImg": "/outerwear_bg.webp",
-                "url": "/products/type/outwear"
+                "url": "/products/outwear"
             },
             {
                 "id": "p3",
@@ -61,7 +61,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/bottom_menu.webp",
                 "fullImg": "/bottom_bg.webp",
-                "url": "/products/type/bottom"
+                "url": "/products/bottom"
             },
             {
                 "id": "p4",
@@ -69,7 +69,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/accessories_menu.webp",
                 "fullImg": "/accessories_bg.webp",
-                "url": "/products/type/accessories"
+                "url": "/products/accessories"
             },
             {
                 "id": "p5",
@@ -77,7 +77,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/footwear_menu.webp",
                 "fullImg": "/footwear_bg.webp",
-                "url": "/products/type/footwear"
+                "url": "/products/footwear"
             }
         ]
     },
@@ -90,7 +90,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/everydaywear_menu.webp",
                 "fullImg": "/everydaywear_bg.webp",
-                "url": "/products/occassion/everyday_wear"
+                "url": "/products/everyday_wear"
             },
             {
                 "id": "o2",
@@ -98,7 +98,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/datenight_menu.webp",
                 "fullImg": "/datenight_bg.webp",
-                "url": "/products/occassion/date_night"
+                "url": "/products/date_night"
             },
             {
                 "id": "o3",
@@ -106,7 +106,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/cozyfits_menu.webp",
                 "fullImg": "/cozyfits_bg.webp",
-                "url": "/products/occassion/cozy_fits"
+                "url": "/products/cozy_fits"
             },
             {
                 "id": "o4",
@@ -114,7 +114,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/occassionwear_menu.webp",
                 "fullImg": "/occassionwear_bg.webp",
-                "url": "/products/occassion/occassionwear"
+                "url": "/products/occassionwear"
             },
             {
                 "id": "o5",
@@ -122,7 +122,7 @@
                 "desc": "in this style profile we ask for your preferences on brands, item types and colours to help us learn more about you and your individual style.",
                 "img": "/img/workwear_menu.webp",
                 "fullImg": "/workwear_bg.webp",
-                "url": "/products/occassion/workwear"
+                "url": "/products/workwear"
             }
         ]
     }
