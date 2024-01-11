@@ -6,7 +6,7 @@ import ProductListCard from '@components/Outfits for you/ProductListCard';
 
 const generateOutfit = async () => {
 
-  const getGeneratedOutfits = () => fetch('https://fakestoreapi.com/products').then((res) => res.json())
+  const getGeneratedOutfits = () => fetch('http://localhost:8000/api/v1/products/all').then((res) => res.json())
   const allProducts: Product[] = await getGeneratedOutfits()
   const products: Product[] = await allProducts.slice(0, 5)
 
