@@ -33,7 +33,7 @@ export default function AutocompleteSearchBoxCountry({ placeholder, options, set
             })
     useEffect(() => {
         setItem(selected)
-    }, [selected])
+    }, [setItem, selected])
 
 
     return (
