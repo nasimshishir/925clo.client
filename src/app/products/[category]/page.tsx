@@ -23,7 +23,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     // const queryParameters = querystring.stringify(searchParams)
     // const products = await getProducts(queryParameters)
 
-    const getProducts = () => fetch(`http://localhost:8000/api/v1/products/all`)
+    const getProducts = () => fetch(`http://localhost:8000/api/v1/products/all`).then((res) => res.json())
     const products = await getProducts()
 
 
