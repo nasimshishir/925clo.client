@@ -16,6 +16,9 @@ const nextConfig = {
             },
             {
                 hostname: 'flagcdn.com'
+            },
+            {
+                hostname: 'www.mrporter.com'
             }
         ],
     },
