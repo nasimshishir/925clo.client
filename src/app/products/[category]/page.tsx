@@ -1,4 +1,3 @@
-'use client'
 import { Products, ProductFilterSidebar } from '@components';
 import React, { Suspense } from 'react';
 import Loading from '../../loading';

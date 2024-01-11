@@ -40,7 +40,8 @@ import DownAngle from "./Svg/DownAngle";
 import HeartSvg from "./Svg/HeartSvg";
 import SortSelectField from "./SortSelectField";
 import ColorSelect from "./ColorSelect";
-import LockSvg from "./Svg/LockSvg"
+import LockSvg from "./Svg/LockSvg";
+import ProductListCard from "./Outfits for you/ProductListCard";
 
 
 
@@ -87,5 +88,6 @@ export {
     HeartSvg,
     LockSvg,
     SortSelectField,
-    ColorSelect
+    ColorSelect,
+    ProductListCard
 }

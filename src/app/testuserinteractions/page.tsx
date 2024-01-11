@@ -1,4 +1,3 @@
-'use client'
 import React, { Suspense } from 'react';
 import Loading from '../loading';
 import { Product } from '../../lib/types/types'
@@ -54,9 +53,7 @@ const ProductCard2: React.FC<productProps> = ({ product }) => {
 
 const TestProductsPage = async () => {
 
-    const getProducts = () => fetch(`http://localhost:8000/api/v1/products/all`, {
-        next: { revalidate: 10 },
-    }).then((res) => res.json())
+    const getProducts = () => fetch(`http://localhost:8000/api/v1/products/all`).then((res) => res.json())
     const products = await getProducts()
 
 
