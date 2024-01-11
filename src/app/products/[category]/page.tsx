@@ -15,16 +15,16 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
 
     const { category } = useProductFilterContext()
 
-    const { queryPramas } = useProductFilterContext()
+    // const { queryPramas } = useProductFilterContext()
 
-    const getProducts = (params?: string, color?: string, brand?: string) => fetch(`https://fakestoreapi.com/products${params && '?' + params}`).then((res) => res.json())
+    // const getProducts = (params?: string, color?: string, brand?: string) => fetch(`https://fakestoreapi.com/products${params && '?' + params}`).then((res) => res.json())
 
-    const querystring = require('querystring');
-    const queryParameters = querystring.stringify(searchParams)
-    const products = await getProducts(queryParameters)
+    // const querystring = require('querystring');
+    // const queryParameters = querystring.stringify(searchParams)
+    // const products = await getProducts(queryParameters)
 
-    const path = "sdfsdfdf"
-
+    const getProducts = () => fetch(`http://localhost:8000/api/v1/products/all`)
+    const products = await getProducts()
 
 
 

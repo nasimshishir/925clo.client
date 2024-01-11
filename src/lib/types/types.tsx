@@ -33,16 +33,20 @@ export type AccordionItem = {
 }
 
 export type Product = {
-    id: number;
-    title: string;
-    price: number;
+    id: number,
+    product_title: string;
     description: string;
-    category: string;
+    currency: string;
     image: string;
-    rating: {
-        rate: number;
-        count: number;
-    }
+    price: string;
+    brand: string;
+    color: string;
+    type: string;
+    gender: string;
+    product_url: string;
+    sizes: { size: string, stock: boolean }[];
+    occasion: string[];
+    season: string[];
 }
 
 export type FilterParams = {
