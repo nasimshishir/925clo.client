@@ -6,7 +6,7 @@ import Loading from './loading';
 
 
 export const metadata = {
-  title: 'Products',
+  title: 'User Inreraction Test',
   description: 'Your daily style manager',
 }
 
