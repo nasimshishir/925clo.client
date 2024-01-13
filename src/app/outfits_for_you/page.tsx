@@ -3,9 +3,9 @@ import { Product } from '@lib/types/types';
 import { ProductListCard } from '@components';
 
 
-const generateOutfit = async () => {
+const OutfitsForYou = async () => {
 
-  const getGeneratedOutfits = () => fetch('http://localhost:8000/api/v1/products/all').then((res) => res.json())
+  const getGeneratedOutfits = () => fetch(`${process.env.API_URL}products/all`).then((res) => res.json())
   const allProducts: Product[] = await getGeneratedOutfits()
   const products: Product[] = allProducts.slice(0, 5)
 
@@ -32,4 +32,4 @@ const generateOutfit = async () => {
   )
 }
 
-export default generateOutfit;
+export default OutfitsForYou;

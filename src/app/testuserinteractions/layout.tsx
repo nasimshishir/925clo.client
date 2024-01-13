@@ -17,10 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <DropdownMenuContextProvider>
-      <div className='realtive bg-header_black min-h-screen flex flex-col'>
+      <div className='relative bg-header_black min-h-screen flex flex-col'>
         {children}
       </div>
-      <Footerv1 />
     </DropdownMenuContextProvider>
   )
 }

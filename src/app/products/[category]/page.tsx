@@ -12,7 +12,7 @@ import { PageProps } from '../../../../.next/types/app/products/[category]/page'
 
 const ProductsPage = async ({ params, searchParams }: PageProps) => {
 
-    const { category } = useProductFilterContext()
+    // const { category } = useProductFilterContext()
 
     // const { queryPramas } = useProductFilterContext()
 
@@ -22,7 +22,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     // const queryParameters = querystring.stringify(searchParams)
     // const products = await getProducts(queryParameters)
 
-    const getProducts = () => fetch(`http://localhost:8000/api/v1/products/all`).then((res) => res.json())
+    const getProducts = () => fetch(`${process.env.API_URL}products/all`).then((res) => res.json())
     const products = await getProducts()
 
 
@@ -36,7 +36,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
                 {/* Banner */}
                 <div className='h-80 rounded-3xl bg-no-repeat bg-cover' style={{ backgroundImage: `url(/img/shop/summer.webp)` }}>
                     <div className='w-[25%] h-full flex flex-col justify-between p-12'>
-                        <p className='text-white font-inter font-bold text-[2rem] uppercase text-justify'>Shop by <br /> {category ? category.title : 'Summer'}</p>
+                        <p className='text-white font-inter font-bold text-[2rem] uppercase text-justify'>Shop by <br /> {'Summer'}</p>
                         <p className='text-white font-inter text-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, repudiandae ad iste tenetur magnam debitis doloremque error pariatur sint, animi expedita repellendus consectetur odio nobis.</p>
                     </div>
                 </div>

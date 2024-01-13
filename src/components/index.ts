@@ -42,6 +42,7 @@ import SortSelectField from "./SortSelectField";
 import ColorSelect from "./ColorSelect";
 import LockSvg from "./Svg/LockSvg";
 import ProductListCard from "./Outfits for you/ProductListCard";
+import ProductCard2 from "./ProductCard2";
 
 
 
@@ -89,5 +90,6 @@ export {
     LockSvg,
     SortSelectField,
     ColorSelect,
-    ProductListCard
+    ProductListCard,
+    ProductCard2
 }
