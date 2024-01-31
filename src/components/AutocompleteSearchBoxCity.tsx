@@ -1,5 +1,5 @@
 'use client'
-import { Fragment, useState, Dispatch, SetStateAction } from 'react'
+import { Fragment, useState, Dispatch, SetStateAction, useEffect } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { BsFillArrowDownSquareFill } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
@@ -27,7 +27,9 @@ export default function AutocompleteSearchBoxCity({ placeholder, options, setIte
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
             })
-
+    useEffect(() => {
+        setItem(selected)
+    }, [setItem, selected])
 
 
     return (

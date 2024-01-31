@@ -48,11 +48,11 @@ const Headerv2 = () => {
                     {/* Main Menu */}
                     <div className="md:block hidden col-span-3 my-auto">
                         <ul className='flex justify-center items-center'>
-                            <Link href="/outfits_for_you"><li className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10`}>Generate Outfit</li></Link>
-                            <Link href="/style_profile"><li className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10`}>Style Profile</li></Link>
-                            <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>Shop Seasons</li>
-                            <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>Shop Product</li>
-                            <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer`}>Shop by Occasion</li>
+                            <Link href="/outfits_for_you"><li className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 font-light`}>Generate Outfit</li></Link>
+                            <Link href="/style_profile"><li className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 font-light`}>Style Profile</li></Link>
+                            <li onClick={() => { handleToggle(menus.season.id, menus.season.seasons) }} className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer font-light`}>Shop Seasons</li>
+                            <li onClick={() => { handleToggle(menus.product_type.id, menus.product_type.product_types) }} className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer font-light`}>Shop Product</li>
+                            <li onClick={() => { handleToggle(menus.occasion.id, menus.occasion.occasions) }} className={`text-xs sm:text-sm px-6 py-2 rounded-[13px] uppercase hover:bg-white/10 cursor-pointer font-light`}>Shop by Occasion</li>
                         </ul>
                     </div>
                     {/* Profile Menu */}

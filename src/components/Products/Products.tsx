@@ -2,6 +2,7 @@
 import { Product } from '@lib/types/types';
 import React, { Suspense, use } from 'react'
 import ProductCard from './ProductCard';
+import Image from 'next/image';
 
 
 interface ProductsProps {

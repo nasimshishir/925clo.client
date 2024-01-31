@@ -5,9 +5,7 @@ const Wishlist = () => {
 
   const tabs = ['5 Outfits', 'single Outfits']
   return (
-    <div>
-      <TabComponent tabs={tabs} />
-    </div>
+    <div>Wishlist</div>
   )
 }
 

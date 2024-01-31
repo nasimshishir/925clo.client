@@ -22,8 +22,16 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     // const queryParameters = querystring.stringify(searchParams)
     // const products = await getProducts(queryParameters)
 
-    const getProducts = () => fetch(`${process.env.API_URL}products/all`).then((res) => res.json())
-    const products = await getProducts()
+    console.log(params);
+    console.log(process.env.API_URL);
+
+
+
+
+    const getProducts = (categoryParams: string) => {
+        return fetch(`${process.env.API_URL}products/${categoryParams}`).then((res) => res.json())
+    }
+    const products = await getProducts(params)
 
 
 
@@ -32,7 +40,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
         <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-6 w-full p-3'>
             <ProductFilterSidebar />
 
-            <div className='col-span-5 grid gap-1'>
+            <div className='col-span-6 grid gap-1'>
                 {/* Banner */}
                 <div className='h-80 rounded-3xl bg-no-repeat bg-cover' style={{ backgroundImage: `url(/img/shop/summer.webp)` }}>
                     <div className='w-[25%] h-full flex flex-col justify-between p-12'>

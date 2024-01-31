@@ -26,7 +26,7 @@ import Products from './Products/Products';
 import ProductsPageHead from './Products/ProductsPageHead';
 import Accordion from './Accordion';
 import Back from './Back'
-import DashboardSidebar from "./Dashboard/DashboardSidebar";
+import DashboardSidebar from "./Dashboard/AccountSidebar";
 import ProfileInfo from "./Dashboard/ProfileInfo";
 import StyleProfile from "./Dashboard/StyleProfile";
 import Wishlist from "./Dashboard/Wishlist";
@@ -43,6 +43,10 @@ import ColorSelect from "./ColorSelect";
 import LockSvg from "./Svg/LockSvg";
 import ProductListCard from "./Outfits for you/ProductListCard";
 import ProductCard2 from "./ProductCard2";
+import RightAngle from "./Svg/RightAngle";
+import WishlistOutfits from "./WishlistOutfits";
+import WishlistProductCard from "./WishlistProductCard";
+
 
 
 
@@ -86,10 +90,13 @@ export {
     AuthHeader,
     AccountCreated,
     DownAngle,
+    RightAngle,
     HeartSvg,
     LockSvg,
     SortSelectField,
     ColorSelect,
     ProductListCard,
-    ProductCard2
+    ProductCard2,
+    WishlistProductCard,
+    WishlistOutfits
 }

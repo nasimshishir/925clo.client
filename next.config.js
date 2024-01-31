@@ -19,6 +19,9 @@ const nextConfig = {
             },
             {
                 hostname: 'www.mrporter.com'
+            },
+            {
+                hostname: 'lh3.googleusercontent.com'
             }
         ],
     },

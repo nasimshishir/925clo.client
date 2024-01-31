@@ -37,7 +37,7 @@
 
 @screen lg {
   .sec_title {
-    @apply text-[2rem] font-[700] font-helvetica uppercase
+    @apply text-[1.875rem] font-[700] font-helvetica uppercase
   }
 
   .sec_desc {

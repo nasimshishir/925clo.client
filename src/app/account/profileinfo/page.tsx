@@ -3,7 +3,9 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <ProfileInfo />
+    <div className='w-full rounded-3xl bg-white px-16 pt-16'>
+      <ProfileInfo />
+    </div>
   )
 }
 

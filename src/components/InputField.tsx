@@ -17,7 +17,7 @@ interface InputFieldProps {
 const InputField: React.FC<InputFieldProps> = ({ label, type, id, name, value, placeholder, onChange, width, textColor, bg, fontWeight }) => {
   return (
     <div className={`grid gap-2 mt-3 ${width}`}>
-      <label htmlFor={id} className="uppercase text-xs font-thin tracking-wide ms-5">
+      <label htmlFor={id} className="uppercase text-sm font-normal tracking-wide ms-6 text-black">
         {label}
       </label>
       <input
@@ -27,7 +27,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, type, id, name, value, p
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`${bg} border rounded-xl border-white text-sm ${fontWeight} focus:bg-transparent focus:outline-none p-3 focus:border-gray-300 placeholder:text-gray-300 ${textColor}`}
+        className={`${bg} rounded-2xl text-sm ${fontWeight} p-6 placeholder:text-gray-300 ${textColor} border-gray-300 uppercase border focus:outline-none `}
       />
     </div>
   );

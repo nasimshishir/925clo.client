@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Product } from "@lib/types/types"
 import Image from "next/image"
@@ -8,6 +9,14 @@ type productProps = {
 
 const ProductCard2: React.FC<productProps> = ({ product }) => {
     const { id, product_title, ...rest } = product
+
+    const handleLiked = () => {
+
+    }
+
+    const handleDisliked = () => {
+
+    }
 
     return (
         <div className={`rounded-3xl bg-white p-5`}>
@@ -21,12 +30,13 @@ const ProductCard2: React.FC<productProps> = ({ product }) => {
                     <p className='text-[1rem] uppercase font-inter font-semibold'>{product_title.length > 12 ? product_title.substring(0, 12) : product_title}</p>
                     <p className='text-[1rem] uppercase font-inter font-semibold'>£{rest.price}</p>
                 </div>
-                <p className='text-[0.875rem]'>{rest.description.slice(0, 40)}...</p>
+                <p className='text-[0.875rem] capitalize'>{rest.description.slice(0, 200)}...</p>
             </div>
             <div className={`grid grid-cols-2 w-full mt-8 gap-5`}>
                 <div>
                     <button
                         className={`text-[0.875rem] text-white bg-green-700 border-green-700 rounded-xl uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all w-full h-[2.75rem]`}
+                        onClick={handleLiked}
                     >
                         {'Like'}
                     </button>
@@ -34,6 +44,7 @@ const ProductCard2: React.FC<productProps> = ({ product }) => {
                 <div>
                     <button
                         className={`text-[0.875rem] text-white bg-red-500 border border-red-500 rounded-xl uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all w-full h-[2.75rem]`}
+                        onClick={handleDisliked}
                     >
                         {'Dislike'}
                     </button>

@@ -20,6 +20,7 @@ const LoginForm: React.FC = () => {
     const { setUser } = useUserContext()
 
     const [err, setErr] = useState<boolean>(false)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
     const [formData, setFormData] = useState<LoginFormData>({
         username: '',
         password: ''
@@ -27,17 +28,19 @@ const LoginForm: React.FC = () => {
 
     const handleLogin = async (loginData: LoginFormData) => {
         // Handle sign up logic, e.g., send form data to the server
-        const siteUrl = process.env.SITE_URL;
+        const siteUrl = process.env.API_URL;
         console.log(siteUrl);
         console.log(loginData);
 
 
         try {
-            const response = await axios.post(`http://localhost:8000/auth/login`, loginData)
+            const response = await axios.post(`https://coral-abalone-veil.cyclic.app/auth/login`, loginData)
             const user: user = response.data;
+            console.log(user);
+
             if (user) {
                 setUser(user)
-                router.push('/')
+                router.push('/testuserinteractions')
             }
 
         } catch (error) {
@@ -56,8 +59,6 @@ const LoginForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData);
-
         handleLogin(formData);
 
     }

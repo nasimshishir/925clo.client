@@ -39,7 +39,10 @@ export type Product = {
     currency?: string,
     image?: string,
     price?: string,
-    brand?: string,
+    brand?: {
+        id: number,
+        brand: string
+    },
     color?: string,
     type?: string,
     gender?: string,

@@ -5,7 +5,7 @@ import Loading from './loading';
 
 
 export const metadata = {
-  title: 'Dashboard-Style Profile',
+  title: 'Account- Wishlist',
   description: 'Your daily style manager',
 }
 
@@ -16,9 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <DropdownMenuContextProvider>
-      <Suspense fallback={<Loading />}>
-        {children}
-      </Suspense>
+      <div className='h-full'>
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
+      </div>
     </DropdownMenuContextProvider>
   )
 }

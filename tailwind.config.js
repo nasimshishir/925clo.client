@@ -52,6 +52,8 @@ module.exports = {
         'cozyfits_bg': "url(/img/cozyfits.webp)",
         'everyday_bg': "url(/img/everyday.webp)",
         'workwear_bg': "url(/img/workwear.webp)",
+        'outfit_wishlist_bg': "url(/img/outfit_wishlist.webp)",
+        'individual_wishlist_bg': "url(/img/individual_wishlist.webp)"
 
       }
     },

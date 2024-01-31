@@ -4,6 +4,7 @@ import Image from 'next/image';
 import mobile from '@assets/mobile_section.webp'
 import { useUserContext } from '@lib/context api/providers/UserProvider';
 import Logo from '@assets/logo.png'
+import { redirect } from 'next/navigation';
 
 
 export default function Home() {
