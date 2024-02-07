@@ -14,7 +14,7 @@ interface AutocompleteProps {
     setItem?: any
 }
 
-export default function AutocompleteSearchBoxCity({ placeholder, options, setItem, }: AutocompleteProps) {
+export default function AutocompleteSearchBoxCity({ placeholder, options, setItem }: AutocompleteProps) {
     const [selected, setSelected] = useState<string>()
     const [query, setQuery] = useState('')
 
@@ -27,9 +27,11 @@ export default function AutocompleteSearchBoxCity({ placeholder, options, setIte
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
             })
+
     useEffect(() => {
         setItem(selected)
     }, [setItem, selected])
+
 
 
     return (

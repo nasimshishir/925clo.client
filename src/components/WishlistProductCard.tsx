@@ -30,7 +30,7 @@ const WishlistProductCard: React.FC<WishlistProductProps> = ({ product }) => {
 
 
     return (
-        <div className={`rounded-3xl bg-white p-5 h-[42vh] flex flex-col`}>
+        <div className={`rounded-3xl bg-white p-5 h-[45vh] flex flex-col`}>
             <div className='flex justify-end'>
                 <button><HeartSvg /></button>
             </div>
@@ -40,8 +40,8 @@ const WishlistProductCard: React.FC<WishlistProductProps> = ({ product }) => {
             <div className='flex flex-col'>
                 <div className='grid gap-1'>
                     {/* {rest.brand && <p className='text-[1rem] uppercase font-inter font-semibold'>{rest.brand.brand}</p>} */}
-                    <p className='text-[0.9375rem] uppercase font-inter font-semibold'>{product_title.slice(0, 10)}</p>
-                    <p className='text-[0.75rem] capitalize'>{product_title.slice(0, 50)}</p>
+                    <p className='text-[0.9375rem] uppercase font-inter font-semibold'>{product_title?.slice(0, 10)}</p>
+                    <p className='text-[0.75rem] capitalize'>{product_title?.slice(0, 50)}</p>
                 </div>
                 <div className={`flex justify-between items-center w-full mt-8`}>
                     <div>

@@ -6,6 +6,7 @@ import { Product } from '@lib/types/types';
 import ProductCard from './Products/ProductCard';
 import WishlistProductCard from './WishlistProductCard';
 import { FaCircle, FaRegCircle } from 'react-icons/fa';
+import { TfiAngleLeft } from 'react-icons/tfi';
 
 
 interface TabComponentProps {
@@ -37,7 +38,7 @@ const TabComponent = ({ tabs, products, outfits }: TabComponentProps) => {
 
       {/* Wishlist Header */}
       <div className='w-full flex justify-center items-end px-10'>
-        <div className='text-white absolute left-10 pb-5'>back</div>
+        <div className='flex items-center gap-2 text-white absolute left-10 pb-5 uppercase text-xs font-inter font-light'><TfiAngleLeft size={12} /> back to your profile</div>
         <div className=''>
           <h2 className='sec_title text-white pb-5'>Wish list</h2>
         </div>
@@ -109,8 +110,8 @@ const TabComponent = ({ tabs, products, outfits }: TabComponentProps) => {
                     </div>
                   </Suspense>}
                   {activeTab === 0 && <Suspense fallback={<Loading />}>
-                    <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 rounded-3xl '>
-                      {outfits?.map((outfit) => <WishlistOutfits key={outfit.id} products={outfit.items} />
+                    <div className='grid gap-5 rounded-3xl '>
+                      {outfits?.map((outfit) => <WishlistOutfits key={outfit.id} products={outfit.items} id={outfit.id} />
                       )}
                     </div>
                   </Suspense>}

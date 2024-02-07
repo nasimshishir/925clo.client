@@ -65,7 +65,7 @@ export default function AutocompleteSearchBoxCountry({ placeholder, options, set
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
-                        <Combobox.Options className="relative z-50 max-h-60 w-full overflow-auto py-1 bg-gray_bg rounded-[1rem]">
+                        <Combobox.Options className="relative z-50 max-h-56 w-full overflow-auto py-1 bg-gray_bg rounded-[1rem]">
                             {filtered?.length === 0 && query !== '' ? (
                                 <div className="relative cursor-default select-none py-2 px-4 text-black">
                                     Nothing found.

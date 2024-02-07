@@ -28,16 +28,17 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
 
 
 
-    const getProducts = (categoryParams: string) => {
+    const getProducts = async (categoryParams: string) => {
         return fetch(`${process.env.API_URL}products/${categoryParams}`).then((res) => res.json())
     }
     const products = await getProducts(params)
 
 
 
+
     return (
 
-        <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-6 w-full p-3'>
+        <div className='bg-bg_white rounded-t-3xl h-full grid grid-cols-6 w-full gap-1 p-3'>
             <ProductFilterSidebar />
 
             <div className='col-span-6 grid gap-1'>
@@ -49,9 +50,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
                     </div>
                 </div>
                 <div className='bg-bg_white'>
-                    <Suspense fallback={<Loading />}>
-                        <Products products={products} />
-                    </Suspense>
+                    <Products products={products} />
                 </div>
             </div>
         </div>

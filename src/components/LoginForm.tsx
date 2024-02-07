@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import Buttonv3 from './Buttons/Button.v3';
 import axios from 'axios';
 import { useUserContext } from '@lib/context api/providers/UserProvider';
-import { user } from '@lib/types/types';
+import { User } from '@lib/types/types';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 
 
 
@@ -14,6 +15,8 @@ interface LoginFormData {
 }
 
 const LoginForm: React.FC = () => {
+
+    const { data: session } = useSession()
 
     const router = useRouter()
 
@@ -35,7 +38,7 @@ const LoginForm: React.FC = () => {
 
         try {
             const response = await axios.post(`https://coral-abalone-veil.cyclic.app/auth/login`, loginData)
-            const user: user = response.data;
+            const user: User = response.data;
             console.log(user);
 
             if (user) {

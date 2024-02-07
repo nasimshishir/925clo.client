@@ -4,7 +4,7 @@ import React from 'react';
 
 const stylingPage = () => {
     return (
-        <div className='bg-white rounded-t-3xl h-full'>
+        <div className='bg-white flex felx-col rounded-t-3xl h-full'>
             <Herov2 />
         </div>
     )

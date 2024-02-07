@@ -1,17 +1,23 @@
 'use cilent'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
-import { Product } from '@lib/types/types';
+import { Product, User } from '@lib/types/types';
 import { HeartSvg, Buttonv1 } from '@components';
+import { useUserContext } from '@lib/context api/providers/UserProvider';
+import axios from 'axios';
 
-type productProps = {
+type ProductProps = {
     product: Product
 }
 
-const ProductCard: React.FC<productProps> = ({ product }) => {
+const ProductCard = ({ product }: ProductProps) => {
 
-    const { id, product_title, ...rest } = product
-    const brandLength = rest.brand?.brand.length
+    const { id, product_title, image, ...rest } = product
+    const { user } = useUserContext()
+    const [isListedByWishlist, setIsListedByWishlist] = useState<boolean>(false)
+    const [isListedByBuy, setIsListedByBuy] = useState<boolean>(false)
+
+    // const brandLength = rest.brand?.brand.length
 
     // function extractProductName(productTitle: string) {
     //     const hyphenIndex1 = productTitle.indexOf('-');
@@ -27,16 +33,46 @@ const ProductCard: React.FC<productProps> = ({ product }) => {
 
     // const cleanProductTitle = extractProductName(product_title)
 
+    const addInteraction = async (product: number) => {
+        const interaction = {
+            user, product, type: 'liked'
+        }
+
+        if (user) {
+            try {
+                const response = await axios.post(
+                    `${process.env.API_URL}user-interactions/add`, // Replace with the actual endpoint URL
+                    interaction, // Replace with your prepared data
+
+                );
+
+                console.log('Response:', response.data);
+                // Handle successful response here (e.g., update UI, show success message)
+            } catch (error) {
+                console.error('Error:', error);
+                // Handle errors here (e.g., display error message, retry)
+            }
+        } else {
+
+        }
+        setIsListedByWishlist(!isListedByWishlist)
+    }
+
+
 
 
     return (
         <div className={`rounded-3xl bg-white p-5`}>
             <div className='flex justify-end'>
-                <button><HeartSvg /></button>
+                {user && <button
+                    onClick={() => addInteraction(product.id)}
+                    disabled={isListedByWishlist ? true : false}>
+                    <HeartSvg fill={isListedByWishlist ? '#F25200' : 'none'} color={isListedByWishlist ? '#F25200' : '#000000'} />
+                </button>}
             </div>
             <div className={`grid grid-cols-1 h-[10rem] md:h-[30rem] relative py-5`}>
                 <div className='h-4/5 w-full relative m-auto'>
-                    <Image className={`object-contain`} src={`${rest.image}`} alt={product_title} fill />
+                    <Image className={`object-contain`} src={`${image}`} alt={product_title} fill onError={(e) => console.error('error')} />
                 </div>
             </div>
             <div className='grid gap-2'>
@@ -49,7 +85,9 @@ const ProductCard: React.FC<productProps> = ({ product }) => {
                 </div>
                 <div>
                     <button
-                        className={`text-[0.875rem] text-white bg-primary_orange border border-primary_orange rounded-xl uppercase font-inter font-light text-center hover:bg-secondary_orange hover:transition-all w-32 h-[2.75rem]`}
+                        className={`text-[0.875rem] text-white rounded-xl uppercase font-inter font-light text-center hover:transition-all w-32 h-[2.75rem] ${isListedByBuy ? 'bg-gray-300' : 'bg-primary_orange hover:bg-secondary_orange'}`}
+                        disabled={isListedByBuy ? true : false}
+                        onClick={() => setIsListedByBuy(true)}
                     >
                         {'Buy Now'}
                     </button>

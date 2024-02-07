@@ -3,7 +3,7 @@ import React from 'react'
 
 const StyleProfilePage = () => {
   return (
-    <div className='w-full rounded-3xl bg-white px-16 pt-16'>
+    <div className='w-full rounded-3xl bg-white px-20 pt-20'>
       <StyleProfile />
     </div>
   )

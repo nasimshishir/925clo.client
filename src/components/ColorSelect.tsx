@@ -9,6 +9,7 @@ const people = [
     { name: 'green' },
     { name: 'blue' },
     { name: 'yellow' },
+    { name: 'burgundi' },
 ]
 
 export default function ColorSeletct() {

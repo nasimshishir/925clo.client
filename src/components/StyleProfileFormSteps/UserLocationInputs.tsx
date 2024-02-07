@@ -31,7 +31,7 @@ const UserLocationInputs = () => {
 
     return (
         <div className='h-full grid grid-cols-1 lg:grid-cols-2'>
-            <div className='pt-10 lg:pt-28 items-center mx-auto w-[90%] lg:w-2/3 pb-10'>
+            <div className='pt-8 lg:pt-28 items-center mx-auto w-[90%] lg:w-2/3 pb-10'>
 
                 <h2 className='text-black sec_title mb-5'>Where in the World are you?</h2>
                 <p className='text-black sec_desc'>Let us know where in the world you’re located. This helps us connect you with more local and regional that you'll love.</p>

@@ -33,7 +33,7 @@ const Auth = () => {
                 </p>
                 <div className='mt-[3.125rem] mb-16 xs:mb-28 md:mb-0'>
                     <Buttonv1 type='submit' css='mb-4 lg:mb-5 w-[16rem] xs:w-[20rem] md:w-[25.6rem] h-[3rem] md:h-[4.3125rem]' to='/auth/login'>Log in</Buttonv1>
-                    {/* <Buttonv2 type='submit' css='w-[16rem] xs:w-[20rem] md:w-[25.6rem] h-[3rem] md:h-[4.3125rem]' to='/auth/signup'>Sign Up</Buttonv2> */}
+                    <Buttonv2 type='submit' css='w-[16rem] xs:w-[20rem] md:w-[25.6rem] h-[3rem] md:h-[4.3125rem]' to='/auth/signup'>Sign Up</Buttonv2>
                 </div>
             </div>
         </div>

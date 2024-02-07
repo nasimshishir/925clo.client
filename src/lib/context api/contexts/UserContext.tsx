@@ -1,10 +1,10 @@
 'use client'
-import { user } from "@lib/types/types";
+import { User } from "@lib/types/types";
 import { Dispatch, SetStateAction, createContext } from "react";
 
 interface UserContextProps {
-    user: user | null;
-    setUser: Dispatch<SetStateAction<user | null>>;
+    user: User | null;
+    setUser: Dispatch<SetStateAction<User | null>>;
 }
 
 

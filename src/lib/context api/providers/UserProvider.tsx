@@ -1,6 +1,6 @@
 'use client'
 import { UserContext } from '@lib/context api/contexts/UserContext';
-import { menuItem, user } from '@lib/types/types';
+import { User, menuItem } from '@lib/types/types';
 import { ReactNode, useState, useContext } from 'react'
 
 interface UserProviderProps {
@@ -9,7 +9,7 @@ interface UserProviderProps {
 
 export const UserContextProvider = ({ children }: UserProviderProps) => {
 
-    const [user, setUser] = useState<user | null>(null)
+    const [user, setUser] = useState<User | null>(null)
 
 
 

@@ -26,7 +26,7 @@ module.exports = {
         'secondary_orange': '#FF5722',
         'gray_bg': '#F6F6F6',
         'off_white': '#FFC7A8',
-        'header_black': '#0F0E0D',
+        'header_black': '#000000',
         'bg_white': '#E7E4E2',
       },
       backgroundImage: {

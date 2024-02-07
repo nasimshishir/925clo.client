@@ -11,9 +11,9 @@ const StyleProfile = () => {
   const brands = ['Gucci', 'Gucci', 'Gucci', 'Gucci', 'Gucci', 'Gucci', 'Gucci', 'Gucci', 'Gucci', 'Gucci']
   const colors = ['#586127', '#586127', '#586127', '#586127', '#586127']
   return (
-    <div className='grid grid-cols-2 gap-x-16'>
+    <div className='grid grid-cols-2 gap-x-20'>
 
-      <div className='grid grid-rows-4 gap-y-16'>
+      <div className='flex flex-col gap-y-24'>
         {/* Your Country */}
         <div>
           <div className='flex justify-between items-center'>
@@ -56,7 +56,7 @@ const StyleProfile = () => {
       </div>
 
 
-      <div className='grid grid-rows-3 gap-y-16'>
+      <div className='flex flex-col gap-y-24'>
         {/* Gender */}
         <div>
           <div className='flex justify-between items-center'>

@@ -9,7 +9,7 @@
 import { type } from "os"
 import { UrlObject } from "url"
 
-export type user = {
+export type User = {
     id: number,
     name: string,
     createdAt: Date,
@@ -47,7 +47,7 @@ export type Product = {
     type?: string,
     gender?: string,
     product_url: string,
-    sizes?: { size: string, stock: boolean }[],
+    sizes?: string[],
     occasion?: string[],
     season?: string[],
     createdAt?: string,

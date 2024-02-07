@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Buttonv3 from './Buttons/Button.v3';
 import axios from 'axios';
 import { useUserContext } from '@lib/context api/providers/UserProvider';
-import { user } from '@lib/types/types';
+import { User } from '@lib/types/types';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { TfiAngleLeft } from 'react-icons/tfi';
@@ -34,7 +34,7 @@ const EmailVerificationForm: React.FC = () => {
 
         try {
             const response = await axios.post(`http://localhost:8000/auth/login`, loginData)
-            const user: user = response.data;
+            const user: User = response.data;
             if (user) {
                 setUser(user)
                 router.replace('/')
