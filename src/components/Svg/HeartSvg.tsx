@@ -3,14 +3,16 @@ import * as React from "react"
 interface heartProps {
     color?: string
     fill?: string
+    width?: number
+    height?: number
 }
 
 function HeartSvg(props: heartProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width={23}
-            height={20}
+            width={props.width ? props.width : 23}
+            height={props.height ? props.height : 20}
             viewBox="0 0 23 20"
             fill={props.fill ? props.fill : 'none'}
         >

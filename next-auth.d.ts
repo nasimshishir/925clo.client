@@ -1,4 +1,4 @@
-import NextAuth from "next-auth";
+import NextAuth from "next-auth/next";
 
 declare module "next-auth" {
     interface Session {
@@ -18,6 +18,7 @@ declare module "next-auth" {
 }
 
 import { JWT } from "next-auth/jwt";
+import NextAuth from "next-auth/next";
 
 declare module "next-auth/jwt" {
     interface JWT {

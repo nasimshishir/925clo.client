@@ -1,6 +1,7 @@
 import { Headerv1 } from '@components';
 import '@styles/globals.css';
 import { DropdownMenuContextProvider } from '@lib/context api/providers/DropdownMenuContextProvider';
+import Providers from '@lib/context api/providers/Providers';
 
 
 export const metadata = {
@@ -14,8 +15,10 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <DropdownMenuContextProvider>
-            {children}
-        </DropdownMenuContextProvider>
+        <Providers>
+            <DropdownMenuContextProvider>
+                {children}
+            </DropdownMenuContextProvider>
+        </Providers>
     )
 }

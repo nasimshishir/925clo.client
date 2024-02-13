@@ -41,16 +41,14 @@ const ProductCard = ({ product }: ProductProps) => {
         if (user) {
             try {
                 const response = await axios.post(
-                    `${process.env.API_URL}user-interactions/add`, // Replace with the actual endpoint URL
-                    interaction, // Replace with your prepared data
+                    `${process.env.API_URL}user-interactions/add`,
+                    interaction,
 
                 );
 
                 console.log('Response:', response.data);
-                // Handle successful response here (e.g., update UI, show success message)
             } catch (error) {
                 console.error('Error:', error);
-                // Handle errors here (e.g., display error message, retry)
             }
         } else {
 
@@ -72,7 +70,7 @@ const ProductCard = ({ product }: ProductProps) => {
             </div>
             <div className={`grid grid-cols-1 h-[10rem] md:h-[30rem] relative py-5`}>
                 <div className='h-4/5 w-full relative m-auto'>
-                    <Image className={`object-contain`} src={`${image}`} alt={product_title} fill onError={(e) => console.error('error')} />
+                    <Image className={`object-contain`} src={image ? image : '/'} alt={product_title} fill onError={(e) => console.error('error')} />
                 </div>
             </div>
             <div className='grid gap-2'>

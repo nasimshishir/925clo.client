@@ -1,12 +1,12 @@
 import * as React from "react"
 
-interface RightAngleProps {
+interface LeftAngleProps {
     color?: string
     width?: number
     height?: number
 }
 
-function RightAngle({ color, height, width }: RightAngleProps) {
+function LeftAngle({ color, height, width }: LeftAngleProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -16,10 +16,10 @@ function RightAngle({ color, height, width }: RightAngleProps) {
             fill="none"
 
         >
-            <path d="M1.008 1l7 7-7 7" stroke={color ? color : "#fff"} />
+            <path d="M7.992 1l-7 7 7 7" stroke={color ? color : "#fff"} />
         </svg>
     )
 }
 
-export default RightAngle
+export default LeftAngle
 

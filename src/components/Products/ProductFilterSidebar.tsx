@@ -18,8 +18,7 @@ const ProductFilterSidebar: React.FC = () => {
 
 
     return (
-        <div className='flex flex-col gap-2 h-full rounded-2xl'>
-
+        <div className='col-span-1 flex flex-col gap-2 h-full rounded-2xl'>
             {/* Sort */}
             <div className='bg-white rounded-2xl'>
                 <SortSelectField />

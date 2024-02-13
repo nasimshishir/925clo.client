@@ -44,6 +44,7 @@ import LockSvg from "./Svg/LockSvg";
 import ProductListCard from "./Outfits for you/ProductListCard";
 import ProductCard2 from "./ProductCard2";
 import RightAngle from "./Svg/RightAngle";
+import LeftAngle from "./Svg/LeftAngle";
 import WishlistOutfits from "./WishlistOutfits";
 import WishlistProductCard from "./WishlistProductCard";
 
@@ -91,6 +92,7 @@ export {
     AccountCreated,
     DownAngle,
     RightAngle,
+    LeftAngle,
     HeartSvg,
     LockSvg,
     SortSelectField,

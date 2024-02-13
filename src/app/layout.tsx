@@ -17,16 +17,16 @@ export default function RootLayout({
 
 
   return (
-    <Providers>
-      <UserContextProvider>
-        <DropdownMenuContextProvider>
-          <html lang="en">
-            <body className="w-full overflow-x-hidden">
+    <html lang="en">
+      <body className="w-full overflow-x-hidden">
+        <Providers>
+          <UserContextProvider>
+            <DropdownMenuContextProvider>
               {children}
-            </body>
-          </html>
-        </DropdownMenuContextProvider>
-      </UserContextProvider>
-    </Providers>
+            </DropdownMenuContextProvider>
+          </UserContextProvider>
+        </Providers>
+      </body>
+    </html>
   )
 }

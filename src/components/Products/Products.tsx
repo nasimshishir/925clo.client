@@ -14,7 +14,7 @@ const Products = ({ products }: ProductsProps) => {
 
     return (
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 rounded-3xl '>
-            {products?.map(async (product: Product) =>
+            {products.length && products.map(async (product: Product) =>
                 <ProductCard key={product.id} product={product} />
             )}
         </div>

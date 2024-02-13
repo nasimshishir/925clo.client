@@ -1,11 +1,17 @@
 import * as React from "react"
 
-function SvgComponent() {
+
+interface LockSvgProps {
+    color?: string
+    width?: number
+    height?: number
+}
+function LockSvg(props: LockSvgProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width={12}
-            height={20}
+            width={props.width ? props.width : 12}
+            height={props.height ? props.height : 20}
             viewBox="0 0 12 20"
             fill="none"
         >
@@ -25,4 +31,4 @@ function SvgComponent() {
     )
 }
 
-export default SvgComponent
+export default LockSvg;
