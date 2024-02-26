@@ -7,8 +7,7 @@ const WishlistPage = async () => {
   const tabs: string[] = ['outfit wishlist', 'individual items']
 
   const getProducts = async () => {
-    const products = fetch(`${process.env.API_URL}products/allproducts`).then((res) => res.json())
-    return products
+    return fetch(`${process.env.API_URL}products/allproducts`).then((res) => res.json())
   }
   const products = await getProducts()
 

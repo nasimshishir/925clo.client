@@ -47,6 +47,7 @@ import RightAngle from "./Svg/RightAngle";
 import LeftAngle from "./Svg/LeftAngle";
 import WishlistOutfits from "./WishlistOutfits";
 import WishlistProductCard from "./WishlistProductCard";
+import FiveOutfits from "./Outfits for you/FiveOutfits";
 
 
 
@@ -100,5 +101,6 @@ export {
     ProductListCard,
     ProductCard2,
     WishlistProductCard,
-    WishlistOutfits
+    WishlistOutfits,
+    FiveOutfits
 }
