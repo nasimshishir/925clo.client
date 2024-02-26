@@ -30,7 +30,7 @@ const ProductCard2: React.FC<productProps> = ({ product }) => {
                     <p className='text-[1rem] uppercase font-inter font-semibold'>{product_title.length > 12 ? product_title.substring(0, 12) : product_title}</p>
                     <p className='text-[1rem] uppercase font-inter font-semibold'>£{rest.price}</p>
                 </div>
-                <p className='text-[0.875rem] capitalize'>{rest.description.slice(0, 200)}...</p>
+                <p className='text-[0.875rem] capitalize'>{rest.description.slice(0, 50)}...</p>
             </div>
             <div className={`grid grid-cols-2 w-full mt-8 gap-5`}>
                 <div>

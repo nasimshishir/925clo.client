@@ -10,7 +10,7 @@ const OutfitsForYou = async () => {
 
   }
   const allProducts = await getGeneratedOutfits()
-  const products: Product[] = allProducts.products.slice(0, 5)
+  const products: Product[] = allProducts.slice(0, 5)
 
 
 
